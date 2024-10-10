@@ -1,0 +1,73 @@
+﻿.image-box-wrap {
+    display: flex;
+    height: 180px;
+    width: 290px;
+    justify-content: center;
+}
+
+.image-box-wrap-empty {
+    background-color: #dddddd;
+}
+
+.image-box {
+    object-fit: contain;
+    font-size: 6em;
+    margin-bottom: 6px;
+    background-color: transparent;
+}
+
+.image-box-span {
+    max-height: 125px;
+    margin: auto;
+    text-align: center;
+}
+
+.image-box-edit-overlay {
+    display: none;
+    background-color: #fefefefe;
+    height: 180px;
+    width: 290px;
+    position: absolute;
+    background-color: #fefefe55;
+    justify-content: center;
+}
+
+.image-box-wrap:hover > .image-box-edit-overlay {
+    display: flex;
+}
+
+.image-box-edit-icon {
+    margin: auto;
+    font-size: 3em;
+}
+
+.image-box-delete-overlay {
+    display: none;
+    background-color: #fefefefe;
+    height: 43px;
+    width: 50px;
+    position: absolute;
+    background-color: #fefefe55;
+    justify-content: center;
+    left: 245px;
+}
+
+.image-box-wrap:hover > .image-box-delete-overlay {
+    display: flex;
+}
+
+.image-box-delete-icon {
+    font-size: 1.5em;
+    color: #c70303e6;
+    border-bottom: 1px #6d626244 solid;
+    border-left: 1px #6d626244 solid;
+    border-bottom-left-radius: 4px 4px;
+    padding: 11px 11px 0;
+}
+
+@media (pointer: none), (pointer: coarse) {
+    .image-box-edit-overlay,
+    .image-box-delete-overlay {
+        display: flex;
+    }
+}

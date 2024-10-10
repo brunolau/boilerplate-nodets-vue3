@@ -1,0 +1,33 @@
+﻿.toggle {
+    margin: 0;
+}
+
+.toggle.btn {
+    min-width: 80px;
+}
+
+.toggle label.btn {
+    margin-bottom: 0;
+}
+
+label.btn.btn-info.toggle-on {
+    color: white;
+}
+
+.btn.btn-light.toggle-off {
+    background-color: #f2f3f3;
+}
+
+.toggle-handle {
+    border-right: 1px solid #d4d4d4;
+}
+
+.btn.btn-light.toggle-off,
+.btn.btn-light.toggle-off:hover {
+    color: #212529;
+}
+
+.no-toggle-trans {
+    transition: none !important;
+    -webkit-transition: none !important;
+}

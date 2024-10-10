@@ -1,0 +1,86 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "start-frontend",
+			"type": "shell",
+			"command": "pnpm",
+			"args": ["dev"],
+			"options": {
+				"cwd": "${workspaceFolder}/front-end"
+			},
+			"isBackground": true,
+			"problemMatcher": [
+				{
+					"pattern": {
+						"regexp": "^.*$"
+					},
+					"background": {
+						"activeOnStart": true,
+						"beginsPattern": ".*",
+						"endsPattern": "Local:.*(:\\d+)"
+					}
+				}
+			],
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			}
+		},
+		{
+			"label": "terminate-frontend",
+			"command": "echo ${input:terminate}",
+			"type": "shell",
+			"problemMatcher": []
+		},
+		{
+            "type": "npm",
+            "label": "debug-start-dwhbe",
+            "script": "debug",
+            "promptOnClose": false,
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "webpack",
+                "severity": "error",
+                "fileLocation": "absolute",
+                "pattern": [
+                    {
+                        "regexp": "ERROR in [^ ]* (.*):(.*):(.*)",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3
+                    },
+                    {
+                        "regexp": ".*",
+                        "message": 0
+                    }
+                ],
+                "background": {
+                    "activeOnStart": false,
+                    "beginsPattern": "Sequelize CLI",
+                    "endsPattern": "Starting 'i18next-scanner'"
+                }
+            }
+        },
+        {
+            "label": "debug-kill-all-tasks-dwhbe",
+            "command": "echo ${input:terminateBE}",
+            "type": "shell",
+            "problemMatcher": []
+          }
+	],
+	"inputs": [
+		{
+			"id": "terminate",
+			"type": "command",
+			"command": "workbench.action.tasks.terminate",
+			"args": "start-frontend"
+		},
+		{
+			"id": "terminateBE",
+			"type": "command",
+			"command": "workbench.action.tasks.terminate",
+			"args": "terminateAll"
+		  }
+	]
+}

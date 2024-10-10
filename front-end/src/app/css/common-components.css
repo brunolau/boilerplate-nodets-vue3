@@ -1,0 +1,636 @@
+﻿/* button.tsx*/
+
+.btn.btn-pulsating,
+span.btn-pulsating,
+div.btn-pulsating {
+    -webkit-animation: pulseAnimation 1.5s infinite;
+    box-shadow: 0 0 0 0 rgba(90, 153, 212, 0.5);
+}
+
+.btn-round {
+    border-width: 1px;
+    border-radius: 30px;
+    padding-right: 23px;
+    padding-left: 23px;
+}
+
+/* text-button.tsx*/
+.text-button {
+    color: #26929e;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 3px;
+    margin-top: 1.5px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-weight: 400;
+    margin-right: 10px;
+    margin-top: 0;
+}
+
+.text-button.text-button-font {
+    font-size: 14px;
+    font-size: 13.5px;
+}
+
+.text-button span {
+    padding-left: 3px;
+    text-decoration: underline;
+}
+
+/*card.tsx*/
+h5.card-title {
+    margin-bottom: 0;
+}
+
+h6.card-small-title {
+    margin-bottom: 0;
+}
+
+.dropdown-toggle.no-caret::after {
+    display: none;
+}
+
+.card.with-card-shadow {
+    box-shadow: 0 1px 15px 1px rgb(39 39 39 / 10%);
+}
+
+.card.card-render-inlined .card-header:not([data-background-color]) {
+    background-color: transparent;
+    border: 0;
+    padding-bottom: 0;
+}
+
+/*flex-container.tsx*/
+.frm-item-flex {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+}
+
+.frm-item-flex > .frm-flex-child {
+    position: relative;
+    width: 1%;
+    margin-bottom: 0;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+.frm-item-flex > .frm-flex-child:first-child {
+    padding-left: 0;
+}
+
+.frm-item-flex > .frm-flex-child:last-child {
+    padding-right: 0;
+}
+
+.frm-item-flex > .frm-flex-child > .form-group,
+.frm-item-flex > .frm-flex-child > .input-group,
+.frm-item-flex > .frm-flex-child > button {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.frm-item-flex .frm-flex-child.frm-flex-childfill {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.frm-item-flex .frm-flex-child.frm-flex-childnofill {
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+}
+
+.frm-flex-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.frm-flex-container > .frm-flex-child {
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+}
+
+.frm-flex-container > .frm-flex-child:first-child {
+    padding-left: 0;
+}
+
+.frm-flex-container > .frm-flex-child:last-child {
+    padding-right: 0;
+}
+
+.frm-flex-container > .frm-flex-child > .card {
+    height: 100%;
+}
+
+/*validation*/
+.invalid-feedback {
+    display: block;
+    padding-left: 3px;
+    margin-top: 0;
+}
+
+.ios-device .form-group .invalid-feedback {
+    margin-top: -10px;
+}
+
+/* Tabs */
+.nav-caption-short {
+    display: none;
+}
+
+.nav-caption-short,
+.nav-caption-long {
+    padding-left: 5px;
+}
+
+.is-required {
+    position: relative;
+}
+
+.is-required:after {
+    content: "*";
+    position: absolute;
+    left: 3px;
+    font-weight: bold;
+    color: #d60000;
+}
+
+@-webkit-keyframes pulseAnimation {
+    0% {
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    70% {
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        box-shadow: 0 0 0 50px rgba(90, 153, 212, 0);
+    }
+
+    100% {
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+    }
+}
+
+@keyframes invMdRadioRipple {
+    0% {
+        box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0);
+    }
+
+    50% {
+        box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px 15px rgba(0, 0, 0, 0);
+    }
+}
+
+.inv-md-radio {
+    margin: 0;
+    padding: 3px 0px;
+    box-sizing: border-box;
+}
+
+.inv-md-radio.inv-md-radio-inline {
+    display: inline-block;
+}
+
+.inv-md-radio input[type="radio"] {
+    display: none;
+}
+
+.inv-md-radio input[type="radio"]:checked + label:before {
+    border-color: #337ab7;
+    animation: invMdRadioRipple 0.2s linear forwards;
+}
+
+.inv-md-radio input[type="radio"]:checked + label:after {
+    transform: scale(1);
+}
+
+.inv-md-radio label,
+input[type="radio"] + label {
+    display: inline-block;
+    min-height: 20px;
+    position: relative;
+    padding: 0 30px;
+    margin-bottom: 0;
+    cursor: pointer;
+    vertical-align: bottom;
+    width: 100%;
+    margin-left: 0px !important;
+}
+
+.inv-md-radio label:before,
+.inv-md-radio label:after {
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    transition-property: transform, border-color;
+}
+
+.inv-md-radio label:before {
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.54);
+}
+
+.inv-md-radio label:after {
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    transform: scale(0);
+    background: #337ab7;
+}
+
+.inv-md-radio *,
+.inv-md-radio *:before,
+.inv-md-radio *:after {
+    box-sizing: border-box;
+}
+
+.inv-md-checkbox input[type="checkbox"] {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+}
+
+.inv-md-checkbox input[type="checkbox"]:active + label:before {
+    transition-duration: 0s;
+}
+
+.inv-md-checkbox input[type="checkbox"] + label {
+    position: relative !important;
+    padding-left: 30px;
+    vertical-align: top;
+    user-select: none;
+    cursor: pointer;
+}
+
+.inv-md-checkbox input[type="checkbox"] + label:before {
+    box-sizing: content-box;
+    content: "";
+    color: #4f8196;
+    position: absolute !important;
+    top: 11px;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    margin-top: -9px;
+    border: 2px solid #4f8196;
+    text-align: center;
+    transition: all 0.4s ease;
+    border-radius: 2px;
+}
+
+.inv-md-checkbox input[type="checkbox"] + label:after {
+    box-sizing: content-box;
+    content: "";
+    background-color: #4f8196;
+    position: absolute !important;
+    top: 50%;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+    margin-top: -5px;
+    transform: scale(0);
+    transform-origin: 50%;
+    transition: transform 200ms ease-out;
+}
+
+.inv-md-checkbox input[type="checkbox"]:disabled + label:before {
+    border-color: #cccccc;
+}
+
+.inv-md-checkbox input[type="checkbox"]:disabled:focus + label:before,
+.inv-md-checkbox input[type="checkbox"]:disabled:hover + label:before {
+    background-color: inherit;
+}
+
+.inv-md-checkbox input[type="checkbox"]:disabled:checked + label:before {
+    background-color: #cccccc;
+}
+
+.inv-md-checkbox input[type="checkbox"] + label:after {
+    background-color: transparent;
+    top: 12px;
+    left: 4px;
+    width: 8px;
+    height: 3px;
+    margin-top: -4px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 0 0 3px 3px;
+    border-image: none;
+    transform: rotate(-45deg) scale(0);
+}
+
+.inv-md-checkbox input[type="checkbox"]:checked + label:after {
+    content: "";
+    transform: rotate(-45deg) scale(1);
+    transition: transform 200ms ease-out;
+}
+
+.inv-md-checkbox input[type="checkbox"]:checked + label:before {
+    animation: invMdBorderscale 200ms ease-in;
+    background: #4f8196;
+}
+
+.inv-md-checkbox input[type="checkbox"]:checked + label:after {
+    transform: rotate(-45deg) scale(1);
+}
+
+@keyframes invMdBorderscale {
+    50% {
+        box-shadow: 0 0 0 2px #4f8196;
+    }
+}
+
+.form-check.ui-checkbox-nonwrapped {
+    padding-left: 0;
+}
+
+.form-check.ui-checkbox-nonwrapped label {
+    width: 100%;
+}
+
+/* 
+    CSS-only tooltip
+*/
+[data-itstooltip] {
+    position: relative;
+    z-index: 2;
+    overflow: visible !important;
+}
+
+[data-itstooltip]:before,
+[data-itstooltip]:after {
+    visibility: hidden;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-itstooltip]:before {
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    margin-bottom: 5px;
+    margin-left: -110px;
+    padding: 7px;
+    width: 220px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #000;
+    background-color: hsla(0, 0%, 20%, 0.925);
+    color: #fff;
+    content: attr(data-itstooltip);
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+[data-itstooltip].input-group-append:before {
+    right: 0;
+    left: auto;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-itstooltip]:after {
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    border-top: 5px solid #000;
+    border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+    opacity: 0;
+}
+
+[data-itstooltip]:before,
+[data-itstooltip]:after {
+    -webkit-transition: opacity 0.25s ease-in-out;
+    -moz-transition: opacity 0.25s ease-in-out;
+    -ms-transition: opacity 0.25s ease-in-out;
+    -o-transition: opacity 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
+}
+
+/* Show tooltip content on hover */
+[data-itstooltip]:hover:before,
+[data-itstooltip]:hover:after {
+    visibility: visible;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+}
+
+.nav.nav-pills.nav-pills-primary.nav-7-items .nav-item {
+    flex: 1;
+}
+
+.nav.nav-pills.nav-pills-primary.nav-7-items .nav-item .nav-link {
+    min-width: 50px;
+}
+
+.localized-input a.nav-link {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    min-width: 50px !important;
+}
+
+@media (min-width: 768px) {
+    .side-pills-mode-extended .nav-pills .nav-item .nav-link,
+    .side-pills-mode-extended .nav-pills .nav-item .nav-link:hover {
+        background-color: hsla(0, 0%, 87%, 0.3);
+    }
+
+    .side-pills-mode-extended .nav-pills .nav-item .nav-link {
+        padding: 0 15.5px;
+        text-align: center;
+        padding: 11px 23px;
+        min-width: 100px;
+        font-weight: 400;
+        color: #444;
+    }
+
+    .side-pills-mode-extended .nav-pills.flex-column li > a {
+        margin-bottom: 15px;
+    }
+
+    .side-pills-mode-extended .nav-pills .nav-item .nav-link.active,
+    .side-pills-mode-extended .nav-pills .nav-item .nav-link.active:focus,
+    .side-pills-mode-extended .nav-pills .nav-item .nav-link.active:hover {
+        background-color: #9a9a9a;
+        color: #fff;
+        box-shadow: 0 5px 35px 0 rgb(0 0 0 / 30%);
+    }
+
+    .side-pills-mode-extended .nav-pills .nav-item i {
+        display: block;
+        font-size: 20px;
+        line-height: 60px;
+    }
+}
+
+@media (max-width: 767px) {
+    /*flex-container.tsx*/
+    .frm-flex-container > .frm-flex-child {
+        padding-left: 1.5px;
+        padding-right: 1.5px;
+    }
+
+    .frm-flex-container > .frm-flex-child:first-child {
+        padding-left: 0;
+    }
+
+    .frm-flex-container > .frm-flex-child:last-child {
+        padding-right: 0;
+    }
+
+    .frm-flex-container.frm-flex-mobilefw {
+        display: block;
+        overflow: hidden;
+    }
+
+    .frm-flex-container.frm-flex-mobilefw > .frm-flex-child {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .frm-flex-container.frm-flex-mobilefw > .frm-flex-child > .card {
+        height: auto;
+    }
+
+    /*Tabs*/
+    .nav-caption-short {
+        display: block;
+    }
+
+    .nav-caption-long {
+        display: none;
+    }
+
+    .nav.nav-pills.nav-pills-secondary.nav-2-items,
+    .nav.nav-pills.nav-pills-secondary.nav-3-items,
+    .nav.nav-pills.nav-pills-secondary.nav-4-items,
+    .nav.nav-pills.nav-pills-secondary.nav-5-items,
+    .nav.nav-pills.nav-pills-secondary.nav-6-items,
+    .nav.nav-pills.nav-pills-secondary.nav-7-items,
+    .nav.nav-pills.nav-pills-secondary.nav-8-items,
+    .nav.nav-pills.nav-pills-secondary.nav-9-items,
+    .nav.nav-pills.nav-pills-secondary.nav-10-items {
+        display: block;
+        text-align: center;
+    }
+
+    .nav.nav-pills.nav-pills-secondary.nav-2-items li,
+    .nav.nav-pills.nav-pills-secondary.nav-3-items li,
+    .nav.nav-pills.nav-pills-secondary.nav-4-items li,
+    .nav.nav-pills.nav-pills-secondary.nav-5-items li,
+    .nav.nav-pills.nav-pills-secondary.nav-6-items li,
+    .nav.nav-pills.nav-pills-secondary.nav-7-items li,
+    .nav.nav-pills.nav-pills-secondary.nav-8-items li,
+    .nav.nav-pills.nav-pills-secondary.nav-9-items li,
+    .nav.nav-pills.nav-pills-secondary.nav-10-items li {
+        display: inline-block;
+    }
+
+    .nav.nav-pills.nav-pills-secondary.nav-2-items li {
+        width: 50%;
+    }
+
+    .nav.nav-pills.nav-pills-secondary.nav-3-items li {
+        width: 33.3333333%;
+    }
+
+    .nav.nav-pills.nav-pills-secondary.nav-4-items li {
+        width: 25%;
+    }
+
+    .nav.nav-pills.nav-pills-secondary.nav-5-items li {
+        width: 20%;
+    }
+
+    .nav.nav-pills.nav-pills-secondary.nav-6-items li {
+        width: 16.6666666%;
+    }
+
+    .nav.nav-pills.nav-pills-secondary.nav-7-items li {
+        width: 14.285714%;
+    }
+
+    .nav.nav-pills.nav-pills-secondary.nav-8-items li {
+        width: 12.5%;
+    }
+
+    .nav.nav-pills.nav-pills-secondary.nav-6-items li > a,
+    .nav.nav-pills.nav-pills-secondary.nav-7-items li > a,
+    .nav.nav-pills.nav-pills-secondary.nav-8-items li > a {
+        padding: 3px;
+        font-size: 10px;
+        min-width: 1px;
+        vertical-align: bottom;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .nav.nav-pills.nav-pills-secondary.nav-6-items li > a .nav-caption-short,
+    .nav.nav-pills.nav-pills-secondary.nav-7-items li > a .nav-caption-short,
+    .nav.nav-pills.nav-pills-secondary.nav-8-items li > a .nav-caption-short {
+        height: 30px;
+    }
+
+    .nav.nav-pills.nav-pills-secondary.nav-8-items li > a {
+        padding: 1.5px;
+        font-size: 9px;
+        min-width: 1px;
+    }
+
+    .nav.nav-pills.nav-pills-secondary.nav-8-items li > a .nav-caption-short {
+        height: 25px;
+    }
+
+    .nav.nav-pills.nav-pills-secondary li a {
+        border-radius: 0;
+    }
+
+    .nav.nav-pills.nav-pills-secondary li i {
+        display: block;
+        line-height: 25px;
+        /* display: none; */
+    }
+}

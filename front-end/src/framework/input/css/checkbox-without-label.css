@@ -1,0 +1,15 @@
+﻿.cb-without-label .col-md-3.col-form-label {
+    display: none;
+}
+
+.cb-without-label small {
+    padding-left: 30px;
+    margin-top: -12px;
+    font-size: 0.8em;
+}
+
+.cb-without-label .col-md-9 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}

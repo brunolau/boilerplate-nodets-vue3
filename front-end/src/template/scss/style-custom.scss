@@ -1,0 +1,24 @@
+/* === Import Bootstrap functions and variables === */
+@import "../../../node_modules/bootstrap/scss/functions";
+
+/*-------------------------------------------------------------------*/
+/* === Import template variables === */
+@import "variables";
+@import "variables-polly";
+
+/*-------------------------------------------------------------------*/
+/* === SCSS Compass Functions === */
+@import "../../../node_modules/compass-mixins/lib/compass";
+@import "../../../node_modules/compass-mixins/lib/animate";
+
+/*-------------------------------------------------------------------*/
+/* === Template mixins === */
+@import "mixins/misc";
+@import "mixins/animation";
+@import "mixins/background";
+
+@import "fonts";
+@import "navbar";
+@import "sidebar";
+@import "layouts";
+@import "vertical-wrapper";

@@ -1,0 +1,13 @@
+.dasbhaord-item-wrap .card-body {
+    min-height: 100px;
+}
+
+.dashboard-online-user {
+    position: relative;
+    font-size: 12px;
+}
+
+.dashboard-online-user .dashboard-online-user-timestamp {
+    color: gray;
+    padding-left: 10px;
+}

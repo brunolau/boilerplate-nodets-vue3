@@ -1,0 +1,120 @@
+﻿.dropdown.menu-user > a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.dropdown.menu-user > a:hover,
+.dropdown.menu-user > a:active {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+}
+
+.dropdown.menu-user > a > span {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding-top: 5px;
+    padding-left: 7px;
+}
+
+.dropdown.menu-user > a > span > i {
+    font-size: 25px;
+}
+
+.dropdown.menu-user .dropdown-menu {
+    padding: 0;
+}
+
+.dropdown-menu .user-menu {
+    width: 240px;
+    padding: 0;
+    font-size: 14px;
+    border: 1px solid #e9ecef;
+}
+
+.dropdown-menu .user-menu .user-info {
+    background-color: #eceeef;
+    color: #262626;
+    padding-bottom: 10px !important;
+    margin-bottom: 8px;
+}
+
+.dropdown-menu .user-menu .user-info i {
+    font-size: 50px;
+}
+
+.dropdown-menu .user-menu a.dropdown-item {
+    color: #212529 !important;
+}
+
+.dropdown.menu-user .dropdown-menu.dropdown-menu-right:before {
+    display: none;
+}
+
+.dropdown.menu-user .icon.icon-user {
+    display: block;
+}
+
+.navbar.has-breadcrumb .dropdown.menu-user {
+    margin-top: -7px;
+}
+
+@media (max-width: 991px) {
+    .dropdown.menu-user {
+        margin-right: -20px;
+        position: static;
+        right: 25px;
+        top: 25px;
+        z-index: 990;
+        display: block;
+    }
+
+    .dropdown.menu-user .user-menu {
+        max-height: calc(100vh - 65px);
+        overflow-y: auto;
+    }
+
+    .menu-user .dropdown-menu-right,
+    .dropdown-menu-accout.dropdown-menu-right {
+        right: -12px !important;
+        margin-right: 0 !important;
+        margin-top: -11px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar.has-breadcrumb .dropdown.menu-user {
+        margin-top: -15px;
+    }
+}
+
+@media (max-width: 419px) {
+    .navbar-wrapper {
+        display: block;
+    }
+
+    .navbar-wrapper .breadcrumb-wrap {
+        min-height: 16px;
+        display: block;
+        position: relative;
+        width: calc(100vw - 130px);
+        margin-top: -16px !important;
+        margin-top: -14.5px !important;
+    }
+
+    .navbar-wrapper .breadcrumb-wrap .breadcrumb {
+        width: 100%;
+        max-height: 16px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+    }
+
+    .navbar-wrapper .breadcrumb-wrap .breadcrumb .breadcrumb-item {
+        display: inline;
+        white-space: nowrap;
+    }
+}

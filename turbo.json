@@ -1,0 +1,16 @@
+{
+	"pipeline": {
+		"build-and-deploy": {
+			"cache": false
+		},
+		"migrate:schema": {
+			"cache": false
+		},
+		"lint": {
+			"outputs": []
+		},
+		"dev": {
+			"cache": false
+		}
+	}
+}

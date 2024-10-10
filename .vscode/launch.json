@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Frontend",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:9345",
+      // "request": "attach",
+      // "port": 9222,
+      "webRoot": "${workspaceFolder}/front-end",
+      "sourceMaps": true,
+      "preLaunchTask": "start-frontend",
+      "postDebugTask": "terminate-frontend"
+    },
+    {
+      "name": "Debug Backend",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "dev"]
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Frontend + Backend",
+      "configurations": ["Debug Frontend", "Debug Backend"],
+      "stopAll": true
+    }
+  ]
+}

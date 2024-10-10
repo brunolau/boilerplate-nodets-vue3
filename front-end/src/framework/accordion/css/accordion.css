@@ -1,0 +1,62 @@
+﻿.accordion-skin-contrasting {
+    box-shadow:
+        0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+        0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+        0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
+.accordion-skin-contrasting > .card-collapse > .card > .card-header {
+    background-color: #007396;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+}
+
+.accordion-skin-contrasting > .card-collapse > .card > .card-header > a {
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    display: block;
+    line-height: 1.3;
+}
+
+.accordion-skin-contrasting > .card-collapse > .card > .card-header > a:hover {
+    text-decoration: none;
+}
+
+.accordion-skin-contrasting > .card-collapse > .card > .card-header > a > i {
+    color: #fff;
+}
+
+.accordion-skin-contrasting > .card-collapse > .card:first-child > .card-header {
+    border-radius: 4px 4px 0 0;
+}
+
+.accordion-skin-contrasting > .card-collapse > .card:last-child {
+    margin-bottom: 0;
+}
+
+.accordion-skin-contrasting > .card-collapse > .card:last-child > .card-header {
+    border-radius: 0 0 4px 4px;
+}
+
+.accordion-cta-button {
+    margin: 0;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.accordion-cta-button,
+.accordion-cta-button i {
+    color: white !important;
+}
+
+.accordion-badge {
+    margin-right: 10px;
+}

@@ -1,0 +1,55 @@
+﻿.chart-pie-wrap {
+    padding: 10px;
+}
+
+.chart-pie-inner {
+    position: relative;
+    max-width: 460px;
+}
+
+.chart-pie-legend {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.7);
+    max-height: 100%;
+    overflow: auto;
+}
+
+.chart-pie-legenditem {
+    position: relative;
+    padding-left: 18px;
+    line-height: 1.4;
+}
+
+.chart-pie-legenditem .chart-pie-legendcolor-outer {
+    border: 1px solid #ccc;
+    padding: 1px;
+    height: 14px;
+    width: 14px;
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    background: #ececec;
+}
+
+.chart-pie-legenditem .chart-pie-legendcolor-outer .chart-pie-legendcolor-inner {
+    height: 10px;
+    width: 10px;
+}
+
+.chart-pie-legendtext {
+    font-size: 10px;
+    font-size: 10.25px;
+    letter-spacing: -0.4px;
+    line-height: 1.1;
+    color: #484848;
+}
+
+.chart-pie-legend .chart-pie-legenditem:first-child .chart-pie-legendtext {
+    text-decoration: underline;
+    font-weight: 600;
+}

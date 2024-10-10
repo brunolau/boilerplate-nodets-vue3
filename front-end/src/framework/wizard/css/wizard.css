@@ -1,0 +1,214 @@
+﻿.wizard {
+    margin: 0px auto;
+    background: #fff;
+    margin-top: -50px;
+}
+
+.wizard .nav-tabs {
+    position: relative;
+    margin: 40px auto;
+    margin-bottom: 0;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 0;
+    padding-bottom: 1px;
+}
+
+.wizard > div.wizard-inner {
+    position: relative;
+}
+
+.wz-connecting-line {
+    height: 2px;
+    background: #e0e0e0;
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+    margin-top: 7px;
+}
+
+.wizard .nav-tabs > li.active > a,
+.wizard .nav-tabs > li.active > a:hover,
+.wizard .nav-tabs > li.active > a:focus {
+    color: #555555;
+    cursor: default;
+    border: 0;
+    border-bottom-color: transparent;
+}
+
+.wizard span.round-tab {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    display: inline-block;
+    border-radius: 100px;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    font-size: 25px;
+}
+
+.wizard span.round-tab i {
+    color: #cecece;
+}
+
+.wizard li.active span.round-tab {
+    background: #fff;
+    border: 2px solid #fa7a50;
+}
+
+.wizard li.active span.round-tab i {
+    color: #fa7a50;
+}
+
+.wizard span.round-tab:hover {
+    color: #333;
+    border: 2px solid #333;
+}
+
+.wizard .nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+    position: relative;
+    display: block;
+    float: left;
+    margin-bottom: -1px;
+    position: relative;
+    display: block;
+}
+
+.wizard li:after {
+    content: " ";
+    position: absolute;
+    left: 46%;
+    opacity: 0;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 5px solid transparent;
+    border-bottom-color: #5bc0de;
+    transition: 0.1s ease-in-out;
+}
+
+.wizard li.active:after {
+    content: " ";
+    position: absolute;
+    left: 46%;
+    opacity: 1;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 10px solid transparent;
+    border-bottom-color: #fa7a50;
+}
+
+.wizard .nav-tabs > li a {
+    width: 70px;
+    height: 70px;
+    margin: 20px auto;
+    border-radius: 100%;
+    padding: 0;
+    display: block;
+    position: relative;
+}
+
+.wizard .nav-tabs > li a:hover {
+    background: transparent;
+}
+
+.wizard .tab-pane {
+    position: relative;
+    padding-top: 25px;
+}
+
+.wizard .wizard-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.wizard .wizard-subtitle {
+    margin-bottom: 2.25rem;
+}
+
+.wizard .wizard-buttons {
+    margin-top: 5px;
+    text-align: left;
+    margin-left: -15px;
+    margin-right: -15px;
+    background: #f9f9f9;
+    margin-bottom: -15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-top: 1px solid #ececec;
+}
+
+@media (max-width: 767px) {
+    .wizard {
+        width: 100%;
+        height: auto !important;
+    }
+
+    .wizard span.round-tab {
+        font-size: 16px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .wizard .nav-tabs > li a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .wizard li.active:after {
+        content: " ";
+        position: absolute;
+        left: 35%;
+    }
+
+    .wizard .nav-tabs {
+        padding: 0;
+    }
+
+    .wizard .wz-connecting-line {
+        margin-top: 17px;
+    }
+
+    .wizard.wizard-fullsize-mob .wizard-inner {
+        position: fixed;
+        z-index: 1005;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 60px;
+        background: white;
+    }
+
+    .wizard.wizard-fullsize-mob .wizard-inner > .nav-tabs {
+        margin-top: 0;
+    }
+
+    .wizard.wizard-fullsize-mob > div[role="form"] {
+        margin-top: 120px;
+        margin-bottom: 70px;
+    }
+
+    .wizard.wizard-fullsize-mob .wizard-buttons {
+        position: fixed;
+        bottom: 0;
+        padding-bottom: 10px;
+        left: 0;
+        right: 0;
+        z-index: 998;
+        padding-left: 10px;
+    }
+
+    .wizard.wizard-fullsize-mob .wizard-buttons button:first-child {
+        margin-left: 10px;
+    }
+}

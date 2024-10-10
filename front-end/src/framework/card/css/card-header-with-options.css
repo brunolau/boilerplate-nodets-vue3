@@ -1,0 +1,11 @@
+﻿.card-header-options-dropdown {
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    z-index: 59;
+}
+
+.card-header-options-dropdown > button {
+    border: 1px solid gray;
+    border-radius: 30px;
+}

@@ -1,0 +1,35 @@
+﻿.share-cmp {
+}
+
+.share-cmp .share-cmp-icon {
+    padding: 0.5rem;
+    width: 20%;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    text-align: right;
+}
+
+.share-cmp .share-cmp-icon > i {
+    cursor: pointer;
+}
+
+.share-cmp .share-cmp-icon > i:hover {
+    font-weight: 600;
+}
+
+.share-cmp .share-cmp-content {
+    padding: 0.5rem;
+    width: 70%;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+}
+
+.share-cmp .share-cmp-content > span {
+    cursor: pointer;
+}
+
+.share-cmp .share-cmp-content > span:hover {
+    font-weight: 600;
+}

@@ -1,0 +1,18 @@
+﻿.dt-draggable-start {
+    position: absolute !important;
+}
+
+.dt-draggable {
+    background: #dff1f2;
+    cursor: move !important;
+    z-index: 49 !important;
+}
+
+.dt-animated-draggable-item {
+    transition: all 0.2s ease;
+    transition-property: left, top;
+}
+
+.dt-not-animated {
+    transition: none;
+}

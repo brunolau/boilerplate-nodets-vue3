@@ -1,15 +1,5 @@
-# boilerplate-nodets-vue3
-
-# Development instructions
-
-```sh
-npm install -g pnpm # install pnpm if not already installed
-pnpm i # install all dependencies
-pnpm dev # run developer server for front-end and back-end in parallel
-```
-
-# TMR booking backend
-Backend for the TMR Booking engine, handles backoffice as well as booking engine for clients. Provides communication with hotels' PMS and holds hotel settings
+# Node.js backend boilerplate
+Backend for Node.js applications, provides basic architecture for building scalable and maintainable applications.
 
 # **Table of Content**
 
@@ -31,7 +21,13 @@ Backend for the TMR Booking engine, handles backoffice as well as booking engine
 | Command				        | Note																				|
 | ------------------------------|-----------------------------------------------------------------------------------|
 | dev						    | Launches app debug session														|
-| db-push-migrations		    | Pushes current schema into database, use with caution								|
+| db-dev-seed						    | Seed database with data														|
+| db-generate-migrations		| Generates migrations according to current DB schema								|
+| db-apply-migrations			| Applies pending migrations to the database										|
+| db-drop-migration			| Drop selected migration file										|
+| db-push-migrations			| Applies pending changes to the database										|
+| type-check					| Runs typescript type-check for whole application									|
+
 
 ## **ENV variables**
 
@@ -44,10 +40,10 @@ Backend for the TMR Booking engine, handles backoffice as well as booking engine
 | DB_LOG_QUERY						| optional		| optional		| Determines if SQL sent to postgres is logged (true, false)											|
 
 ## **Debugging**
-App comes with attached launch profile for VS code, both FE and BE, which simplifies launching the debug, alternatively, run the npm "dev" command
+App comes with attached launch profile for VS code, which simplifies launching the debug, alternatively, run the npm "debug" command
 
 ## **Basic architecture**
-Backend is powered by Express 5 and makes heavy use of dependepcy injection. This aims to provide similar architecture that is common in .NET ecosystem and has advantage in easier fulfilling the SOLID principles. DI is provided by the [InversifyJS](https://github.com/inversify/InversifyJS) library, which allows easy binding to interfaces by using symbols. See their docs for more info. Endpoints are driven by "controllers", this is a simple class, which implements the IController interface, for easier implementation there is also a simple base-class provided. Controllers request services as needed from the service container and are just tiny wrapper around the services. All the application and business logic must reside in the service layer.
+App is powered by Express 5 and makes heavy use of dependepcy injection. This aims to provide similar architecture that is common in .NET ecosystem and has advantage in easier fulfilling the SOLID principles. DI is provided by the [InversifyJS](https://github.com/inversify/InversifyJS) library, which allows easy binding to interfaces by using symbols. See their docs for more info. Endpoints are driven by "controllers", this is a simple class, which implements the IController interface, for easier implementation there is also a simple base-class provided. Controllers request services as needed from the service container and are just tiny wrapper around the services. All the application and business logic must reside in the service layer.
 
 
 ### **Services**
@@ -230,8 +226,113 @@ export default class HelloBookingController extends ControllerBase {
 Also note the ExpressParseQueryNumber,ExpressParseQueryString helper functions. These are to simplify parsing the query string to request object as no reliable library that would provide parsing query string into given type exists at the moment.
 
 ## **Database**
-App uses postgres for the data storage. Data access is provided by using [Drizzle ORM](https://orm.drizzle.team/docs/quick-start) in combination with [postgres](https://github.com/porsager/postgres) node client. On top of this there is a layer called eftify-drizzle-pg, which aims to provide more relational approach then drizzle's built-in CRUD and relational API similar to what Entity Framework Core offers for .NET ecosystem. This does not aim to be a full-featured ORM with change tracker, however makes selection and aggregation queries easier without constant need of joins. 
+App uses postgres for the data storage. Data access is provided by using [Drizzle ORM](https://orm.drizzle.team/docs/quick-start) in combination with [postgres](https://github.com/porsager/postgres) node client. On top of this there is a layer called drizzle-eftify, which aims to provide more relational approach then drizzle's built-in CRUD and relational API similar to what Entity Framework Core offers for .NET ecosystem. This does not aim to be a full-featured ORM with change tracker, however makes selection and aggregation queries easier without constant need of joins. 
 
 First there is a need to declare a drizzle schema just as written in Drizzle docs, this resides in src/db/schema folder.
 
-The usage of the lib is described on https://www.npmjs.com/package/eftify-drizzle-pg and it's mandatory to use this. No use of standard drizzle functions is allowed unless necessary.
+Similar to EF Core, the data context has to inherit from DbContext class. Each table (entity) is represented by the DbSet class. This is a generic class of the underlying entity. The underlying data entity represents the table contents itself and has to inherit from DbEntity class. Main application context can be found in src/db/dataContext class and entities have to be located in src/db/entity folder.
+
+### **Example table**
+First let's define a simple drizzle schema
+
+```
+import { relations } from 'drizzle-orm';
+import { integer, pgTable, serial, text } from 'drizzle-orm/pg-core';
+
+
+export const users = pgTable('users', {
+	id: serial('id').primaryKey(),
+	name: text('name'),
+});
+
+export const userAddress = pgTable('userAddress', {
+	id: serial('id').primaryKey(),
+	userId: integer('sender_user_id').references(() => users.id),
+	address: text('address'),
+});
+```
+
+
+Now the entities
+
+usersEntity.ts
+```
+import { DbEntity } from "../drizzle/drizzle-eftify/db-entity";
+import { DbColumn } from "../drizzle/drizzle-eftify/decorators/db-column";
+import { DbNavigationProperty } from "../drizzle/drizzle-eftify/decorators/db-navigation-property";
+import { users } from "../schema/schema";
+import UserAddressEntity from "./userAddressEntity";
+
+
+export default class UsersEntity extends DbEntity<typeof users> {
+    @DbColumn()
+    get id() { return this.table.id };
+
+    @DbColumn()
+    get name() { return this.table.name }
+
+    @DbNavigationProperty()
+    userAddress!: UserAddressEntity
+
+    protected getTableEntity() {
+        return users;
+    }
+}
+```
+
+
+userAddressEntity.ts
+```
+import { DbEntity } from "../drizzle/drizzle-eftify/db-entity";
+import { DbColumn } from "../drizzle/drizzle-eftify/decorators/db-column";
+import { userAddress } from "../schema/schema";
+
+export default class UserAddressEntity extends DbEntity<typeof userAddress> {
+    @DbColumn()
+    get id() { return this.table.id }
+
+    @DbColumn()
+    get address() { return this.table.address }
+
+    @DbColumn()
+    get userId() { return this.table.userId }
+
+    protected getTableEntity() {
+        return userAddress;
+    }
+}
+```
+
+
+And finally, the data context
+
+```
+export default class DataContext extends DbContext {
+	get users() { return new DbSet<typeof users, UsersEntity>(this, UsersEntity) }
+    get userAddress() { return new DbSet<typeof userAddress, UserAddressEntity>(this, UserAddressEntity) }
+
+    static create() {
+        return new DataContext(drizzleDb);
+    }
+
+	protected onModelCreating(modelBuilder: DbModelBuilder): void {
+		modelBuilder.of(UsersEntity, (entity) => {
+			entity.addRelation({
+				childEntity: UserAddressEntity,
+				fieldName: nameof<UsersEntity>("userAddress"),
+				type: 'one',
+				mandatory: false,
+				joinStatement: function (args) {
+					return eq(args.parent.id, args.child.userId);
+				}
+			})
+		});
+	}
+}
+```
+
+DataContext can be created by using the static "create" method and is not a subject to dependency injection for now
+
+### **pre-commit tests**
+
+To activate *pre-commit* hook for type-check and eslint test purposes you need to copy `git_hooks/pre-commit` file to `.git/hooks` folder.

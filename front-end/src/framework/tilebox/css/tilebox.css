@@ -1,0 +1,459 @@
+﻿.tile-object {
+    position: relative;
+    display: table;
+    width: 100%;
+}
+
+.tilebox-header {
+    margin-bottom: -1px;
+}
+
+.tilebox {
+    padding: 2px;
+    border: 0px;
+    text-decoration: none;
+}
+
+a.tilebox:hover {
+    text-decoration: none;
+}
+
+.tilebox-icon {
+    font-size: 70px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 70px;
+    text-align: center;
+    height: 70px;
+    display: inline-block;
+}
+
+.tilebox-wrap {
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 3px;
+    border: 1px solid black;
+    background: #fafafa;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.1),
+        0 1px 2px rgba(0, 0, 0, 0.18) !important;
+    transition:
+        box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+        background 250ms linear,
+        color 250ms linear,
+        border-color 250ms linear;
+}
+
+.tilebox-wrap:hover,
+.tilebox-wrap:active {
+    background: #f2f2f2;
+}
+
+.tilebox-title {
+    height: 56px;
+    display: table-row;
+    text-align: center;
+    width: 100%;
+    /* margin-top: -5px; */
+}
+
+.tilebox-title div {
+    font-size: 20px;
+    white-space: normal;
+    height: 56px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    line-height: 22px;
+    padding-bottom: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: -30px;
+    letter-spacing: -1px;
+}
+
+.tilebox-subcontent {
+    display: table-row;
+    text-align: center;
+    width: 100%;
+}
+
+.tilebox-subcontent div {
+    font-size: 11px;
+    white-space: normal;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    line-height: 12px;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    height: 80px;
+}
+
+.tilebox-subcontent-inner {
+    display: block;
+    /* min-height: 80px; */
+}
+
+.row.tb-4-cols {
+    margin: 0;
+}
+
+/*  Red */
+.tlb-red {
+    color: #d84a38;
+    text-shadow: none;
+    border-color: #d84a38 !important;
+    background: #fff5f4;
+}
+
+.tlb-red:hover,
+.tlb-red:focus,
+.tlb-red:active,
+.tlb-red.active,
+.tlb-red[disabled],
+.tlb-red.disabled {
+    border-color: #bb2413 !important;
+    color: #bb2413 !important;
+    background: #ffeae8;
+}
+
+/*  Blue */
+.tlb-blue,
+.ajax-file-upload {
+    color: #348be3;
+    text-shadow: none;
+    border-color: #348be3;
+    background: #f5faff;
+}
+
+.tlb-blue:hover,
+.tlb-blue:focus,
+.tlb-blue:active,
+.tlb-blue.active,
+.tlb-blue[disabled],
+.tlb-blue.disabled,
+.ajax-file-upload:hover {
+    border-color: #2174c7 !important;
+    color: #2174c7;
+    background: #e8f4ff;
+}
+
+.tlb-green {
+    color: #35aa47;
+    text-shadow: none;
+    border-color: #35aa47 !important;
+    background: #fcfffc;
+}
+
+.tlb-green:hover,
+.tlb-green:focus,
+.tlb-green:active,
+.tlb-green.active,
+.tlb-green.disabled,
+.tlb-green[disabled] {
+    border-color: #1d943b !important;
+    color: #1d943b !important;
+    background: #e6f9e6;
+}
+
+.tlb-green.btn-outline {
+    border-color: green !important;
+}
+
+.tlb-purple {
+    color: #852b99;
+    text-shadow: none;
+    background: #fef9ff;
+    border-color: #852b99 !important;
+}
+
+.tlb-purple:hover,
+.tlb-purple:focus,
+.tlb-purple:active,
+.tlb-purple.active,
+.tlb-purple.disabled,
+.tlb-purple[disabled] {
+    background: #f3ecf5;
+    border-color: #6d1b81 !important;
+    color: #6d1b81 !important;
+}
+
+.tlb-yellow {
+    color: #e78d00;
+    text-shadow: none;
+    border-color: #e78d00 !important;
+    background: #fffdfa;
+}
+
+.tlb-yellow:hover,
+.tlb-yellow:focus,
+.tlb-yellow:active,
+.tlb-yellow.active,
+.tlb-yellow.disabled,
+.tlb-yellow[disabled] {
+    border-color: #eca22e !important;
+    color: #eca22e !important;
+    background: #fffaf2;
+}
+
+.tlb-black {
+    color: #555555 !important;
+    text-shadow: none;
+    border-color: #555555 !important;
+    background: #f5f5f5;
+}
+
+.tlb-black:hover,
+.tlb-black:focus,
+.tlb-black:active,
+.tlb-black.active,
+.tlb-black.disabled,
+.tlb-black[disabled] {
+    border-color: #222222 !important;
+    color: #222222 !important;
+    background: #f1efef;
+}
+
+.tlb-rusty {
+    color: rgb(139, 60, 45) !important;
+    text-shadow: none;
+    border-color: rgb(139, 60, 45) !important;
+    background: #fffbfa;
+}
+
+.tlb-rusty:hover,
+.tlb-rusty:focus,
+.tlb-rusty:active,
+.tlb-rusty.active,
+.tlb-rusty.disabled,
+.tlb-rusty[disabled] {
+    border-color: rgb(107, 43, 31) !important;
+    color: rgb(107, 43, 31) !important;
+    background: #f5eae7;
+}
+
+.tlb-darkpurple {
+    color: #3e0d4a !important;
+    text-shadow: none;
+    border-color: #3e0d4a !important;
+    background: #f8f3f9;
+}
+
+.tlb-darkpurple:hover,
+.tlb-darkpurple:focus,
+.tlb-darkpurple:active,
+.tlb-darkpurple.active,
+.tlb-darkpurple.disabled,
+.tlb-darkpurple[disabled] {
+    border-color: #27072f !important;
+    color: #27072f !important;
+    background: #f3e3f7;
+}
+
+.tlb-turquoise {
+    border-color: rgb(42, 155, 165) !important;
+    color: white;
+}
+
+.tlb-turquoise:hover,
+.tlb-turquoise:focus,
+.tlb-turquoise:active,
+.tlb-turquoise.active,
+.tlb-turquoise.disabled,
+.tlb-turquoise[disabled] {
+    border-color: #1d8c96 !important;
+}
+
+.tlb-darkblue {
+    border-color: #4b8ac0 !important;
+}
+
+.tlb-darkblue:hover,
+.tlb-darkblue:focus,
+.tlb-darkblue:active,
+.tlb-darkblue.active,
+.tlb-darkblue.disabled,
+.tlb-darkblue[disabled] {
+    border-color: #3b7bb1 !important;
+}
+
+.tlb-khaki {
+    border-color: #c0754b !important;
+}
+
+.tlb-khaki:hover,
+.tlb-khaki:focus,
+.tlb-khaki:active,
+.tlb-khaki.active,
+.tlb-khaki.disabled,
+.tlb-khaki[disabled] {
+    border-color: #a75e35 !important;
+}
+
+.tlb-brown {
+    border-color: #8b3c2d !important;
+}
+
+.tlb-brown:hover,
+.tlb-brown:focus,
+.tlb-brown:active,
+.tlb-brown.active,
+.tlb-brown.disabled,
+.tlb-brown[disabled] {
+    border-color: #733124 !important;
+}
+
+@media (max-width: 991px) {
+    .tilebox-wrap {
+        text-align: left;
+        position: relative;
+        height: 90px;
+        width: 100%;
+    }
+
+    .tilebox-icon {
+        font-size: 64px;
+        display: inline-block;
+        margin-left: 5px;
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+
+    .tile-object {
+        display: inline-block;
+        position: absolute;
+        top: -10px;
+    }
+
+    .tilebox-iconsize {
+        vertical-align: middle;
+        padding-bottom: 25px;
+    }
+
+    .tilebox-subcontent div {
+        height: 45px;
+    }
+
+    .tilebox-subcontent-inner {
+        padding-right: 100px;
+    }
+
+    .tilebox-title div {
+        height: 100%;
+        padding-right: 100px;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .tilebox-subcontent-inner {
+        margin-top: -15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .mobile-spacer {
+        height: 360px;
+    }
+
+    .tilebox-subcontent div {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+@media (max-width: 420px) {
+    .tilebox-subcontent div {
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+}
+
+@media (max-width: 400px) {
+    .tilebox-wrap {
+        height: 110px;
+    }
+
+    .tilebox-subcontent div {
+        height: 60px;
+    }
+}
+
+@media (max-width: 340px) {
+    .tilebox-wrap {
+        height: 130px;
+    }
+
+    .tilebox-subcontent div {
+        height: 60px;
+    }
+
+    .tilebox-title {
+        display: table;
+        margin-left: -5px;
+    }
+
+    .tilebox-title,
+    .tilebox-title div {
+        height: 70px;
+        vertical-align: middle;
+    }
+
+    .tilebox-subcontent {
+        position: absolute;
+        left: -85px;
+        top: 65px;
+    }
+
+    .tilebox-subcontent-inner {
+        padding-right: 0px;
+        padding-top: 23px;
+    }
+}
+
+@media (min-width: 1430px) {
+    .tb-4-cols .tilebox-title div {
+        height: 100%;
+    }
+
+    .tb-4-cols .tilebox-title div {
+        font-size: 24px;
+    }
+
+    .tb-4-cols .tilebox-title div {
+        font-size: 24px;
+    }
+
+    .tb-4-cols .tilebox-subcontent div {
+        font-size: 13px;
+        line-height: 14px;
+    }
+}
+
+@media (min-width: 1660px) {
+    .tile-object {
+        margin-top: -10px;
+    }
+
+    .tb-4-cols .tilebox-title div {
+        font-size: 26px;
+    }
+
+    .tb-4-cols .tilebox-subcontent div {
+        height: 62px;
+    }
+
+    .tb-4-cols .tilebox-subcontent div {
+        padding-bottom: 0px;
+        padding-top: 10px;
+    }
+}

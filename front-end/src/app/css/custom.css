@@ -1,0 +1,4798 @@
+html {
+    --tmr-corp-color: #c72328;
+    --placeholder-color: #a1a5b7;
+    --placeholder-width: 400;
+    --form-color-background: #f3f3f3;
+    --form-border: 1px solid var(--form-color-background);
+    --form-border-radius: 8px;
+    --form-input-fontsize: 15px;
+    --form-input-color: #5e6278;
+    --form-input-fontweight: 500;
+    --form-input-padding: 7px 17px;
+    --font-typeface: Poppins, Helvetica, "sans-serif";
+    --navbar-font-size: 13px;
+    --datatable-fullheight-container-offset: 40px;
+    --datatable-fullheight-container-buttons-offset: 90px;
+    --datatable-fullheight-desktop-rows-offset: -20px;
+    --datatable-fullheight-mobile-rows-offset: 80px;
+}
+
+html,
+body {
+    font-weight: 400;
+    font-family: var(--font-typeface);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-size: 16px;
+}
+
+.navbar {
+    font-family: var(--font-typeface) !important;
+}
+
+.navbar .dropdown-toggle,
+.navbar .navbar-item {
+    color: #5e6278 !important;
+    font-size: var(--navbar-font-size);
+    font-weight: 500;
+}
+
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item .nav-link i {
+    font-size: var(--navbar-font-size);
+}
+
+.sidebar .nav .nav-item.active > .nav-link .menu-title {
+    color: #dbdbdb;
+}
+
+.sidebar .nav .nav-item.active > .nav-link i,
+.sidebar .nav .nav-item.active > .nav-link svg {
+    color: var(--tmr-corp-color);
+}
+
+.sidebar .nav .nav-item.active > .nav-link:before {
+    background: var(--tmr-corp-color);
+}
+
+.navbar .navbar-brand-wrapper .navbar-brand img {
+    width: auto;
+}
+
+.sidebar .nav.sub-menu .nav-item .nav-link.router-link-active {
+    color: var(--tmr-corp-color);
+}
+
+.topbar-menu-item,
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .dropdown-menu.navbar-dropdown .dropdown-item.topbar-menu-item,
+.dropdown-item {
+    cursor: pointer;
+    display: block;
+    align-items: center;
+    padding: 0;
+    flex: 0 0 100%;
+    padding: 10px 17px;
+    transition: none;
+    outline: none !important;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: inherit;
+    color: #5e6278;
+}
+
+.topbar-menu-item.active,
+.topbar-menu-item:active,
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .dropdown-menu.navbar-dropdown .dropdown-item.topbar-menu-item.active,
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .dropdown-menu.navbar-dropdown .dropdown-item.topbar-menu-item:active {
+    color: var(--tmr-corp-color);
+    background-color: rgba(245, 248, 250, 0.8);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #0d6efd;
+}
+
+.dropdown .dropdown-toggle:after {
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 0;
+    font: normal normal normal 24px/1 "Material Design Icons";
+    content: "\f35d";
+    width: auto;
+    height: auto;
+    vertical-align: baseline;
+    font-size: 0.75rem;
+    color: #aab2bd;
+    font-size: 1.25rem;
+    content: "\f35d";
+}
+
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-language .nav-link .nav-language-text {
+    margin-left: 4px;
+}
+
+.sidebar {
+    visibility: visible !important;
+}
+
+.inv-full-screen .main-panel {
+    width: 100%;
+}
+
+.inv-no-menu .main-panel {
+    width: 100%;
+}
+
+.form-item-wrapper {
+    margin-bottom: 10px;
+}
+
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple {
+    height: auto !important;
+    width: 100% !important;
+    min-height: 35px !important;
+    padding-top: 3px;
+}
+
+.form-control,
+.custom-form-wrapper,
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple,
+.form-control.localized-input-wrap {
+    display: block;
+    width: 100%;
+    line-height: 1.5;
+    color: #5e6278;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    appearance: none;
+    border-radius: var(--form-border-radius);
+    box-shadow: inset 0 1px 2px rgb(0 0 0 / 8%);
+    transition:
+        border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+    min-height: 45px;
+    border-radius: 0.625rem;
+    box-shadow: none !important;
+    padding: var(--form-input-padding);
+    background-color: var(--form-color-background);
+    border: var(--form-border);
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+    margin-bottom: 1px;
+}
+
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple {
+    background-color: var(--form-color-background) !important;
+    border: var(--form-border) !important;
+    border-radius: var(--form-border-radius) !important;
+}
+
+.dt-root .select2-container--default .select2-selection--single,
+.dt-root .select2-container--default .select2-selection--multiple {
+    background-color: #ffffff !important;
+    min-height: 25px !important;
+}
+
+.form-control,
+.custom-form-wrapper,
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--single .select2-selection__rendered,
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+    font-size: var(--form-input-fontsize) !important;
+    color: var(--form-input-color) !important;
+    font-weight: var(--form-input-fontweight) !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered,
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+    padding-left: 0 !important;
+    padding-right: 5px !important;
+}
+
+.form-control.localized-input-wrap.lii-placeholder,
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: var(--placeholder-color) !important;
+    font-weight: var(--placeholder-width);
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__clear {
+    margin-right: 0 !important;
+}
+
+.form-control.localized-input-wrap:not(.lii-more) {
+    line-height: 2;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: #888 transparent transparent transparent;
+    border-style: solid;
+    border-width: 5px 4px 0 4px;
+    height: 0;
+    left: 50%;
+    margin-left: -4px;
+    margin-top: -2px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 6px !important;
+}
+
+.select2-dropdown .select2-search {
+    padding: 6.5px 16.5px;
+    margin: 0 0 0.5rem 0;
+}
+
+.select2-dropdown .select2-search .select2-search__field {
+    background-color: #ffffff;
+    padding: 7.15px 9.75px;
+    color: #5e6278;
+    font-size: 15px;
+    border: 1px solid #e4e6ef !important;
+    border-radius: 4px !important;
+    line-height: 18px;
+    outline: 0 !important;
+}
+
+.select2-dropdown .select2-results__option {
+    color: #5e6278;
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+    padding: 9.75px 16.25px;
+    margin: 0 0;
+}
+
+.select2-dropdown .select2-results__option.select2-results__option--selected {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 11'><path fill='%23FFFFFF' d='M4.89557 6.49823L2.79487 4.26513C2.26967 3.70683 1.38251 3.70683 0.857309 4.26513C0.375593 4.77721 0.375593 5.57574 0.857309 6.08781L4.74989 10.2257C5.14476 10.6455 5.81176 10.6455 6.20663 10.2257L13.1427 2.85252C13.6244 2.34044 13.6244 1.54191 13.1427 1.02984C12.6175 0.471537 11.7303 0.471536 11.2051 1.02984L6.06096 6.49823C5.74506 6.83403 5.21146 6.83403 4.89557 6.49823Z'/></svg>");
+    background-size: 0.8rem;
+    background-position: center right 1.25rem;
+    background-color: #009ef7;
+    color: #ffffff;
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.col-form-label {
+    font-weight: 500 !important;
+    padding-top: calc(0.75rem + 1px);
+    padding-bottom: calc(0.75rem + 1px);
+    margin-bottom: 0;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #3f4254;
+    font-size: 14px;
+}
+
+.swal2-icon.swal2-error .swal2-x-mark {
+    position: relative;
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.dropdown.show > .form-control.form-control-solid,
+.form-control:active,
+.form-control.active,
+.form-control:focus,
+.form-control.focus {
+    background-color: #eef3f7;
+    border-color: #eef3f7;
+    color: #5e6278;
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.form-control::placeholder,
+.select2-search__field::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--placeholder-color);
+    opacity: 1;
+    /* Firefox */
+    font-weight: var(--placeholder-width);
+}
+
+.form-control:-ms-input-placeholder,
+.select2-search__field:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var(--placeholder-color);
+    font-weight: var(--placeholder-width);
+}
+
+.form-control::-ms-input-placeholder,
+.select2-search__field::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: var(--placeholder-color);
+    font-weight: var(--placeholder-width);
+}
+
+div.fieldset-control > div.fieldset-legend {
+    text-transform: none !important;
+    font-weight: 600 !important;
+}
+
+.input-spinner-wrap button {
+    color: #6c757d;
+    border-color: #dbdbdb;
+    background: #dbdbdb;
+}
+
+button.btn.btn-simple.btn-sm.btn-simple.btn-icon {
+    background-color: var(--form-color-background);
+    border: 0;
+}
+
+.dt-table.dt-table-mode table > thead > tr.dt-header th,
+.dt-table.dt-table-mode table > thead > tr.dt-header-filter th {
+    text-transform: capitalize !important;
+}
+
+.dt-table.dt-table-mode table > tbody > tr > td {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    color: #7e8299 !important;
+}
+
+.dt-button.dropdown .dropdown-selectable-section i {
+    float: right;
+}
+
+.tabs-normal-mode .nav-link {
+    color: #4f525c;
+}
+
+.tabs-normal-mode .nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    background-color: #e4e6ef !important;
+    color: #3f4254;
+}
+
+.btn {
+    font-size: 14px;
+    padding: 7px 14px;
+}
+
+.btn-check:checked + .btn.btn-white i,
+.btn-check:checked + .btn.btn-white .svg-icon,
+.btn-check:active + .btn.btn-white i,
+.btn-check:active + .btn.btn-white .svg-icon,
+.btn.btn-white:focus:not(.btn-active) i,
+.btn.btn-white:focus:not(.btn-active) .svg-icon,
+.btn.btn-white:hover:not(.btn-active) i,
+.btn.btn-white:hover:not(.btn-active) .svg-icon,
+.btn.btn-white:active:not(.btn-active) i,
+.btn.btn-white:active:not(.btn-active) .svg-icon,
+.btn.btn-white.active i,
+.btn.btn-white.active .svg-icon,
+.btn.btn-white.show i,
+.btn.btn-white.show .svg-icon,
+.show > .btn.btn-white i,
+.show > .btn.btn-white .svg-icon {
+    color: #7e8299;
+}
+
+.btn-check:checked + .btn.btn-white.dropdown-toggle:after,
+.btn-check:active + .btn.btn-white.dropdown-toggle:after,
+.btn.btn-white:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-white:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-white:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-white.active.dropdown-toggle:after,
+.btn.btn-white.show.dropdown-toggle:after,
+.show > .btn.btn-white.dropdown-toggle:after {
+    color: #7e8299;
+}
+
+.btn.btn-bg-white {
+    border-color: #ffffff;
+    background-color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-active-white,
+.btn-check:active + .btn.btn-active-white,
+.btn.btn-active-white:focus:not(.btn-active),
+.btn.btn-active-white:hover:not(.btn-active),
+.btn.btn-active-white:active:not(.btn-active),
+.btn.btn-active-white.active,
+.btn.btn-active-white.show,
+.show > .btn.btn-active-white {
+    color: #7e8299;
+    border-color: #ffffff;
+    background-color: #ffffff !important;
+}
+
+.btn-check:checked + .btn.btn-active-white i,
+.btn-check:checked + .btn.btn-active-white .svg-icon,
+.btn-check:active + .btn.btn-active-white i,
+.btn-check:active + .btn.btn-active-white .svg-icon,
+.btn.btn-active-white:focus:not(.btn-active) i,
+.btn.btn-active-white:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-white:hover:not(.btn-active) i,
+.btn.btn-active-white:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-white:active:not(.btn-active) i,
+.btn.btn-active-white:active:not(.btn-active) .svg-icon,
+.btn.btn-active-white.active i,
+.btn.btn-active-white.active .svg-icon,
+.btn.btn-active-white.show i,
+.btn.btn-active-white.show .svg-icon,
+.show > .btn.btn-active-white i,
+.show > .btn.btn-active-white .svg-icon {
+    color: #7e8299;
+}
+
+.btn-check:checked + .btn.btn-active-white.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-white.dropdown-toggle:after,
+.btn.btn-active-white:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-white:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-white:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-white.active.dropdown-toggle:after,
+.btn.btn-active-white.show.dropdown-toggle:after,
+.show > .btn.btn-active-white.dropdown-toggle:after {
+    color: #7e8299;
+}
+
+.btn.btn-light {
+    color: #7e8299;
+    border-color: #f5f8fa;
+    background-color: #f5f8fa;
+}
+
+.btn.btn-light i,
+.btn.btn-light .svg-icon {
+    color: #7e8299;
+}
+
+.btn.btn-light.dropdown-toggle:after {
+    color: #7e8299;
+}
+
+.btn-check:checked + .btn.btn-light,
+.btn-check:active + .btn.btn-light,
+.btn.btn-light:focus:not(.btn-active),
+.btn.btn-light:hover:not(.btn-active),
+.btn.btn-light:active:not(.btn-active),
+.btn.btn-light.active,
+.btn.btn-light.show,
+.show > .btn.btn-light {
+    color: #7e8299;
+    border-color: #eff2f5;
+    background-color: #eff2f5 !important;
+}
+
+.btn-check:checked + .btn.btn-light i,
+.btn-check:checked + .btn.btn-light .svg-icon,
+.btn-check:active + .btn.btn-light i,
+.btn-check:active + .btn.btn-light .svg-icon,
+.btn.btn-light:focus:not(.btn-active) i,
+.btn.btn-light:focus:not(.btn-active) .svg-icon,
+.btn.btn-light:hover:not(.btn-active) i,
+.btn.btn-light:hover:not(.btn-active) .svg-icon,
+.btn.btn-light:active:not(.btn-active) i,
+.btn.btn-light:active:not(.btn-active) .svg-icon,
+.btn.btn-light.active i,
+.btn.btn-light.active .svg-icon,
+.btn.btn-light.show i,
+.btn.btn-light.show .svg-icon,
+.show > .btn.btn-light i,
+.show > .btn.btn-light .svg-icon {
+    color: #7e8299;
+}
+
+.btn-check:checked + .btn.btn-light.dropdown-toggle:after,
+.btn-check:active + .btn.btn-light.dropdown-toggle:after,
+.btn.btn-light:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light.active.dropdown-toggle:after,
+.btn.btn-light.show.dropdown-toggle:after,
+.show > .btn.btn-light.dropdown-toggle:after {
+    color: #7e8299;
+}
+
+.btn.btn-bg-light {
+    border-color: #f5f8fa;
+    background-color: #f5f8fa;
+}
+
+.btn-check:checked + .btn.btn-active-light,
+.btn-check:active + .btn.btn-active-light,
+.btn.btn-active-light:focus:not(.btn-active),
+.btn.btn-active-light:hover:not(.btn-active),
+.btn.btn-active-light:active:not(.btn-active),
+.btn.btn-active-light.active,
+.btn.btn-active-light.show,
+.show > .btn.btn-active-light {
+    color: #7e8299;
+    border-color: #f5f8fa;
+    background-color: #f5f8fa !important;
+}
+
+.btn-check:checked + .btn.btn-active-light i,
+.btn-check:checked + .btn.btn-active-light .svg-icon,
+.btn-check:active + .btn.btn-active-light i,
+.btn-check:active + .btn.btn-active-light .svg-icon,
+.btn.btn-active-light:focus:not(.btn-active) i,
+.btn.btn-active-light:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-light:hover:not(.btn-active) i,
+.btn.btn-active-light:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-light:active:not(.btn-active) i,
+.btn.btn-active-light:active:not(.btn-active) .svg-icon,
+.btn.btn-active-light.active i,
+.btn.btn-active-light.active .svg-icon,
+.btn.btn-active-light.show i,
+.btn.btn-active-light.show .svg-icon,
+.show > .btn.btn-active-light i,
+.show > .btn.btn-active-light .svg-icon {
+    color: #7e8299;
+}
+
+.btn-check:checked + .btn.btn-active-light.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-light.dropdown-toggle:after,
+.btn.btn-active-light:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-light:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-light:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-light.active.dropdown-toggle:after,
+.btn.btn-active-light.show.dropdown-toggle:after,
+.show > .btn.btn-active-light.dropdown-toggle:after {
+    color: #7e8299;
+}
+
+.btn.btn-primary {
+    color: #ffffff;
+    border-color: #009ef7;
+    background-color: #009ef7;
+}
+
+.btn.btn-primary i,
+.btn.btn-primary .svg-icon {
+    color: #ffffff;
+}
+
+.btn.btn-primary.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-primary,
+.btn-check:active + .btn.btn-primary,
+.btn.btn-primary:focus:not(.btn-active),
+.btn.btn-primary:hover:not(.btn-active),
+.btn.btn-primary:active:not(.btn-active),
+.btn.btn-primary.active,
+.btn.btn-primary.show,
+.show > .btn.btn-primary {
+    color: #ffffff;
+    border-color: #0095e8;
+    background-color: #0095e8 !important;
+}
+
+.btn-check:checked + .btn.btn-primary i,
+.btn-check:checked + .btn.btn-primary .svg-icon,
+.btn-check:active + .btn.btn-primary i,
+.btn-check:active + .btn.btn-primary .svg-icon,
+.btn.btn-primary:focus:not(.btn-active) i,
+.btn.btn-primary:focus:not(.btn-active) .svg-icon,
+.btn.btn-primary:hover:not(.btn-active) i,
+.btn.btn-primary:hover:not(.btn-active) .svg-icon,
+.btn.btn-primary:active:not(.btn-active) i,
+.btn.btn-primary:active:not(.btn-active) .svg-icon,
+.btn.btn-primary.active i,
+.btn.btn-primary.active .svg-icon,
+.btn.btn-primary.show i,
+.btn.btn-primary.show .svg-icon,
+.show > .btn.btn-primary i,
+.show > .btn.btn-primary .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-primary.dropdown-toggle:after,
+.btn-check:active + .btn.btn-primary.dropdown-toggle:after,
+.btn.btn-primary:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-primary:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-primary:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-primary.active.dropdown-toggle:after,
+.btn.btn-primary.show.dropdown-toggle:after,
+.show > .btn.btn-primary.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn.btn-light-primary {
+    color: #009ef7;
+    border-color: #f1faff;
+    background-color: #f1faff;
+}
+
+.btn.btn-light-primary i,
+.btn.btn-light-primary .svg-icon {
+    color: #009ef7;
+}
+
+.btn.btn-light-primary.dropdown-toggle:after {
+    color: #009ef7;
+}
+
+.btn-check:checked + .btn.btn-light-primary,
+.btn-check:active + .btn.btn-light-primary,
+.btn.btn-light-primary:focus:not(.btn-active),
+.btn.btn-light-primary:hover:not(.btn-active),
+.btn.btn-light-primary:active:not(.btn-active),
+.btn.btn-light-primary.active,
+.btn.btn-light-primary.show,
+.show > .btn.btn-light-primary {
+    color: #ffffff;
+    border-color: #009ef7;
+    background-color: #009ef7 !important;
+}
+
+.btn-check:checked + .btn.btn-light-primary i,
+.btn-check:checked + .btn.btn-light-primary .svg-icon,
+.btn-check:active + .btn.btn-light-primary i,
+.btn-check:active + .btn.btn-light-primary .svg-icon,
+.btn.btn-light-primary:focus:not(.btn-active) i,
+.btn.btn-light-primary:focus:not(.btn-active) .svg-icon,
+.btn.btn-light-primary:hover:not(.btn-active) i,
+.btn.btn-light-primary:hover:not(.btn-active) .svg-icon,
+.btn.btn-light-primary:active:not(.btn-active) i,
+.btn.btn-light-primary:active:not(.btn-active) .svg-icon,
+.btn.btn-light-primary.active i,
+.btn.btn-light-primary.active .svg-icon,
+.btn.btn-light-primary.show i,
+.btn.btn-light-primary.show .svg-icon,
+.show > .btn.btn-light-primary i,
+.show > .btn.btn-light-primary .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-light-primary.dropdown-toggle:after,
+.btn-check:active + .btn.btn-light-primary.dropdown-toggle:after,
+.btn.btn-light-primary:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-primary:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-primary:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-primary.active.dropdown-toggle:after,
+.btn.btn-light-primary.show.dropdown-toggle:after,
+.show > .btn.btn-light-primary.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn.btn-bg-primary {
+    border-color: #009ef7;
+    background-color: #009ef7;
+}
+
+.btn-check:checked + .btn.btn-active-primary,
+.btn-check:active + .btn.btn-active-primary,
+.btn.btn-active-primary:focus:not(.btn-active),
+.btn.btn-active-primary:hover:not(.btn-active),
+.btn.btn-active-primary:active:not(.btn-active),
+.btn.btn-active-primary.active,
+.btn.btn-active-primary.show,
+.show > .btn.btn-active-primary {
+    color: #ffffff;
+    border-color: #009ef7;
+    background-color: #009ef7 !important;
+}
+
+.btn-check:checked + .btn.btn-active-primary i,
+.btn-check:checked + .btn.btn-active-primary .svg-icon,
+.btn-check:active + .btn.btn-active-primary i,
+.btn-check:active + .btn.btn-active-primary .svg-icon,
+.btn.btn-active-primary:focus:not(.btn-active) i,
+.btn.btn-active-primary:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-primary:hover:not(.btn-active) i,
+.btn.btn-active-primary:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-primary:active:not(.btn-active) i,
+.btn.btn-active-primary:active:not(.btn-active) .svg-icon,
+.btn.btn-active-primary.active i,
+.btn.btn-active-primary.active .svg-icon,
+.btn.btn-active-primary.show i,
+.btn.btn-active-primary.show .svg-icon,
+.show > .btn.btn-active-primary i,
+.show > .btn.btn-active-primary .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-active-primary.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-primary.dropdown-toggle:after,
+.btn.btn-active-primary:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-primary:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-primary:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-primary.active.dropdown-toggle:after,
+.btn.btn-active-primary.show.dropdown-toggle:after,
+.show > .btn.btn-active-primary.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-active-light-primary,
+.btn-check:active + .btn.btn-active-light-primary,
+.btn.btn-active-light-primary:focus:not(.btn-active),
+.btn.btn-active-light-primary:hover:not(.btn-active),
+.btn.btn-active-light-primary:active:not(.btn-active),
+.btn.btn-active-light-primary.active,
+.btn.btn-active-light-primary.show,
+.show > .btn.btn-active-light-primary {
+    color: #009ef7;
+    border-color: #f1faff;
+    background-color: #f1faff !important;
+}
+
+.btn-check:checked + .btn.btn-active-light-primary i,
+.btn-check:checked + .btn.btn-active-light-primary .svg-icon,
+.btn-check:active + .btn.btn-active-light-primary i,
+.btn-check:active + .btn.btn-active-light-primary .svg-icon,
+.btn.btn-active-light-primary:focus:not(.btn-active) i,
+.btn.btn-active-light-primary:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-light-primary:hover:not(.btn-active) i,
+.btn.btn-active-light-primary:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-light-primary:active:not(.btn-active) i,
+.btn.btn-active-light-primary:active:not(.btn-active) .svg-icon,
+.btn.btn-active-light-primary.active i,
+.btn.btn-active-light-primary.active .svg-icon,
+.btn.btn-active-light-primary.show i,
+.btn.btn-active-light-primary.show .svg-icon,
+.show > .btn.btn-active-light-primary i,
+.show > .btn.btn-active-light-primary .svg-icon {
+    color: #009ef7;
+}
+
+.btn-check:checked + .btn.btn-active-light-primary.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-light-primary.dropdown-toggle:after,
+.btn.btn-active-light-primary:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-light-primary:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-light-primary:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-light-primary.active.dropdown-toggle:after,
+.btn.btn-active-light-primary.show.dropdown-toggle:after,
+.show > .btn.btn-active-light-primary.dropdown-toggle:after {
+    color: #009ef7;
+}
+
+.btn.btn-active-light-primary.btn-outline:not(.btn-outline-default) {
+    border-color: #009ef7 !important;
+}
+
+.btn.btn-secondary {
+    color: #3f4254;
+    border-color: #e4e6ef;
+    background-color: #e4e6ef;
+}
+
+.btn.btn-secondary i,
+.btn.btn-secondary .svg-icon {
+    color: #3f4254;
+}
+
+.btn.btn-secondary.dropdown-toggle:after {
+    color: #3f4254;
+}
+
+.btn-check:checked + .btn.btn-secondary,
+.btn-check:active + .btn.btn-secondary,
+.btn.btn-secondary:focus:not(.btn-active),
+.btn.btn-secondary:hover:not(.btn-active),
+.btn.btn-secondary:active:not(.btn-active),
+.btn.btn-secondary.active,
+.btn.btn-secondary.show,
+.show > .btn.btn-secondary {
+    color: #3f4254;
+    border-color: #b5b5c3;
+    background-color: #b5b5c3 !important;
+}
+
+.btn-check:checked + .btn.btn-secondary i,
+.btn-check:checked + .btn.btn-secondary .svg-icon,
+.btn-check:active + .btn.btn-secondary i,
+.btn-check:active + .btn.btn-secondary .svg-icon,
+.btn.btn-secondary:focus:not(.btn-active) i,
+.btn.btn-secondary:focus:not(.btn-active) .svg-icon,
+.btn.btn-secondary:hover:not(.btn-active) i,
+.btn.btn-secondary:hover:not(.btn-active) .svg-icon,
+.btn.btn-secondary:active:not(.btn-active) i,
+.btn.btn-secondary:active:not(.btn-active) .svg-icon,
+.btn.btn-secondary.active i,
+.btn.btn-secondary.active .svg-icon,
+.btn.btn-secondary.show i,
+.btn.btn-secondary.show .svg-icon,
+.show > .btn.btn-secondary i,
+.show > .btn.btn-secondary .svg-icon {
+    color: #3f4254;
+}
+
+.btn-check:checked + .btn.btn-secondary.dropdown-toggle:after,
+.btn-check:active + .btn.btn-secondary.dropdown-toggle:after,
+.btn.btn-secondary:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-secondary:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-secondary:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-secondary.active.dropdown-toggle:after,
+.btn.btn-secondary.show.dropdown-toggle:after,
+.show > .btn.btn-secondary.dropdown-toggle:after {
+    color: #3f4254;
+}
+
+.btn.btn-bg-secondary {
+    border-color: #e4e6ef;
+    background-color: #e4e6ef;
+}
+
+.btn-check:checked + .btn.btn-active-secondary,
+.btn-check:active + .btn.btn-active-secondary,
+.btn.btn-active-secondary:focus:not(.btn-active),
+.btn.btn-active-secondary:hover:not(.btn-active),
+.btn.btn-active-secondary:active:not(.btn-active),
+.btn.btn-active-secondary.active,
+.btn.btn-active-secondary.show,
+.show > .btn.btn-active-secondary {
+    color: #3f4254;
+    border-color: #e4e6ef;
+    background-color: #e4e6ef !important;
+}
+
+.btn-check:checked + .btn.btn-active-secondary i,
+.btn-check:checked + .btn.btn-active-secondary .svg-icon,
+.btn-check:active + .btn.btn-active-secondary i,
+.btn-check:active + .btn.btn-active-secondary .svg-icon,
+.btn.btn-active-secondary:focus:not(.btn-active) i,
+.btn.btn-active-secondary:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-secondary:hover:not(.btn-active) i,
+.btn.btn-active-secondary:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-secondary:active:not(.btn-active) i,
+.btn.btn-active-secondary:active:not(.btn-active) .svg-icon,
+.btn.btn-active-secondary.active i,
+.btn.btn-active-secondary.active .svg-icon,
+.btn.btn-active-secondary.show i,
+.btn.btn-active-secondary.show .svg-icon,
+.show > .btn.btn-active-secondary i,
+.show > .btn.btn-active-secondary .svg-icon {
+    color: #3f4254;
+}
+
+.btn-check:checked + .btn.btn-active-secondary.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-secondary.dropdown-toggle:after,
+.btn.btn-active-secondary:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-secondary:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-secondary:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-secondary.active.dropdown-toggle:after,
+.btn.btn-active-secondary.show.dropdown-toggle:after,
+.show > .btn.btn-active-secondary.dropdown-toggle:after {
+    color: #3f4254;
+}
+
+.btn.btn-success {
+    color: #ffffff;
+    border-color: #50cd89;
+    background-color: #50cd89;
+}
+
+.btn.btn-success i,
+.btn.btn-success .svg-icon {
+    color: #ffffff;
+}
+
+.btn.btn-success.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-success,
+.btn-check:active + .btn.btn-success,
+.btn.btn-success:focus:not(.btn-active),
+.btn.btn-success:hover:not(.btn-active),
+.btn.btn-success:active:not(.btn-active),
+.btn.btn-success.active,
+.btn.btn-success.show,
+.show > .btn.btn-success {
+    color: #ffffff;
+    border-color: #47be7d;
+    background-color: #47be7d !important;
+}
+
+.btn-check:checked + .btn.btn-success i,
+.btn-check:checked + .btn.btn-success .svg-icon,
+.btn-check:active + .btn.btn-success i,
+.btn-check:active + .btn.btn-success .svg-icon,
+.btn.btn-success:focus:not(.btn-active) i,
+.btn.btn-success:focus:not(.btn-active) .svg-icon,
+.btn.btn-success:hover:not(.btn-active) i,
+.btn.btn-success:hover:not(.btn-active) .svg-icon,
+.btn.btn-success:active:not(.btn-active) i,
+.btn.btn-success:active:not(.btn-active) .svg-icon,
+.btn.btn-success.active i,
+.btn.btn-success.active .svg-icon,
+.btn.btn-success.show i,
+.btn.btn-success.show .svg-icon,
+.show > .btn.btn-success i,
+.show > .btn.btn-success .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-success.dropdown-toggle:after,
+.btn-check:active + .btn.btn-success.dropdown-toggle:after,
+.btn.btn-success:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-success:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-success:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-success.active.dropdown-toggle:after,
+.btn.btn-success.show.dropdown-toggle:after,
+.show > .btn.btn-success.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn.btn-light-success {
+    color: #50cd89;
+    border-color: #e8fff3;
+    background-color: #e8fff3;
+}
+
+.btn.btn-light-success i,
+.btn.btn-light-success .svg-icon {
+    color: #50cd89;
+}
+
+.btn.btn-light-success.dropdown-toggle:after {
+    color: #50cd89;
+}
+
+.btn-check:checked + .btn.btn-light-success,
+.btn-check:active + .btn.btn-light-success,
+.btn.btn-light-success:focus:not(.btn-active),
+.btn.btn-light-success:hover:not(.btn-active),
+.btn.btn-light-success:active:not(.btn-active),
+.btn.btn-light-success.active,
+.btn.btn-light-success.show,
+.show > .btn.btn-light-success {
+    color: #ffffff;
+    border-color: #50cd89;
+    background-color: #50cd89 !important;
+}
+
+.btn-check:checked + .btn.btn-light-success i,
+.btn-check:checked + .btn.btn-light-success .svg-icon,
+.btn-check:active + .btn.btn-light-success i,
+.btn-check:active + .btn.btn-light-success .svg-icon,
+.btn.btn-light-success:focus:not(.btn-active) i,
+.btn.btn-light-success:focus:not(.btn-active) .svg-icon,
+.btn.btn-light-success:hover:not(.btn-active) i,
+.btn.btn-light-success:hover:not(.btn-active) .svg-icon,
+.btn.btn-light-success:active:not(.btn-active) i,
+.btn.btn-light-success:active:not(.btn-active) .svg-icon,
+.btn.btn-light-success.active i,
+.btn.btn-light-success.active .svg-icon,
+.btn.btn-light-success.show i,
+.btn.btn-light-success.show .svg-icon,
+.show > .btn.btn-light-success i,
+.show > .btn.btn-light-success .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-light-success.dropdown-toggle:after,
+.btn-check:active + .btn.btn-light-success.dropdown-toggle:after,
+.btn.btn-light-success:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-success:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-success:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-success.active.dropdown-toggle:after,
+.btn.btn-light-success.show.dropdown-toggle:after,
+.show > .btn.btn-light-success.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn.btn-bg-success {
+    border-color: #50cd89;
+    background-color: #50cd89;
+}
+
+.btn-check:checked + .btn.btn-active-success,
+.btn-check:active + .btn.btn-active-success,
+.btn.btn-active-success:focus:not(.btn-active),
+.btn.btn-active-success:hover:not(.btn-active),
+.btn.btn-active-success:active:not(.btn-active),
+.btn.btn-active-success.active,
+.btn.btn-active-success.show,
+.show > .btn.btn-active-success {
+    color: #ffffff;
+    border-color: #50cd89;
+    background-color: #50cd89 !important;
+}
+
+.btn-check:checked + .btn.btn-active-success i,
+.btn-check:checked + .btn.btn-active-success .svg-icon,
+.btn-check:active + .btn.btn-active-success i,
+.btn-check:active + .btn.btn-active-success .svg-icon,
+.btn.btn-active-success:focus:not(.btn-active) i,
+.btn.btn-active-success:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-success:hover:not(.btn-active) i,
+.btn.btn-active-success:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-success:active:not(.btn-active) i,
+.btn.btn-active-success:active:not(.btn-active) .svg-icon,
+.btn.btn-active-success.active i,
+.btn.btn-active-success.active .svg-icon,
+.btn.btn-active-success.show i,
+.btn.btn-active-success.show .svg-icon,
+.show > .btn.btn-active-success i,
+.show > .btn.btn-active-success .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-active-success.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-success.dropdown-toggle:after,
+.btn.btn-active-success:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-success:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-success:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-success.active.dropdown-toggle:after,
+.btn.btn-active-success.show.dropdown-toggle:after,
+.show > .btn.btn-active-success.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-active-light-success,
+.btn-check:active + .btn.btn-active-light-success,
+.btn.btn-active-light-success:focus:not(.btn-active),
+.btn.btn-active-light-success:hover:not(.btn-active),
+.btn.btn-active-light-success:active:not(.btn-active),
+.btn.btn-active-light-success.active,
+.btn.btn-active-light-success.show,
+.show > .btn.btn-active-light-success {
+    color: #50cd89;
+    border-color: #e8fff3;
+    background-color: #e8fff3 !important;
+}
+
+.btn-check:checked + .btn.btn-active-light-success i,
+.btn-check:checked + .btn.btn-active-light-success .svg-icon,
+.btn-check:active + .btn.btn-active-light-success i,
+.btn-check:active + .btn.btn-active-light-success .svg-icon,
+.btn.btn-active-light-success:focus:not(.btn-active) i,
+.btn.btn-active-light-success:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-light-success:hover:not(.btn-active) i,
+.btn.btn-active-light-success:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-light-success:active:not(.btn-active) i,
+.btn.btn-active-light-success:active:not(.btn-active) .svg-icon,
+.btn.btn-active-light-success.active i,
+.btn.btn-active-light-success.active .svg-icon,
+.btn.btn-active-light-success.show i,
+.btn.btn-active-light-success.show .svg-icon,
+.show > .btn.btn-active-light-success i,
+.show > .btn.btn-active-light-success .svg-icon {
+    color: #50cd89;
+}
+
+.btn-check:checked + .btn.btn-active-light-success.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-light-success.dropdown-toggle:after,
+.btn.btn-active-light-success:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-light-success:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-light-success:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-light-success.active.dropdown-toggle:after,
+.btn.btn-active-light-success.show.dropdown-toggle:after,
+.show > .btn.btn-active-light-success.dropdown-toggle:after {
+    color: #50cd89;
+}
+
+.btn.btn-active-light-success.btn-outline:not(.btn-outline-default) {
+    border-color: #50cd89 !important;
+}
+
+.btn.btn-info {
+    color: #ffffff;
+    border-color: #7239ea;
+    background-color: #7239ea;
+}
+
+.btn.btn-info i,
+.btn.btn-info .svg-icon {
+    color: #ffffff;
+}
+
+.btn.btn-info.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-info,
+.btn-check:active + .btn.btn-info,
+.btn.btn-info:focus:not(.btn-active),
+.btn.btn-info:hover:not(.btn-active),
+.btn.btn-info:active:not(.btn-active),
+.btn.btn-info.active,
+.btn.btn-info.show,
+.show > .btn.btn-info {
+    color: #ffffff;
+    border-color: #5014d0;
+    background-color: #5014d0 !important;
+}
+
+.btn-check:checked + .btn.btn-info i,
+.btn-check:checked + .btn.btn-info .svg-icon,
+.btn-check:active + .btn.btn-info i,
+.btn-check:active + .btn.btn-info .svg-icon,
+.btn.btn-info:focus:not(.btn-active) i,
+.btn.btn-info:focus:not(.btn-active) .svg-icon,
+.btn.btn-info:hover:not(.btn-active) i,
+.btn.btn-info:hover:not(.btn-active) .svg-icon,
+.btn.btn-info:active:not(.btn-active) i,
+.btn.btn-info:active:not(.btn-active) .svg-icon,
+.btn.btn-info.active i,
+.btn.btn-info.active .svg-icon,
+.btn.btn-info.show i,
+.btn.btn-info.show .svg-icon,
+.show > .btn.btn-info i,
+.show > .btn.btn-info .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-info.dropdown-toggle:after,
+.btn-check:active + .btn.btn-info.dropdown-toggle:after,
+.btn.btn-info:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-info:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-info:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-info.active.dropdown-toggle:after,
+.btn.btn-info.show.dropdown-toggle:after,
+.show > .btn.btn-info.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn.btn-light-info {
+    color: #7239ea;
+    border-color: #f8f5ff;
+    background-color: #f8f5ff;
+}
+
+.btn.btn-light-info i,
+.btn.btn-light-info .svg-icon {
+    color: #7239ea;
+}
+
+.btn.btn-light-info.dropdown-toggle:after {
+    color: #7239ea;
+}
+
+.btn-check:checked + .btn.btn-light-info,
+.btn-check:active + .btn.btn-light-info,
+.btn.btn-light-info:focus:not(.btn-active),
+.btn.btn-light-info:hover:not(.btn-active),
+.btn.btn-light-info:active:not(.btn-active),
+.btn.btn-light-info.active,
+.btn.btn-light-info.show,
+.show > .btn.btn-light-info {
+    color: #ffffff;
+    border-color: #7239ea;
+    background-color: #7239ea !important;
+}
+
+.btn-check:checked + .btn.btn-light-info i,
+.btn-check:checked + .btn.btn-light-info .svg-icon,
+.btn-check:active + .btn.btn-light-info i,
+.btn-check:active + .btn.btn-light-info .svg-icon,
+.btn.btn-light-info:focus:not(.btn-active) i,
+.btn.btn-light-info:focus:not(.btn-active) .svg-icon,
+.btn.btn-light-info:hover:not(.btn-active) i,
+.btn.btn-light-info:hover:not(.btn-active) .svg-icon,
+.btn.btn-light-info:active:not(.btn-active) i,
+.btn.btn-light-info:active:not(.btn-active) .svg-icon,
+.btn.btn-light-info.active i,
+.btn.btn-light-info.active .svg-icon,
+.btn.btn-light-info.show i,
+.btn.btn-light-info.show .svg-icon,
+.show > .btn.btn-light-info i,
+.show > .btn.btn-light-info .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-light-info.dropdown-toggle:after,
+.btn-check:active + .btn.btn-light-info.dropdown-toggle:after,
+.btn.btn-light-info:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-info:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-info:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-info.active.dropdown-toggle:after,
+.btn.btn-light-info.show.dropdown-toggle:after,
+.show > .btn.btn-light-info.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn.btn-bg-info {
+    border-color: #7239ea;
+    background-color: #7239ea;
+}
+
+.btn-check:checked + .btn.btn-active-info,
+.btn-check:active + .btn.btn-active-info,
+.btn.btn-active-info:focus:not(.btn-active),
+.btn.btn-active-info:hover:not(.btn-active),
+.btn.btn-active-info:active:not(.btn-active),
+.btn.btn-active-info.active,
+.btn.btn-active-info.show,
+.show > .btn.btn-active-info {
+    color: #ffffff;
+    border-color: #7239ea;
+    background-color: #7239ea !important;
+}
+
+.btn-check:checked + .btn.btn-active-info i,
+.btn-check:checked + .btn.btn-active-info .svg-icon,
+.btn-check:active + .btn.btn-active-info i,
+.btn-check:active + .btn.btn-active-info .svg-icon,
+.btn.btn-active-info:focus:not(.btn-active) i,
+.btn.btn-active-info:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-info:hover:not(.btn-active) i,
+.btn.btn-active-info:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-info:active:not(.btn-active) i,
+.btn.btn-active-info:active:not(.btn-active) .svg-icon,
+.btn.btn-active-info.active i,
+.btn.btn-active-info.active .svg-icon,
+.btn.btn-active-info.show i,
+.btn.btn-active-info.show .svg-icon,
+.show > .btn.btn-active-info i,
+.show > .btn.btn-active-info .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-active-info.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-info.dropdown-toggle:after,
+.btn.btn-active-info:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-info:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-info:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-info.active.dropdown-toggle:after,
+.btn.btn-active-info.show.dropdown-toggle:after,
+.show > .btn.btn-active-info.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-active-light-info,
+.btn-check:active + .btn.btn-active-light-info,
+.btn.btn-active-light-info:focus:not(.btn-active),
+.btn.btn-active-light-info:hover:not(.btn-active),
+.btn.btn-active-light-info:active:not(.btn-active),
+.btn.btn-active-light-info.active,
+.btn.btn-active-light-info.show,
+.show > .btn.btn-active-light-info {
+    color: #7239ea;
+    border-color: #f8f5ff;
+    background-color: #f8f5ff !important;
+}
+
+.btn-check:checked + .btn.btn-active-light-info i,
+.btn-check:checked + .btn.btn-active-light-info .svg-icon,
+.btn-check:active + .btn.btn-active-light-info i,
+.btn-check:active + .btn.btn-active-light-info .svg-icon,
+.btn.btn-active-light-info:focus:not(.btn-active) i,
+.btn.btn-active-light-info:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-light-info:hover:not(.btn-active) i,
+.btn.btn-active-light-info:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-light-info:active:not(.btn-active) i,
+.btn.btn-active-light-info:active:not(.btn-active) .svg-icon,
+.btn.btn-active-light-info.active i,
+.btn.btn-active-light-info.active .svg-icon,
+.btn.btn-active-light-info.show i,
+.btn.btn-active-light-info.show .svg-icon,
+.show > .btn.btn-active-light-info i,
+.show > .btn.btn-active-light-info .svg-icon {
+    color: #7239ea;
+}
+
+.btn-check:checked + .btn.btn-active-light-info.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-light-info.dropdown-toggle:after,
+.btn.btn-active-light-info:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-light-info:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-light-info:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-light-info.active.dropdown-toggle:after,
+.btn.btn-active-light-info.show.dropdown-toggle:after,
+.show > .btn.btn-active-light-info.dropdown-toggle:after {
+    color: #7239ea;
+}
+
+.btn.btn-active-light-info.btn-outline:not(.btn-outline-default) {
+    border-color: #7239ea !important;
+}
+
+.btn.btn-warning {
+    color: #ffffff;
+    border-color: #ffc700;
+    background-color: #ffc700;
+}
+
+.btn.btn-warning i,
+.btn.btn-warning .svg-icon {
+    color: #ffffff;
+}
+
+.btn.btn-warning.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-warning,
+.btn-check:active + .btn.btn-warning,
+.btn.btn-warning:focus:not(.btn-active),
+.btn.btn-warning:hover:not(.btn-active),
+.btn.btn-warning:active:not(.btn-active),
+.btn.btn-warning.active,
+.btn.btn-warning.show,
+.show > .btn.btn-warning {
+    color: #ffffff;
+    border-color: #f1bc00;
+    background-color: #f1bc00 !important;
+}
+
+.btn-check:checked + .btn.btn-warning i,
+.btn-check:checked + .btn.btn-warning .svg-icon,
+.btn-check:active + .btn.btn-warning i,
+.btn-check:active + .btn.btn-warning .svg-icon,
+.btn.btn-warning:focus:not(.btn-active) i,
+.btn.btn-warning:focus:not(.btn-active) .svg-icon,
+.btn.btn-warning:hover:not(.btn-active) i,
+.btn.btn-warning:hover:not(.btn-active) .svg-icon,
+.btn.btn-warning:active:not(.btn-active) i,
+.btn.btn-warning:active:not(.btn-active) .svg-icon,
+.btn.btn-warning.active i,
+.btn.btn-warning.active .svg-icon,
+.btn.btn-warning.show i,
+.btn.btn-warning.show .svg-icon,
+.show > .btn.btn-warning i,
+.show > .btn.btn-warning .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-warning.dropdown-toggle:after,
+.btn-check:active + .btn.btn-warning.dropdown-toggle:after,
+.btn.btn-warning:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-warning:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-warning:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-warning.active.dropdown-toggle:after,
+.btn.btn-warning.show.dropdown-toggle:after,
+.show > .btn.btn-warning.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn.btn-light-warning {
+    color: #ffc700;
+    border-color: #fff8dd;
+    background-color: #fff8dd;
+}
+
+.btn.btn-light-warning i,
+.btn.btn-light-warning .svg-icon {
+    color: #ffc700;
+}
+
+.btn.btn-light-warning.dropdown-toggle:after {
+    color: #ffc700;
+}
+
+.btn-check:checked + .btn.btn-light-warning,
+.btn-check:active + .btn.btn-light-warning,
+.btn.btn-light-warning:focus:not(.btn-active),
+.btn.btn-light-warning:hover:not(.btn-active),
+.btn.btn-light-warning:active:not(.btn-active),
+.btn.btn-light-warning.active,
+.btn.btn-light-warning.show,
+.show > .btn.btn-light-warning {
+    color: #ffffff;
+    border-color: #ffc700;
+    background-color: #ffc700 !important;
+}
+
+.btn-check:checked + .btn.btn-light-warning i,
+.btn-check:checked + .btn.btn-light-warning .svg-icon,
+.btn-check:active + .btn.btn-light-warning i,
+.btn-check:active + .btn.btn-light-warning .svg-icon,
+.btn.btn-light-warning:focus:not(.btn-active) i,
+.btn.btn-light-warning:focus:not(.btn-active) .svg-icon,
+.btn.btn-light-warning:hover:not(.btn-active) i,
+.btn.btn-light-warning:hover:not(.btn-active) .svg-icon,
+.btn.btn-light-warning:active:not(.btn-active) i,
+.btn.btn-light-warning:active:not(.btn-active) .svg-icon,
+.btn.btn-light-warning.active i,
+.btn.btn-light-warning.active .svg-icon,
+.btn.btn-light-warning.show i,
+.btn.btn-light-warning.show .svg-icon,
+.show > .btn.btn-light-warning i,
+.show > .btn.btn-light-warning .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-light-warning.dropdown-toggle:after,
+.btn-check:active + .btn.btn-light-warning.dropdown-toggle:after,
+.btn.btn-light-warning:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-warning:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-warning:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-warning.active.dropdown-toggle:after,
+.btn.btn-light-warning.show.dropdown-toggle:after,
+.show > .btn.btn-light-warning.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn.btn-bg-warning {
+    border-color: #ffc700;
+    background-color: #ffc700;
+}
+
+.btn-check:checked + .btn.btn-active-warning,
+.btn-check:active + .btn.btn-active-warning,
+.btn.btn-active-warning:focus:not(.btn-active),
+.btn.btn-active-warning:hover:not(.btn-active),
+.btn.btn-active-warning:active:not(.btn-active),
+.btn.btn-active-warning.active,
+.btn.btn-active-warning.show,
+.show > .btn.btn-active-warning {
+    color: #ffffff;
+    border-color: #ffc700;
+    background-color: #ffc700 !important;
+}
+
+.btn-check:checked + .btn.btn-active-warning i,
+.btn-check:checked + .btn.btn-active-warning .svg-icon,
+.btn-check:active + .btn.btn-active-warning i,
+.btn-check:active + .btn.btn-active-warning .svg-icon,
+.btn.btn-active-warning:focus:not(.btn-active) i,
+.btn.btn-active-warning:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-warning:hover:not(.btn-active) i,
+.btn.btn-active-warning:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-warning:active:not(.btn-active) i,
+.btn.btn-active-warning:active:not(.btn-active) .svg-icon,
+.btn.btn-active-warning.active i,
+.btn.btn-active-warning.active .svg-icon,
+.btn.btn-active-warning.show i,
+.btn.btn-active-warning.show .svg-icon,
+.show > .btn.btn-active-warning i,
+.show > .btn.btn-active-warning .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-active-warning.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-warning.dropdown-toggle:after,
+.btn.btn-active-warning:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-warning:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-warning:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-warning.active.dropdown-toggle:after,
+.btn.btn-active-warning.show.dropdown-toggle:after,
+.show > .btn.btn-active-warning.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-active-light-warning,
+.btn-check:active + .btn.btn-active-light-warning,
+.btn.btn-active-light-warning:focus:not(.btn-active),
+.btn.btn-active-light-warning:hover:not(.btn-active),
+.btn.btn-active-light-warning:active:not(.btn-active),
+.btn.btn-active-light-warning.active,
+.btn.btn-active-light-warning.show,
+.show > .btn.btn-active-light-warning {
+    color: #ffc700;
+    border-color: #fff8dd;
+    background-color: #fff8dd !important;
+}
+
+.btn-check:checked + .btn.btn-active-light-warning i,
+.btn-check:checked + .btn.btn-active-light-warning .svg-icon,
+.btn-check:active + .btn.btn-active-light-warning i,
+.btn-check:active + .btn.btn-active-light-warning .svg-icon,
+.btn.btn-active-light-warning:focus:not(.btn-active) i,
+.btn.btn-active-light-warning:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-light-warning:hover:not(.btn-active) i,
+.btn.btn-active-light-warning:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-light-warning:active:not(.btn-active) i,
+.btn.btn-active-light-warning:active:not(.btn-active) .svg-icon,
+.btn.btn-active-light-warning.active i,
+.btn.btn-active-light-warning.active .svg-icon,
+.btn.btn-active-light-warning.show i,
+.btn.btn-active-light-warning.show .svg-icon,
+.show > .btn.btn-active-light-warning i,
+.show > .btn.btn-active-light-warning .svg-icon {
+    color: #ffc700;
+}
+
+.btn-check:checked + .btn.btn-active-light-warning.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-light-warning.dropdown-toggle:after,
+.btn.btn-active-light-warning:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-light-warning:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-light-warning:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-light-warning.active.dropdown-toggle:after,
+.btn.btn-active-light-warning.show.dropdown-toggle:after,
+.show > .btn.btn-active-light-warning.dropdown-toggle:after {
+    color: #ffc700;
+}
+
+.btn.btn-active-light-warning.btn-outline:not(.btn-outline-default) {
+    border-color: #ffc700 !important;
+}
+
+.btn.btn-danger {
+    color: #ffffff;
+    border-color: #f1416c;
+    background-color: #f1416c;
+}
+
+.btn.btn-danger i,
+.btn.btn-danger .svg-icon {
+    color: #ffffff;
+}
+
+.btn.btn-danger.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-danger,
+.btn-check:active + .btn.btn-danger,
+.btn.btn-danger:focus:not(.btn-active),
+.btn.btn-danger:hover:not(.btn-active),
+.btn.btn-danger:active:not(.btn-active),
+.btn.btn-danger.active,
+.btn.btn-danger.show,
+.show > .btn.btn-danger {
+    color: #ffffff;
+    border-color: #d9214e;
+    background-color: #d9214e !important;
+}
+
+.btn-check:checked + .btn.btn-danger i,
+.btn-check:checked + .btn.btn-danger .svg-icon,
+.btn-check:active + .btn.btn-danger i,
+.btn-check:active + .btn.btn-danger .svg-icon,
+.btn.btn-danger:focus:not(.btn-active) i,
+.btn.btn-danger:focus:not(.btn-active) .svg-icon,
+.btn.btn-danger:hover:not(.btn-active) i,
+.btn.btn-danger:hover:not(.btn-active) .svg-icon,
+.btn.btn-danger:active:not(.btn-active) i,
+.btn.btn-danger:active:not(.btn-active) .svg-icon,
+.btn.btn-danger.active i,
+.btn.btn-danger.active .svg-icon,
+.btn.btn-danger.show i,
+.btn.btn-danger.show .svg-icon,
+.show > .btn.btn-danger i,
+.show > .btn.btn-danger .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-danger.dropdown-toggle:after,
+.btn-check:active + .btn.btn-danger.dropdown-toggle:after,
+.btn.btn-danger:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-danger:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-danger:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-danger.active.dropdown-toggle:after,
+.btn.btn-danger.show.dropdown-toggle:after,
+.show > .btn.btn-danger.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn.btn-light-danger {
+    color: #f1416c;
+    border-color: #fff5f8;
+    background-color: #fff5f8;
+}
+
+.btn.btn-light-danger i,
+.btn.btn-light-danger .svg-icon {
+    color: #f1416c;
+}
+
+.btn.btn-light-danger.dropdown-toggle:after {
+    color: #f1416c;
+}
+
+.btn-check:checked + .btn.btn-light-danger,
+.btn-check:active + .btn.btn-light-danger,
+.btn.btn-light-danger:focus:not(.btn-active),
+.btn.btn-light-danger:hover:not(.btn-active),
+.btn.btn-light-danger:active:not(.btn-active),
+.btn.btn-light-danger.active,
+.btn.btn-light-danger.show,
+.show > .btn.btn-light-danger {
+    color: #ffffff;
+    border-color: #f1416c;
+    background-color: #f1416c !important;
+}
+
+.btn-check:checked + .btn.btn-light-danger i,
+.btn-check:checked + .btn.btn-light-danger .svg-icon,
+.btn-check:active + .btn.btn-light-danger i,
+.btn-check:active + .btn.btn-light-danger .svg-icon,
+.btn.btn-light-danger:focus:not(.btn-active) i,
+.btn.btn-light-danger:focus:not(.btn-active) .svg-icon,
+.btn.btn-light-danger:hover:not(.btn-active) i,
+.btn.btn-light-danger:hover:not(.btn-active) .svg-icon,
+.btn.btn-light-danger:active:not(.btn-active) i,
+.btn.btn-light-danger:active:not(.btn-active) .svg-icon,
+.btn.btn-light-danger.active i,
+.btn.btn-light-danger.active .svg-icon,
+.btn.btn-light-danger.show i,
+.btn.btn-light-danger.show .svg-icon,
+.show > .btn.btn-light-danger i,
+.show > .btn.btn-light-danger .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-light-danger.dropdown-toggle:after,
+.btn-check:active + .btn.btn-light-danger.dropdown-toggle:after,
+.btn.btn-light-danger:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-danger:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-danger:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-danger.active.dropdown-toggle:after,
+.btn.btn-light-danger.show.dropdown-toggle:after,
+.show > .btn.btn-light-danger.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn.btn-bg-danger {
+    border-color: #f1416c;
+    background-color: #f1416c;
+}
+
+.btn-check:checked + .btn.btn-active-danger,
+.btn-check:active + .btn.btn-active-danger,
+.btn.btn-active-danger:focus:not(.btn-active),
+.btn.btn-active-danger:hover:not(.btn-active),
+.btn.btn-active-danger:active:not(.btn-active),
+.btn.btn-active-danger.active,
+.btn.btn-active-danger.show,
+.show > .btn.btn-active-danger {
+    color: #ffffff;
+    border-color: #f1416c;
+    background-color: #f1416c !important;
+}
+
+.btn-check:checked + .btn.btn-active-danger i,
+.btn-check:checked + .btn.btn-active-danger .svg-icon,
+.btn-check:active + .btn.btn-active-danger i,
+.btn-check:active + .btn.btn-active-danger .svg-icon,
+.btn.btn-active-danger:focus:not(.btn-active) i,
+.btn.btn-active-danger:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-danger:hover:not(.btn-active) i,
+.btn.btn-active-danger:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-danger:active:not(.btn-active) i,
+.btn.btn-active-danger:active:not(.btn-active) .svg-icon,
+.btn.btn-active-danger.active i,
+.btn.btn-active-danger.active .svg-icon,
+.btn.btn-active-danger.show i,
+.btn.btn-active-danger.show .svg-icon,
+.show > .btn.btn-active-danger i,
+.show > .btn.btn-active-danger .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-active-danger.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-danger.dropdown-toggle:after,
+.btn.btn-active-danger:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-danger:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-danger:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-danger.active.dropdown-toggle:after,
+.btn.btn-active-danger.show.dropdown-toggle:after,
+.show > .btn.btn-active-danger.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-active-light-danger,
+.btn-check:active + .btn.btn-active-light-danger,
+.btn.btn-active-light-danger:focus:not(.btn-active),
+.btn.btn-active-light-danger:hover:not(.btn-active),
+.btn.btn-active-light-danger:active:not(.btn-active),
+.btn.btn-active-light-danger.active,
+.btn.btn-active-light-danger.show,
+.show > .btn.btn-active-light-danger {
+    color: #f1416c;
+    border-color: #fff5f8;
+    background-color: #fff5f8 !important;
+}
+
+.btn-check:checked + .btn.btn-active-light-danger i,
+.btn-check:checked + .btn.btn-active-light-danger .svg-icon,
+.btn-check:active + .btn.btn-active-light-danger i,
+.btn-check:active + .btn.btn-active-light-danger .svg-icon,
+.btn.btn-active-light-danger:focus:not(.btn-active) i,
+.btn.btn-active-light-danger:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-light-danger:hover:not(.btn-active) i,
+.btn.btn-active-light-danger:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-light-danger:active:not(.btn-active) i,
+.btn.btn-active-light-danger:active:not(.btn-active) .svg-icon,
+.btn.btn-active-light-danger.active i,
+.btn.btn-active-light-danger.active .svg-icon,
+.btn.btn-active-light-danger.show i,
+.btn.btn-active-light-danger.show .svg-icon,
+.show > .btn.btn-active-light-danger i,
+.show > .btn.btn-active-light-danger .svg-icon {
+    color: #f1416c;
+}
+
+.btn-check:checked + .btn.btn-active-light-danger.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-light-danger.dropdown-toggle:after,
+.btn.btn-active-light-danger:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-light-danger:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-light-danger:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-light-danger.active.dropdown-toggle:after,
+.btn.btn-active-light-danger.show.dropdown-toggle:after,
+.show > .btn.btn-active-light-danger.dropdown-toggle:after {
+    color: #f1416c;
+}
+
+.btn.btn-active-light-danger.btn-outline:not(.btn-outline-default) {
+    border-color: #f1416c !important;
+}
+
+.btn.btn-dark {
+    color: #ffffff;
+    border-color: #181c32;
+    background-color: #181c32;
+}
+
+.btn.btn-dark i,
+.btn.btn-dark .svg-icon {
+    color: #ffffff;
+}
+
+.btn.btn-dark.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-dark,
+.btn-check:active + .btn.btn-dark,
+.btn.btn-dark:focus:not(.btn-active),
+.btn.btn-dark:hover:not(.btn-active),
+.btn.btn-dark:active:not(.btn-active),
+.btn.btn-dark.active,
+.btn.btn-dark.show,
+.show > .btn.btn-dark {
+    color: #ffffff;
+    border-color: #131628;
+    background-color: #131628 !important;
+}
+
+.btn-check:checked + .btn.btn-dark i,
+.btn-check:checked + .btn.btn-dark .svg-icon,
+.btn-check:active + .btn.btn-dark i,
+.btn-check:active + .btn.btn-dark .svg-icon,
+.btn.btn-dark:focus:not(.btn-active) i,
+.btn.btn-dark:focus:not(.btn-active) .svg-icon,
+.btn.btn-dark:hover:not(.btn-active) i,
+.btn.btn-dark:hover:not(.btn-active) .svg-icon,
+.btn.btn-dark:active:not(.btn-active) i,
+.btn.btn-dark:active:not(.btn-active) .svg-icon,
+.btn.btn-dark.active i,
+.btn.btn-dark.active .svg-icon,
+.btn.btn-dark.show i,
+.btn.btn-dark.show .svg-icon,
+.show > .btn.btn-dark i,
+.show > .btn.btn-dark .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-dark.dropdown-toggle:after,
+.btn-check:active + .btn.btn-dark.dropdown-toggle:after,
+.btn.btn-dark:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-dark:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-dark:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-dark.active.dropdown-toggle:after,
+.btn.btn-dark.show.dropdown-toggle:after,
+.show > .btn.btn-dark.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn.btn-light-dark {
+    color: #181c32;
+    border-color: #eff2f5;
+    background-color: #eff2f5;
+}
+
+.btn.btn-light-dark i,
+.btn.btn-light-dark .svg-icon {
+    color: #181c32;
+}
+
+.btn.btn-light-dark.dropdown-toggle:after {
+    color: #181c32;
+}
+
+.btn-check:checked + .btn.btn-light-dark,
+.btn-check:active + .btn.btn-light-dark,
+.btn.btn-light-dark:focus:not(.btn-active),
+.btn.btn-light-dark:hover:not(.btn-active),
+.btn.btn-light-dark:active:not(.btn-active),
+.btn.btn-light-dark.active,
+.btn.btn-light-dark.show,
+.show > .btn.btn-light-dark {
+    color: #ffffff;
+    border-color: #181c32;
+    background-color: #181c32 !important;
+}
+
+.btn-check:checked + .btn.btn-light-dark i,
+.btn-check:checked + .btn.btn-light-dark .svg-icon,
+.btn-check:active + .btn.btn-light-dark i,
+.btn-check:active + .btn.btn-light-dark .svg-icon,
+.btn.btn-light-dark:focus:not(.btn-active) i,
+.btn.btn-light-dark:focus:not(.btn-active) .svg-icon,
+.btn.btn-light-dark:hover:not(.btn-active) i,
+.btn.btn-light-dark:hover:not(.btn-active) .svg-icon,
+.btn.btn-light-dark:active:not(.btn-active) i,
+.btn.btn-light-dark:active:not(.btn-active) .svg-icon,
+.btn.btn-light-dark.active i,
+.btn.btn-light-dark.active .svg-icon,
+.btn.btn-light-dark.show i,
+.btn.btn-light-dark.show .svg-icon,
+.show > .btn.btn-light-dark i,
+.show > .btn.btn-light-dark .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-light-dark.dropdown-toggle:after,
+.btn-check:active + .btn.btn-light-dark.dropdown-toggle:after,
+.btn.btn-light-dark:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-dark:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-dark:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-dark.active.dropdown-toggle:after,
+.btn.btn-light-dark.show.dropdown-toggle:after,
+.show > .btn.btn-light-dark.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn.btn-bg-dark {
+    border-color: #181c32;
+    background-color: #181c32;
+}
+
+.btn-check:checked + .btn.btn-active-dark,
+.btn-check:active + .btn.btn-active-dark,
+.btn.btn-active-dark:focus:not(.btn-active),
+.btn.btn-active-dark:hover:not(.btn-active),
+.btn.btn-active-dark:active:not(.btn-active),
+.btn.btn-active-dark.active,
+.btn.btn-active-dark.show,
+.show > .btn.btn-active-dark {
+    color: #ffffff;
+    border-color: #181c32;
+    background-color: #181c32 !important;
+}
+
+.btn-check:checked + .btn.btn-active-dark i,
+.btn-check:checked + .btn.btn-active-dark .svg-icon,
+.btn-check:active + .btn.btn-active-dark i,
+.btn-check:active + .btn.btn-active-dark .svg-icon,
+.btn.btn-active-dark:focus:not(.btn-active) i,
+.btn.btn-active-dark:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-dark:hover:not(.btn-active) i,
+.btn.btn-active-dark:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-dark:active:not(.btn-active) i,
+.btn.btn-active-dark:active:not(.btn-active) .svg-icon,
+.btn.btn-active-dark.active i,
+.btn.btn-active-dark.active .svg-icon,
+.btn.btn-active-dark.show i,
+.btn.btn-active-dark.show .svg-icon,
+.show > .btn.btn-active-dark i,
+.show > .btn.btn-active-dark .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-active-dark.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-dark.dropdown-toggle:after,
+.btn.btn-active-dark:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-dark:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-dark:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-dark.active.dropdown-toggle:after,
+.btn.btn-active-dark.show.dropdown-toggle:after,
+.show > .btn.btn-active-dark.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-active-light-dark,
+.btn-check:active + .btn.btn-active-light-dark,
+.btn.btn-active-light-dark:focus:not(.btn-active),
+.btn.btn-active-light-dark:hover:not(.btn-active),
+.btn.btn-active-light-dark:active:not(.btn-active),
+.btn.btn-active-light-dark.active,
+.btn.btn-active-light-dark.show,
+.show > .btn.btn-active-light-dark {
+    color: #181c32;
+    border-color: #eff2f5;
+    background-color: #eff2f5 !important;
+}
+
+.btn-check:checked + .btn.btn-active-light-dark i,
+.btn-check:checked + .btn.btn-active-light-dark .svg-icon,
+.btn-check:active + .btn.btn-active-light-dark i,
+.btn-check:active + .btn.btn-active-light-dark .svg-icon,
+.btn.btn-active-light-dark:focus:not(.btn-active) i,
+.btn.btn-active-light-dark:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-light-dark:hover:not(.btn-active) i,
+.btn.btn-active-light-dark:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-light-dark:active:not(.btn-active) i,
+.btn.btn-active-light-dark:active:not(.btn-active) .svg-icon,
+.btn.btn-active-light-dark.active i,
+.btn.btn-active-light-dark.active .svg-icon,
+.btn.btn-active-light-dark.show i,
+.btn.btn-active-light-dark.show .svg-icon,
+.show > .btn.btn-active-light-dark i,
+.show > .btn.btn-active-light-dark .svg-icon {
+    color: #181c32;
+}
+
+.btn-check:checked + .btn.btn-active-light-dark.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-light-dark.dropdown-toggle:after,
+.btn.btn-active-light-dark:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-light-dark:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-light-dark:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-light-dark.active.dropdown-toggle:after,
+.btn.btn-active-light-dark.show.dropdown-toggle:after,
+.show > .btn.btn-active-light-dark.dropdown-toggle:after {
+    color: #181c32;
+}
+
+.btn.btn-active-light-dark.btn-outline:not(.btn-outline-default) {
+    border-color: #181c32 !important;
+}
+
+.btn.btn-color-white {
+    color: #ffffff;
+}
+
+.btn.btn-color-white i,
+.btn.btn-color-white .svg-icon {
+    color: #ffffff;
+}
+
+.btn.btn-color-white.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-active-color-white,
+.btn-check:active + .btn.btn-active-color-white,
+.btn.btn-active-color-white:focus:not(.btn-active),
+.btn.btn-active-color-white:hover:not(.btn-active),
+.btn.btn-active-color-white:active:not(.btn-active),
+.btn.btn-active-color-white.active,
+.btn.btn-active-color-white.show,
+.show > .btn.btn-active-color-white {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-active-color-white i,
+.btn-check:checked + .btn.btn-active-color-white .svg-icon,
+.btn-check:active + .btn.btn-active-color-white i,
+.btn-check:active + .btn.btn-active-color-white .svg-icon,
+.btn.btn-active-color-white:focus:not(.btn-active) i,
+.btn.btn-active-color-white:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-color-white:hover:not(.btn-active) i,
+.btn.btn-active-color-white:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-color-white:active:not(.btn-active) i,
+.btn.btn-active-color-white:active:not(.btn-active) .svg-icon,
+.btn.btn-active-color-white.active i,
+.btn.btn-active-color-white.active .svg-icon,
+.btn.btn-active-color-white.show i,
+.btn.btn-active-color-white.show .svg-icon,
+.show > .btn.btn-active-color-white i,
+.show > .btn.btn-active-color-white .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-active-color-white.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-color-white.dropdown-toggle:after,
+.btn.btn-active-color-white:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-white:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-white:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-white.active.dropdown-toggle:after,
+.btn.btn-active-color-white.show.dropdown-toggle:after,
+.show > .btn.btn-active-color-white.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn.btn-icon-white i,
+.btn.btn-icon-white .svg-icon {
+    color: #ffffff;
+}
+
+.btn.btn-icon-white.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-active-icon-white i,
+.btn-check:checked + .btn.btn-active-icon-white .svg-icon,
+.btn-check:active + .btn.btn-active-icon-white i,
+.btn-check:active + .btn.btn-active-icon-white .svg-icon,
+.btn.btn-active-icon-white:focus:not(.btn-active) i,
+.btn.btn-active-icon-white:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-white:hover:not(.btn-active) i,
+.btn.btn-active-icon-white:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-white:active:not(.btn-active) i,
+.btn.btn-active-icon-white:active:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-white.active i,
+.btn.btn-active-icon-white.active .svg-icon,
+.btn.btn-active-icon-white.show i,
+.btn.btn-active-icon-white.show .svg-icon,
+.show > .btn.btn-active-icon-white i,
+.show > .btn.btn-active-icon-white .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-active-icon-white.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-icon-white.dropdown-toggle:after,
+.btn.btn-active-icon-white:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-white:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-white:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-white.active.dropdown-toggle:after,
+.btn.btn-active-icon-white.show.dropdown-toggle:after,
+.show > .btn.btn-active-icon-white.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn.btn-text-white {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-active-text-white,
+.btn-check:active + .btn.btn-active-text-white,
+.btn.btn-active-text-white:focus:not(.btn-active),
+.btn.btn-active-text-white:hover:not(.btn-active),
+.btn.btn-active-text-white:active:not(.btn-active),
+.btn.btn-active-text-white.active,
+.btn.btn-active-text-white.show,
+.show > .btn.btn-active-text-white {
+    color: #ffffff;
+}
+
+.btn.btn-color-primary {
+    color: #009ef7;
+}
+
+.btn.btn-color-primary i,
+.btn.btn-color-primary .svg-icon {
+    color: #009ef7;
+}
+
+.btn.btn-color-primary.dropdown-toggle:after {
+    color: #009ef7;
+}
+
+.btn-check:checked + .btn.btn-active-color-primary,
+.btn-check:active + .btn.btn-active-color-primary,
+.btn.btn-active-color-primary:focus:not(.btn-active),
+.btn.btn-active-color-primary:hover:not(.btn-active),
+.btn.btn-active-color-primary:active:not(.btn-active),
+.btn.btn-active-color-primary.active,
+.btn.btn-active-color-primary.show,
+.show > .btn.btn-active-color-primary {
+    color: #009ef7;
+}
+
+.btn-check:checked + .btn.btn-active-color-primary i,
+.btn-check:checked + .btn.btn-active-color-primary .svg-icon,
+.btn-check:active + .btn.btn-active-color-primary i,
+.btn-check:active + .btn.btn-active-color-primary .svg-icon,
+.btn.btn-active-color-primary:focus:not(.btn-active) i,
+.btn.btn-active-color-primary:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-color-primary:hover:not(.btn-active) i,
+.btn.btn-active-color-primary:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-color-primary:active:not(.btn-active) i,
+.btn.btn-active-color-primary:active:not(.btn-active) .svg-icon,
+.btn.btn-active-color-primary.active i,
+.btn.btn-active-color-primary.active .svg-icon,
+.btn.btn-active-color-primary.show i,
+.btn.btn-active-color-primary.show .svg-icon,
+.show > .btn.btn-active-color-primary i,
+.show > .btn.btn-active-color-primary .svg-icon {
+    color: #009ef7;
+}
+
+.btn-check:checked + .btn.btn-active-color-primary.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-color-primary.dropdown-toggle:after,
+.btn.btn-active-color-primary:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-primary:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-primary:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-primary.active.dropdown-toggle:after,
+.btn.btn-active-color-primary.show.dropdown-toggle:after,
+.show > .btn.btn-active-color-primary.dropdown-toggle:after {
+    color: #009ef7;
+}
+
+.btn.btn-icon-primary i,
+.btn.btn-icon-primary .svg-icon {
+    color: #009ef7;
+}
+
+.btn.btn-icon-primary.dropdown-toggle:after {
+    color: #009ef7;
+}
+
+.btn-check:checked + .btn.btn-active-icon-primary i,
+.btn-check:checked + .btn.btn-active-icon-primary .svg-icon,
+.btn-check:active + .btn.btn-active-icon-primary i,
+.btn-check:active + .btn.btn-active-icon-primary .svg-icon,
+.btn.btn-active-icon-primary:focus:not(.btn-active) i,
+.btn.btn-active-icon-primary:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-primary:hover:not(.btn-active) i,
+.btn.btn-active-icon-primary:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-primary:active:not(.btn-active) i,
+.btn.btn-active-icon-primary:active:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-primary.active i,
+.btn.btn-active-icon-primary.active .svg-icon,
+.btn.btn-active-icon-primary.show i,
+.btn.btn-active-icon-primary.show .svg-icon,
+.show > .btn.btn-active-icon-primary i,
+.show > .btn.btn-active-icon-primary .svg-icon {
+    color: #009ef7;
+}
+
+.btn-check:checked + .btn.btn-active-icon-primary.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-icon-primary.dropdown-toggle:after,
+.btn.btn-active-icon-primary:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-primary:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-primary:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-primary.active.dropdown-toggle:after,
+.btn.btn-active-icon-primary.show.dropdown-toggle:after,
+.show > .btn.btn-active-icon-primary.dropdown-toggle:after {
+    color: #009ef7;
+}
+
+.btn.btn-text-primary {
+    color: #009ef7;
+}
+
+.btn-check:checked + .btn.btn-active-text-primary,
+.btn-check:active + .btn.btn-active-text-primary,
+.btn.btn-active-text-primary:focus:not(.btn-active),
+.btn.btn-active-text-primary:hover:not(.btn-active),
+.btn.btn-active-text-primary:active:not(.btn-active),
+.btn.btn-active-text-primary.active,
+.btn.btn-active-text-primary.show,
+.show > .btn.btn-active-text-primary {
+    color: #009ef7;
+}
+
+.btn.btn-color-secondary {
+    color: #e4e6ef;
+}
+
+.btn.btn-color-secondary i,
+.btn.btn-color-secondary .svg-icon {
+    color: #e4e6ef;
+}
+
+.btn.btn-color-secondary.dropdown-toggle:after {
+    color: #e4e6ef;
+}
+
+.btn-check:checked + .btn.btn-active-color-secondary,
+.btn-check:active + .btn.btn-active-color-secondary,
+.btn.btn-active-color-secondary:focus:not(.btn-active),
+.btn.btn-active-color-secondary:hover:not(.btn-active),
+.btn.btn-active-color-secondary:active:not(.btn-active),
+.btn.btn-active-color-secondary.active,
+.btn.btn-active-color-secondary.show,
+.show > .btn.btn-active-color-secondary {
+    color: #e4e6ef;
+}
+
+.btn-check:checked + .btn.btn-active-color-secondary i,
+.btn-check:checked + .btn.btn-active-color-secondary .svg-icon,
+.btn-check:active + .btn.btn-active-color-secondary i,
+.btn-check:active + .btn.btn-active-color-secondary .svg-icon,
+.btn.btn-active-color-secondary:focus:not(.btn-active) i,
+.btn.btn-active-color-secondary:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-color-secondary:hover:not(.btn-active) i,
+.btn.btn-active-color-secondary:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-color-secondary:active:not(.btn-active) i,
+.btn.btn-active-color-secondary:active:not(.btn-active) .svg-icon,
+.btn.btn-active-color-secondary.active i,
+.btn.btn-active-color-secondary.active .svg-icon,
+.btn.btn-active-color-secondary.show i,
+.btn.btn-active-color-secondary.show .svg-icon,
+.show > .btn.btn-active-color-secondary i,
+.show > .btn.btn-active-color-secondary .svg-icon {
+    color: #e4e6ef;
+}
+
+.btn-check:checked + .btn.btn-active-color-secondary.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-color-secondary.dropdown-toggle:after,
+.btn.btn-active-color-secondary:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-secondary:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-secondary:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-secondary.active.dropdown-toggle:after,
+.btn.btn-active-color-secondary.show.dropdown-toggle:after,
+.show > .btn.btn-active-color-secondary.dropdown-toggle:after {
+    color: #e4e6ef;
+}
+
+.btn.btn-icon-secondary i,
+.btn.btn-icon-secondary .svg-icon {
+    color: #e4e6ef;
+}
+
+.btn.btn-icon-secondary.dropdown-toggle:after {
+    color: #e4e6ef;
+}
+
+.btn-check:checked + .btn.btn-active-icon-secondary i,
+.btn-check:checked + .btn.btn-active-icon-secondary .svg-icon,
+.btn-check:active + .btn.btn-active-icon-secondary i,
+.btn-check:active + .btn.btn-active-icon-secondary .svg-icon,
+.btn.btn-active-icon-secondary:focus:not(.btn-active) i,
+.btn.btn-active-icon-secondary:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-secondary:hover:not(.btn-active) i,
+.btn.btn-active-icon-secondary:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-secondary:active:not(.btn-active) i,
+.btn.btn-active-icon-secondary:active:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-secondary.active i,
+.btn.btn-active-icon-secondary.active .svg-icon,
+.btn.btn-active-icon-secondary.show i,
+.btn.btn-active-icon-secondary.show .svg-icon,
+.show > .btn.btn-active-icon-secondary i,
+.show > .btn.btn-active-icon-secondary .svg-icon {
+    color: #e4e6ef;
+}
+
+.btn-check:checked + .btn.btn-active-icon-secondary.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-icon-secondary.dropdown-toggle:after,
+.btn.btn-active-icon-secondary:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-secondary:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-secondary:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-secondary.active.dropdown-toggle:after,
+.btn.btn-active-icon-secondary.show.dropdown-toggle:after,
+.show > .btn.btn-active-icon-secondary.dropdown-toggle:after {
+    color: #e4e6ef;
+}
+
+.btn.btn-text-secondary {
+    color: #e4e6ef;
+}
+
+.btn-check:checked + .btn.btn-active-text-secondary,
+.btn-check:active + .btn.btn-active-text-secondary,
+.btn.btn-active-text-secondary:focus:not(.btn-active),
+.btn.btn-active-text-secondary:hover:not(.btn-active),
+.btn.btn-active-text-secondary:active:not(.btn-active),
+.btn.btn-active-text-secondary.active,
+.btn.btn-active-text-secondary.show,
+.show > .btn.btn-active-text-secondary {
+    color: #e4e6ef;
+}
+
+.btn.btn-color-light {
+    color: #f5f8fa;
+}
+
+.btn.btn-color-light i,
+.btn.btn-color-light .svg-icon {
+    color: #f5f8fa;
+}
+
+.btn.btn-color-light.dropdown-toggle:after {
+    color: #f5f8fa;
+}
+
+.btn-check:checked + .btn.btn-active-color-light,
+.btn-check:active + .btn.btn-active-color-light,
+.btn.btn-active-color-light:focus:not(.btn-active),
+.btn.btn-active-color-light:hover:not(.btn-active),
+.btn.btn-active-color-light:active:not(.btn-active),
+.btn.btn-active-color-light.active,
+.btn.btn-active-color-light.show,
+.show > .btn.btn-active-color-light {
+    color: #f5f8fa;
+}
+
+.btn-check:checked + .btn.btn-active-color-light i,
+.btn-check:checked + .btn.btn-active-color-light .svg-icon,
+.btn-check:active + .btn.btn-active-color-light i,
+.btn-check:active + .btn.btn-active-color-light .svg-icon,
+.btn.btn-active-color-light:focus:not(.btn-active) i,
+.btn.btn-active-color-light:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-color-light:hover:not(.btn-active) i,
+.btn.btn-active-color-light:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-color-light:active:not(.btn-active) i,
+.btn.btn-active-color-light:active:not(.btn-active) .svg-icon,
+.btn.btn-active-color-light.active i,
+.btn.btn-active-color-light.active .svg-icon,
+.btn.btn-active-color-light.show i,
+.btn.btn-active-color-light.show .svg-icon,
+.show > .btn.btn-active-color-light i,
+.show > .btn.btn-active-color-light .svg-icon {
+    color: #f5f8fa;
+}
+
+.btn-check:checked + .btn.btn-active-color-light.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-color-light.dropdown-toggle:after,
+.btn.btn-active-color-light:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-light:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-light:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-light.active.dropdown-toggle:after,
+.btn.btn-active-color-light.show.dropdown-toggle:after,
+.show > .btn.btn-active-color-light.dropdown-toggle:after {
+    color: #f5f8fa;
+}
+
+.btn.btn-icon-light i,
+.btn.btn-icon-light .svg-icon {
+    color: #f5f8fa;
+}
+
+.btn.btn-icon-light.dropdown-toggle:after {
+    color: #f5f8fa;
+}
+
+.btn-check:checked + .btn.btn-active-icon-light i,
+.btn-check:checked + .btn.btn-active-icon-light .svg-icon,
+.btn-check:active + .btn.btn-active-icon-light i,
+.btn-check:active + .btn.btn-active-icon-light .svg-icon,
+.btn.btn-active-icon-light:focus:not(.btn-active) i,
+.btn.btn-active-icon-light:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-light:hover:not(.btn-active) i,
+.btn.btn-active-icon-light:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-light:active:not(.btn-active) i,
+.btn.btn-active-icon-light:active:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-light.active i,
+.btn.btn-active-icon-light.active .svg-icon,
+.btn.btn-active-icon-light.show i,
+.btn.btn-active-icon-light.show .svg-icon,
+.show > .btn.btn-active-icon-light i,
+.show > .btn.btn-active-icon-light .svg-icon {
+    color: #f5f8fa;
+}
+
+.btn-check:checked + .btn.btn-active-icon-light.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-icon-light.dropdown-toggle:after,
+.btn.btn-active-icon-light:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-light:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-light:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-light.active.dropdown-toggle:after,
+.btn.btn-active-icon-light.show.dropdown-toggle:after,
+.show > .btn.btn-active-icon-light.dropdown-toggle:after {
+    color: #f5f8fa;
+}
+
+.btn.btn-text-light {
+    color: #f5f8fa;
+}
+
+.btn-check:checked + .btn.btn-active-text-light,
+.btn-check:active + .btn.btn-active-text-light,
+.btn.btn-active-text-light:focus:not(.btn-active),
+.btn.btn-active-text-light:hover:not(.btn-active),
+.btn.btn-active-text-light:active:not(.btn-active),
+.btn.btn-active-text-light.active,
+.btn.btn-active-text-light.show,
+.show > .btn.btn-active-text-light {
+    color: #f5f8fa;
+}
+
+.btn.btn-color-success {
+    color: #50cd89;
+}
+
+.btn.btn-color-success i,
+.btn.btn-color-success .svg-icon {
+    color: #50cd89;
+}
+
+.btn.btn-color-success.dropdown-toggle:after {
+    color: #50cd89;
+}
+
+.btn-check:checked + .btn.btn-active-color-success,
+.btn-check:active + .btn.btn-active-color-success,
+.btn.btn-active-color-success:focus:not(.btn-active),
+.btn.btn-active-color-success:hover:not(.btn-active),
+.btn.btn-active-color-success:active:not(.btn-active),
+.btn.btn-active-color-success.active,
+.btn.btn-active-color-success.show,
+.show > .btn.btn-active-color-success {
+    color: #50cd89;
+}
+
+.btn-check:checked + .btn.btn-active-color-success i,
+.btn-check:checked + .btn.btn-active-color-success .svg-icon,
+.btn-check:active + .btn.btn-active-color-success i,
+.btn-check:active + .btn.btn-active-color-success .svg-icon,
+.btn.btn-active-color-success:focus:not(.btn-active) i,
+.btn.btn-active-color-success:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-color-success:hover:not(.btn-active) i,
+.btn.btn-active-color-success:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-color-success:active:not(.btn-active) i,
+.btn.btn-active-color-success:active:not(.btn-active) .svg-icon,
+.btn.btn-active-color-success.active i,
+.btn.btn-active-color-success.active .svg-icon,
+.btn.btn-active-color-success.show i,
+.btn.btn-active-color-success.show .svg-icon,
+.show > .btn.btn-active-color-success i,
+.show > .btn.btn-active-color-success .svg-icon {
+    color: #50cd89;
+}
+
+.btn-check:checked + .btn.btn-active-color-success.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-color-success.dropdown-toggle:after,
+.btn.btn-active-color-success:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-success:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-success:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-success.active.dropdown-toggle:after,
+.btn.btn-active-color-success.show.dropdown-toggle:after,
+.show > .btn.btn-active-color-success.dropdown-toggle:after {
+    color: #50cd89;
+}
+
+.btn.btn-icon-success i,
+.btn.btn-icon-success .svg-icon {
+    color: #50cd89;
+}
+
+.btn.btn-icon-success.dropdown-toggle:after {
+    color: #50cd89;
+}
+
+.btn-check:checked + .btn.btn-active-icon-success i,
+.btn-check:checked + .btn.btn-active-icon-success .svg-icon,
+.btn-check:active + .btn.btn-active-icon-success i,
+.btn-check:active + .btn.btn-active-icon-success .svg-icon,
+.btn.btn-active-icon-success:focus:not(.btn-active) i,
+.btn.btn-active-icon-success:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-success:hover:not(.btn-active) i,
+.btn.btn-active-icon-success:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-success:active:not(.btn-active) i,
+.btn.btn-active-icon-success:active:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-success.active i,
+.btn.btn-active-icon-success.active .svg-icon,
+.btn.btn-active-icon-success.show i,
+.btn.btn-active-icon-success.show .svg-icon,
+.show > .btn.btn-active-icon-success i,
+.show > .btn.btn-active-icon-success .svg-icon {
+    color: #50cd89;
+}
+
+.btn-check:checked + .btn.btn-active-icon-success.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-icon-success.dropdown-toggle:after,
+.btn.btn-active-icon-success:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-success:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-success:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-success.active.dropdown-toggle:after,
+.btn.btn-active-icon-success.show.dropdown-toggle:after,
+.show > .btn.btn-active-icon-success.dropdown-toggle:after {
+    color: #50cd89;
+}
+
+.btn.btn-text-success {
+    color: #50cd89;
+}
+
+.btn-check:checked + .btn.btn-active-text-success,
+.btn-check:active + .btn.btn-active-text-success,
+.btn.btn-active-text-success:focus:not(.btn-active),
+.btn.btn-active-text-success:hover:not(.btn-active),
+.btn.btn-active-text-success:active:not(.btn-active),
+.btn.btn-active-text-success.active,
+.btn.btn-active-text-success.show,
+.show > .btn.btn-active-text-success {
+    color: #50cd89;
+}
+
+.btn.btn-color-info {
+    color: #7239ea;
+}
+
+.btn.btn-color-info i,
+.btn.btn-color-info .svg-icon {
+    color: #7239ea;
+}
+
+.btn.btn-color-info.dropdown-toggle:after {
+    color: #7239ea;
+}
+
+.btn-check:checked + .btn.btn-active-color-info,
+.btn-check:active + .btn.btn-active-color-info,
+.btn.btn-active-color-info:focus:not(.btn-active),
+.btn.btn-active-color-info:hover:not(.btn-active),
+.btn.btn-active-color-info:active:not(.btn-active),
+.btn.btn-active-color-info.active,
+.btn.btn-active-color-info.show,
+.show > .btn.btn-active-color-info {
+    color: #7239ea;
+}
+
+.btn-check:checked + .btn.btn-active-color-info i,
+.btn-check:checked + .btn.btn-active-color-info .svg-icon,
+.btn-check:active + .btn.btn-active-color-info i,
+.btn-check:active + .btn.btn-active-color-info .svg-icon,
+.btn.btn-active-color-info:focus:not(.btn-active) i,
+.btn.btn-active-color-info:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-color-info:hover:not(.btn-active) i,
+.btn.btn-active-color-info:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-color-info:active:not(.btn-active) i,
+.btn.btn-active-color-info:active:not(.btn-active) .svg-icon,
+.btn.btn-active-color-info.active i,
+.btn.btn-active-color-info.active .svg-icon,
+.btn.btn-active-color-info.show i,
+.btn.btn-active-color-info.show .svg-icon,
+.show > .btn.btn-active-color-info i,
+.show > .btn.btn-active-color-info .svg-icon {
+    color: #7239ea;
+}
+
+.btn-check:checked + .btn.btn-active-color-info.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-color-info.dropdown-toggle:after,
+.btn.btn-active-color-info:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-info:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-info:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-info.active.dropdown-toggle:after,
+.btn.btn-active-color-info.show.dropdown-toggle:after,
+.show > .btn.btn-active-color-info.dropdown-toggle:after {
+    color: #7239ea;
+}
+
+.btn.btn-icon-info i,
+.btn.btn-icon-info .svg-icon {
+    color: #7239ea;
+}
+
+.btn.btn-icon-info.dropdown-toggle:after {
+    color: #7239ea;
+}
+
+.btn-check:checked + .btn.btn-active-icon-info i,
+.btn-check:checked + .btn.btn-active-icon-info .svg-icon,
+.btn-check:active + .btn.btn-active-icon-info i,
+.btn-check:active + .btn.btn-active-icon-info .svg-icon,
+.btn.btn-active-icon-info:focus:not(.btn-active) i,
+.btn.btn-active-icon-info:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-info:hover:not(.btn-active) i,
+.btn.btn-active-icon-info:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-info:active:not(.btn-active) i,
+.btn.btn-active-icon-info:active:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-info.active i,
+.btn.btn-active-icon-info.active .svg-icon,
+.btn.btn-active-icon-info.show i,
+.btn.btn-active-icon-info.show .svg-icon,
+.show > .btn.btn-active-icon-info i,
+.show > .btn.btn-active-icon-info .svg-icon {
+    color: #7239ea;
+}
+
+.btn-check:checked + .btn.btn-active-icon-info.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-icon-info.dropdown-toggle:after,
+.btn.btn-active-icon-info:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-info:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-info:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-info.active.dropdown-toggle:after,
+.btn.btn-active-icon-info.show.dropdown-toggle:after,
+.show > .btn.btn-active-icon-info.dropdown-toggle:after {
+    color: #7239ea;
+}
+
+.btn.btn-text-info {
+    color: #7239ea;
+}
+
+.btn-check:checked + .btn.btn-active-text-info,
+.btn-check:active + .btn.btn-active-text-info,
+.btn.btn-active-text-info:focus:not(.btn-active),
+.btn.btn-active-text-info:hover:not(.btn-active),
+.btn.btn-active-text-info:active:not(.btn-active),
+.btn.btn-active-text-info.active,
+.btn.btn-active-text-info.show,
+.show > .btn.btn-active-text-info {
+    color: #7239ea;
+}
+
+.btn.btn-color-warning {
+    color: #ffc700;
+}
+
+.btn.btn-color-warning i,
+.btn.btn-color-warning .svg-icon {
+    color: #ffc700;
+}
+
+.btn.btn-color-warning.dropdown-toggle:after {
+    color: #ffc700;
+}
+
+.btn-check:checked + .btn.btn-active-color-warning,
+.btn-check:active + .btn.btn-active-color-warning,
+.btn.btn-active-color-warning:focus:not(.btn-active),
+.btn.btn-active-color-warning:hover:not(.btn-active),
+.btn.btn-active-color-warning:active:not(.btn-active),
+.btn.btn-active-color-warning.active,
+.btn.btn-active-color-warning.show,
+.show > .btn.btn-active-color-warning {
+    color: #ffc700;
+}
+
+.btn-check:checked + .btn.btn-active-color-warning i,
+.btn-check:checked + .btn.btn-active-color-warning .svg-icon,
+.btn-check:active + .btn.btn-active-color-warning i,
+.btn-check:active + .btn.btn-active-color-warning .svg-icon,
+.btn.btn-active-color-warning:focus:not(.btn-active) i,
+.btn.btn-active-color-warning:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-color-warning:hover:not(.btn-active) i,
+.btn.btn-active-color-warning:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-color-warning:active:not(.btn-active) i,
+.btn.btn-active-color-warning:active:not(.btn-active) .svg-icon,
+.btn.btn-active-color-warning.active i,
+.btn.btn-active-color-warning.active .svg-icon,
+.btn.btn-active-color-warning.show i,
+.btn.btn-active-color-warning.show .svg-icon,
+.show > .btn.btn-active-color-warning i,
+.show > .btn.btn-active-color-warning .svg-icon {
+    color: #ffc700;
+}
+
+.btn-check:checked + .btn.btn-active-color-warning.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-color-warning.dropdown-toggle:after,
+.btn.btn-active-color-warning:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-warning:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-warning:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-warning.active.dropdown-toggle:after,
+.btn.btn-active-color-warning.show.dropdown-toggle:after,
+.show > .btn.btn-active-color-warning.dropdown-toggle:after {
+    color: #ffc700;
+}
+
+.btn.btn-icon-warning i,
+.btn.btn-icon-warning .svg-icon {
+    color: #ffc700;
+}
+
+.btn.btn-icon-warning.dropdown-toggle:after {
+    color: #ffc700;
+}
+
+.btn-check:checked + .btn.btn-active-icon-warning i,
+.btn-check:checked + .btn.btn-active-icon-warning .svg-icon,
+.btn-check:active + .btn.btn-active-icon-warning i,
+.btn-check:active + .btn.btn-active-icon-warning .svg-icon,
+.btn.btn-active-icon-warning:focus:not(.btn-active) i,
+.btn.btn-active-icon-warning:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-warning:hover:not(.btn-active) i,
+.btn.btn-active-icon-warning:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-warning:active:not(.btn-active) i,
+.btn.btn-active-icon-warning:active:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-warning.active i,
+.btn.btn-active-icon-warning.active .svg-icon,
+.btn.btn-active-icon-warning.show i,
+.btn.btn-active-icon-warning.show .svg-icon,
+.show > .btn.btn-active-icon-warning i,
+.show > .btn.btn-active-icon-warning .svg-icon {
+    color: #ffc700;
+}
+
+.btn-check:checked + .btn.btn-active-icon-warning.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-icon-warning.dropdown-toggle:after,
+.btn.btn-active-icon-warning:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-warning:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-warning:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-warning.active.dropdown-toggle:after,
+.btn.btn-active-icon-warning.show.dropdown-toggle:after,
+.show > .btn.btn-active-icon-warning.dropdown-toggle:after {
+    color: #ffc700;
+}
+
+.btn.btn-text-warning {
+    color: #ffc700;
+}
+
+.btn-check:checked + .btn.btn-active-text-warning,
+.btn-check:active + .btn.btn-active-text-warning,
+.btn.btn-active-text-warning:focus:not(.btn-active),
+.btn.btn-active-text-warning:hover:not(.btn-active),
+.btn.btn-active-text-warning:active:not(.btn-active),
+.btn.btn-active-text-warning.active,
+.btn.btn-active-text-warning.show,
+.show > .btn.btn-active-text-warning {
+    color: #ffc700;
+}
+
+.btn.btn-color-danger {
+    color: #f1416c;
+}
+
+.btn.btn-color-danger i,
+.btn.btn-color-danger .svg-icon {
+    color: #f1416c;
+}
+
+.btn.btn-color-danger.dropdown-toggle:after {
+    color: #f1416c;
+}
+
+.btn-check:checked + .btn.btn-active-color-danger,
+.btn-check:active + .btn.btn-active-color-danger,
+.btn.btn-active-color-danger:focus:not(.btn-active),
+.btn.btn-active-color-danger:hover:not(.btn-active),
+.btn.btn-active-color-danger:active:not(.btn-active),
+.btn.btn-active-color-danger.active,
+.btn.btn-active-color-danger.show,
+.show > .btn.btn-active-color-danger {
+    color: #f1416c;
+}
+
+.btn-check:checked + .btn.btn-active-color-danger i,
+.btn-check:checked + .btn.btn-active-color-danger .svg-icon,
+.btn-check:active + .btn.btn-active-color-danger i,
+.btn-check:active + .btn.btn-active-color-danger .svg-icon,
+.btn.btn-active-color-danger:focus:not(.btn-active) i,
+.btn.btn-active-color-danger:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-color-danger:hover:not(.btn-active) i,
+.btn.btn-active-color-danger:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-color-danger:active:not(.btn-active) i,
+.btn.btn-active-color-danger:active:not(.btn-active) .svg-icon,
+.btn.btn-active-color-danger.active i,
+.btn.btn-active-color-danger.active .svg-icon,
+.btn.btn-active-color-danger.show i,
+.btn.btn-active-color-danger.show .svg-icon,
+.show > .btn.btn-active-color-danger i,
+.show > .btn.btn-active-color-danger .svg-icon {
+    color: #f1416c;
+}
+
+.btn-check:checked + .btn.btn-active-color-danger.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-color-danger.dropdown-toggle:after,
+.btn.btn-active-color-danger:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-danger:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-danger:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-danger.active.dropdown-toggle:after,
+.btn.btn-active-color-danger.show.dropdown-toggle:after,
+.show > .btn.btn-active-color-danger.dropdown-toggle:after {
+    color: #f1416c;
+}
+
+.btn.btn-icon-danger i,
+.btn.btn-icon-danger .svg-icon {
+    color: #f1416c;
+}
+
+.btn.btn-icon-danger.dropdown-toggle:after {
+    color: #f1416c;
+}
+
+.btn-check:checked + .btn.btn-active-icon-danger i,
+.btn-check:checked + .btn.btn-active-icon-danger .svg-icon,
+.btn-check:active + .btn.btn-active-icon-danger i,
+.btn-check:active + .btn.btn-active-icon-danger .svg-icon,
+.btn.btn-active-icon-danger:focus:not(.btn-active) i,
+.btn.btn-active-icon-danger:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-danger:hover:not(.btn-active) i,
+.btn.btn-active-icon-danger:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-danger:active:not(.btn-active) i,
+.btn.btn-active-icon-danger:active:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-danger.active i,
+.btn.btn-active-icon-danger.active .svg-icon,
+.btn.btn-active-icon-danger.show i,
+.btn.btn-active-icon-danger.show .svg-icon,
+.show > .btn.btn-active-icon-danger i,
+.show > .btn.btn-active-icon-danger .svg-icon {
+    color: #f1416c;
+}
+
+.btn-check:checked + .btn.btn-active-icon-danger.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-icon-danger.dropdown-toggle:after,
+.btn.btn-active-icon-danger:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-danger:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-danger:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-danger.active.dropdown-toggle:after,
+.btn.btn-active-icon-danger.show.dropdown-toggle:after,
+.show > .btn.btn-active-icon-danger.dropdown-toggle:after {
+    color: #f1416c;
+}
+
+.btn.btn-text-danger {
+    color: #f1416c;
+}
+
+.btn-check:checked + .btn.btn-active-text-danger,
+.btn-check:active + .btn.btn-active-text-danger,
+.btn.btn-active-text-danger:focus:not(.btn-active),
+.btn.btn-active-text-danger:hover:not(.btn-active),
+.btn.btn-active-text-danger:active:not(.btn-active),
+.btn.btn-active-text-danger.active,
+.btn.btn-active-text-danger.show,
+.show > .btn.btn-active-text-danger {
+    color: #f1416c;
+}
+
+.btn.btn-color-dark {
+    color: #181c32;
+}
+
+.btn.btn-color-dark i,
+.btn.btn-color-dark .svg-icon {
+    color: #181c32;
+}
+
+.btn.btn-color-dark.dropdown-toggle:after {
+    color: #181c32;
+}
+
+.btn-check:checked + .btn.btn-active-color-dark,
+.btn-check:active + .btn.btn-active-color-dark,
+.btn.btn-active-color-dark:focus:not(.btn-active),
+.btn.btn-active-color-dark:hover:not(.btn-active),
+.btn.btn-active-color-dark:active:not(.btn-active),
+.btn.btn-active-color-dark.active,
+.btn.btn-active-color-dark.show,
+.show > .btn.btn-active-color-dark {
+    color: #181c32;
+}
+
+.btn-check:checked + .btn.btn-active-color-dark i,
+.btn-check:checked + .btn.btn-active-color-dark .svg-icon,
+.btn-check:active + .btn.btn-active-color-dark i,
+.btn-check:active + .btn.btn-active-color-dark .svg-icon,
+.btn.btn-active-color-dark:focus:not(.btn-active) i,
+.btn.btn-active-color-dark:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-color-dark:hover:not(.btn-active) i,
+.btn.btn-active-color-dark:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-color-dark:active:not(.btn-active) i,
+.btn.btn-active-color-dark:active:not(.btn-active) .svg-icon,
+.btn.btn-active-color-dark.active i,
+.btn.btn-active-color-dark.active .svg-icon,
+.btn.btn-active-color-dark.show i,
+.btn.btn-active-color-dark.show .svg-icon,
+.show > .btn.btn-active-color-dark i,
+.show > .btn.btn-active-color-dark .svg-icon {
+    color: #181c32;
+}
+
+.btn-check:checked + .btn.btn-active-color-dark.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-color-dark.dropdown-toggle:after,
+.btn.btn-active-color-dark:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-dark:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-dark:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-dark.active.dropdown-toggle:after,
+.btn.btn-active-color-dark.show.dropdown-toggle:after,
+.show > .btn.btn-active-color-dark.dropdown-toggle:after {
+    color: #181c32;
+}
+
+.btn.btn-icon-dark i,
+.btn.btn-icon-dark .svg-icon {
+    color: #181c32;
+}
+
+.btn.btn-icon-dark.dropdown-toggle:after {
+    color: #181c32;
+}
+
+.btn-check:checked + .btn.btn-active-icon-dark i,
+.btn-check:checked + .btn.btn-active-icon-dark .svg-icon,
+.btn-check:active + .btn.btn-active-icon-dark i,
+.btn-check:active + .btn.btn-active-icon-dark .svg-icon,
+.btn.btn-active-icon-dark:focus:not(.btn-active) i,
+.btn.btn-active-icon-dark:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-dark:hover:not(.btn-active) i,
+.btn.btn-active-icon-dark:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-dark:active:not(.btn-active) i,
+.btn.btn-active-icon-dark:active:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-dark.active i,
+.btn.btn-active-icon-dark.active .svg-icon,
+.btn.btn-active-icon-dark.show i,
+.btn.btn-active-icon-dark.show .svg-icon,
+.show > .btn.btn-active-icon-dark i,
+.show > .btn.btn-active-icon-dark .svg-icon {
+    color: #181c32;
+}
+
+.btn-check:checked + .btn.btn-active-icon-dark.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-icon-dark.dropdown-toggle:after,
+.btn.btn-active-icon-dark:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-dark:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-dark:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-dark.active.dropdown-toggle:after,
+.btn.btn-active-icon-dark.show.dropdown-toggle:after,
+.show > .btn.btn-active-icon-dark.dropdown-toggle:after {
+    color: #181c32;
+}
+
+.btn.btn-text-dark {
+    color: #181c32;
+}
+
+.btn-check:checked + .btn.btn-active-text-dark,
+.btn-check:active + .btn.btn-active-text-dark,
+.btn.btn-active-text-dark:focus:not(.btn-active),
+.btn.btn-active-text-dark:hover:not(.btn-active),
+.btn.btn-active-text-dark:active:not(.btn-active),
+.btn.btn-active-text-dark.active,
+.btn.btn-active-text-dark.show,
+.show > .btn.btn-active-text-dark {
+    color: #181c32;
+}
+
+.btn.btn-color-muted {
+    color: #a1a5b7;
+}
+
+.btn.btn-color-muted i,
+.btn.btn-color-muted .svg-icon {
+    color: #a1a5b7;
+}
+
+.btn.btn-color-muted.dropdown-toggle:after {
+    color: #a1a5b7;
+}
+
+.btn-check:checked + .btn.btn-active-color-muted,
+.btn-check:active + .btn.btn-active-color-muted,
+.btn.btn-active-color-muted:focus:not(.btn-active),
+.btn.btn-active-color-muted:hover:not(.btn-active),
+.btn.btn-active-color-muted:active:not(.btn-active),
+.btn.btn-active-color-muted.active,
+.btn.btn-active-color-muted.show,
+.show > .btn.btn-active-color-muted {
+    color: #a1a5b7;
+}
+
+.btn-check:checked + .btn.btn-active-color-muted i,
+.btn-check:checked + .btn.btn-active-color-muted .svg-icon,
+.btn-check:active + .btn.btn-active-color-muted i,
+.btn-check:active + .btn.btn-active-color-muted .svg-icon,
+.btn.btn-active-color-muted:focus:not(.btn-active) i,
+.btn.btn-active-color-muted:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-color-muted:hover:not(.btn-active) i,
+.btn.btn-active-color-muted:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-color-muted:active:not(.btn-active) i,
+.btn.btn-active-color-muted:active:not(.btn-active) .svg-icon,
+.btn.btn-active-color-muted.active i,
+.btn.btn-active-color-muted.active .svg-icon,
+.btn.btn-active-color-muted.show i,
+.btn.btn-active-color-muted.show .svg-icon,
+.show > .btn.btn-active-color-muted i,
+.show > .btn.btn-active-color-muted .svg-icon {
+    color: #a1a5b7;
+}
+
+.btn-check:checked + .btn.btn-active-color-muted.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-color-muted.dropdown-toggle:after,
+.btn.btn-active-color-muted:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-muted:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-muted:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-muted.active.dropdown-toggle:after,
+.btn.btn-active-color-muted.show.dropdown-toggle:after,
+.show > .btn.btn-active-color-muted.dropdown-toggle:after {
+    color: #a1a5b7;
+}
+
+.btn.btn-icon-muted i,
+.btn.btn-icon-muted .svg-icon {
+    color: #a1a5b7;
+}
+
+.btn.btn-icon-muted.dropdown-toggle:after {
+    color: #a1a5b7;
+}
+
+.btn-check:checked + .btn.btn-active-icon-muted i,
+.btn-check:checked + .btn.btn-active-icon-muted .svg-icon,
+.btn-check:active + .btn.btn-active-icon-muted i,
+.btn-check:active + .btn.btn-active-icon-muted .svg-icon,
+.btn.btn-active-icon-muted:focus:not(.btn-active) i,
+.btn.btn-active-icon-muted:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-muted:hover:not(.btn-active) i,
+.btn.btn-active-icon-muted:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-muted:active:not(.btn-active) i,
+.btn.btn-active-icon-muted:active:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-muted.active i,
+.btn.btn-active-icon-muted.active .svg-icon,
+.btn.btn-active-icon-muted.show i,
+.btn.btn-active-icon-muted.show .svg-icon,
+.show > .btn.btn-active-icon-muted i,
+.show > .btn.btn-active-icon-muted .svg-icon {
+    color: #a1a5b7;
+}
+
+.btn-check:checked + .btn.btn-active-icon-muted.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-icon-muted.dropdown-toggle:after,
+.btn.btn-active-icon-muted:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-muted:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-muted:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-muted.active.dropdown-toggle:after,
+.btn.btn-active-icon-muted.show.dropdown-toggle:after,
+.show > .btn.btn-active-icon-muted.dropdown-toggle:after {
+    color: #a1a5b7;
+}
+
+.btn.btn-text-muted {
+    color: #a1a5b7;
+}
+
+.btn-check:checked + .btn.btn-active-text-muted,
+.btn-check:active + .btn.btn-active-text-muted,
+.btn.btn-active-text-muted:focus:not(.btn-active),
+.btn.btn-active-text-muted:hover:not(.btn-active),
+.btn.btn-active-text-muted:active:not(.btn-active),
+.btn.btn-active-text-muted.active,
+.btn.btn-active-text-muted.show,
+.show > .btn.btn-active-text-muted {
+    color: #a1a5b7;
+}
+
+.btn.btn-color-gray-100 {
+    color: #f5f8fa;
+}
+
+.btn.btn-color-gray-100 i,
+.btn.btn-color-gray-100 .svg-icon {
+    color: #f5f8fa;
+}
+
+.btn.btn-color-gray-100.dropdown-toggle:after {
+    color: #f5f8fa;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-100,
+.btn-check:active + .btn.btn-active-color-gray-100,
+.btn.btn-active-color-gray-100:focus:not(.btn-active),
+.btn.btn-active-color-gray-100:hover:not(.btn-active),
+.btn.btn-active-color-gray-100:active:not(.btn-active),
+.btn.btn-active-color-gray-100.active,
+.btn.btn-active-color-gray-100.show,
+.show > .btn.btn-active-color-gray-100 {
+    color: #f5f8fa;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-100 i,
+.btn-check:checked + .btn.btn-active-color-gray-100 .svg-icon,
+.btn-check:active + .btn.btn-active-color-gray-100 i,
+.btn-check:active + .btn.btn-active-color-gray-100 .svg-icon,
+.btn.btn-active-color-gray-100:focus:not(.btn-active) i,
+.btn.btn-active-color-gray-100:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-100:hover:not(.btn-active) i,
+.btn.btn-active-color-gray-100:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-100:active:not(.btn-active) i,
+.btn.btn-active-color-gray-100:active:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-100.active i,
+.btn.btn-active-color-gray-100.active .svg-icon,
+.btn.btn-active-color-gray-100.show i,
+.btn.btn-active-color-gray-100.show .svg-icon,
+.show > .btn.btn-active-color-gray-100 i,
+.show > .btn.btn-active-color-gray-100 .svg-icon {
+    color: #f5f8fa;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-100.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-color-gray-100.dropdown-toggle:after,
+.btn.btn-active-color-gray-100:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-100:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-100:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-100.active.dropdown-toggle:after,
+.btn.btn-active-color-gray-100.show.dropdown-toggle:after,
+.show > .btn.btn-active-color-gray-100.dropdown-toggle:after {
+    color: #f5f8fa;
+}
+
+.btn.btn-icon-gray-100 i,
+.btn.btn-icon-gray-100 .svg-icon {
+    color: #f5f8fa;
+}
+
+.btn.btn-icon-gray-100.dropdown-toggle:after {
+    color: #f5f8fa;
+}
+
+.btn-check:checked + .btn.btn-active-icon-gray-100 i,
+.btn-check:checked + .btn.btn-active-icon-gray-100 .svg-icon,
+.btn-check:active + .btn.btn-active-icon-gray-100 i,
+.btn-check:active + .btn.btn-active-icon-gray-100 .svg-icon,
+.btn.btn-active-icon-gray-100:focus:not(.btn-active) i,
+.btn.btn-active-icon-gray-100:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-100:hover:not(.btn-active) i,
+.btn.btn-active-icon-gray-100:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-100:active:not(.btn-active) i,
+.btn.btn-active-icon-gray-100:active:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-100.active i,
+.btn.btn-active-icon-gray-100.active .svg-icon,
+.btn.btn-active-icon-gray-100.show i,
+.btn.btn-active-icon-gray-100.show .svg-icon,
+.show > .btn.btn-active-icon-gray-100 i,
+.show > .btn.btn-active-icon-gray-100 .svg-icon {
+    color: #f5f8fa;
+}
+
+.btn-check:checked + .btn.btn-active-icon-gray-100.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-icon-gray-100.dropdown-toggle:after,
+.btn.btn-active-icon-gray-100:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-100:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-100:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-100.active.dropdown-toggle:after,
+.btn.btn-active-icon-gray-100.show.dropdown-toggle:after,
+.show > .btn.btn-active-icon-gray-100.dropdown-toggle:after {
+    color: #f5f8fa;
+}
+
+.btn.btn-text-gray-100 {
+    color: #f5f8fa;
+}
+
+.btn-check:checked + .btn.btn-active-text-gray-100,
+.btn-check:active + .btn.btn-active-text-gray-100,
+.btn.btn-active-text-gray-100:focus:not(.btn-active),
+.btn.btn-active-text-gray-100:hover:not(.btn-active),
+.btn.btn-active-text-gray-100:active:not(.btn-active),
+.btn.btn-active-text-gray-100.active,
+.btn.btn-active-text-gray-100.show,
+.show > .btn.btn-active-text-gray-100 {
+    color: #f5f8fa;
+}
+
+.btn.btn-color-gray-200 {
+    color: #eff2f5;
+}
+
+.btn.btn-color-gray-200 i,
+.btn.btn-color-gray-200 .svg-icon {
+    color: #eff2f5;
+}
+
+.btn.btn-color-gray-200.dropdown-toggle:after {
+    color: #eff2f5;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-200,
+.btn-check:active + .btn.btn-active-color-gray-200,
+.btn.btn-active-color-gray-200:focus:not(.btn-active),
+.btn.btn-active-color-gray-200:hover:not(.btn-active),
+.btn.btn-active-color-gray-200:active:not(.btn-active),
+.btn.btn-active-color-gray-200.active,
+.btn.btn-active-color-gray-200.show,
+.show > .btn.btn-active-color-gray-200 {
+    color: #eff2f5;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-200 i,
+.btn-check:checked + .btn.btn-active-color-gray-200 .svg-icon,
+.btn-check:active + .btn.btn-active-color-gray-200 i,
+.btn-check:active + .btn.btn-active-color-gray-200 .svg-icon,
+.btn.btn-active-color-gray-200:focus:not(.btn-active) i,
+.btn.btn-active-color-gray-200:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-200:hover:not(.btn-active) i,
+.btn.btn-active-color-gray-200:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-200:active:not(.btn-active) i,
+.btn.btn-active-color-gray-200:active:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-200.active i,
+.btn.btn-active-color-gray-200.active .svg-icon,
+.btn.btn-active-color-gray-200.show i,
+.btn.btn-active-color-gray-200.show .svg-icon,
+.show > .btn.btn-active-color-gray-200 i,
+.show > .btn.btn-active-color-gray-200 .svg-icon {
+    color: #eff2f5;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-200.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-color-gray-200.dropdown-toggle:after,
+.btn.btn-active-color-gray-200:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-200:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-200:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-200.active.dropdown-toggle:after,
+.btn.btn-active-color-gray-200.show.dropdown-toggle:after,
+.show > .btn.btn-active-color-gray-200.dropdown-toggle:after {
+    color: #eff2f5;
+}
+
+.btn.btn-icon-gray-200 i,
+.btn.btn-icon-gray-200 .svg-icon {
+    color: #eff2f5;
+}
+
+.btn.btn-icon-gray-200.dropdown-toggle:after {
+    color: #eff2f5;
+}
+
+.btn-check:checked + .btn.btn-active-icon-gray-200 i,
+.btn-check:checked + .btn.btn-active-icon-gray-200 .svg-icon,
+.btn-check:active + .btn.btn-active-icon-gray-200 i,
+.btn-check:active + .btn.btn-active-icon-gray-200 .svg-icon,
+.btn.btn-active-icon-gray-200:focus:not(.btn-active) i,
+.btn.btn-active-icon-gray-200:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-200:hover:not(.btn-active) i,
+.btn.btn-active-icon-gray-200:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-200:active:not(.btn-active) i,
+.btn.btn-active-icon-gray-200:active:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-200.active i,
+.btn.btn-active-icon-gray-200.active .svg-icon,
+.btn.btn-active-icon-gray-200.show i,
+.btn.btn-active-icon-gray-200.show .svg-icon,
+.show > .btn.btn-active-icon-gray-200 i,
+.show > .btn.btn-active-icon-gray-200 .svg-icon {
+    color: #eff2f5;
+}
+
+.btn-check:checked + .btn.btn-active-icon-gray-200.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-icon-gray-200.dropdown-toggle:after,
+.btn.btn-active-icon-gray-200:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-200:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-200:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-200.active.dropdown-toggle:after,
+.btn.btn-active-icon-gray-200.show.dropdown-toggle:after,
+.show > .btn.btn-active-icon-gray-200.dropdown-toggle:after {
+    color: #eff2f5;
+}
+
+.btn.btn-text-gray-200 {
+    color: #eff2f5;
+}
+
+.btn-check:checked + .btn.btn-active-text-gray-200,
+.btn-check:active + .btn.btn-active-text-gray-200,
+.btn.btn-active-text-gray-200:focus:not(.btn-active),
+.btn.btn-active-text-gray-200:hover:not(.btn-active),
+.btn.btn-active-text-gray-200:active:not(.btn-active),
+.btn.btn-active-text-gray-200.active,
+.btn.btn-active-text-gray-200.show,
+.show > .btn.btn-active-text-gray-200 {
+    color: #eff2f5;
+}
+
+.btn.btn-color-gray-300 {
+    color: #e4e6ef;
+}
+
+.btn.btn-color-gray-300 i,
+.btn.btn-color-gray-300 .svg-icon {
+    color: #e4e6ef;
+}
+
+.btn.btn-color-gray-300.dropdown-toggle:after {
+    color: #e4e6ef;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-300,
+.btn-check:active + .btn.btn-active-color-gray-300,
+.btn.btn-active-color-gray-300:focus:not(.btn-active),
+.btn.btn-active-color-gray-300:hover:not(.btn-active),
+.btn.btn-active-color-gray-300:active:not(.btn-active),
+.btn.btn-active-color-gray-300.active,
+.btn.btn-active-color-gray-300.show,
+.show > .btn.btn-active-color-gray-300 {
+    color: #e4e6ef;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-300 i,
+.btn-check:checked + .btn.btn-active-color-gray-300 .svg-icon,
+.btn-check:active + .btn.btn-active-color-gray-300 i,
+.btn-check:active + .btn.btn-active-color-gray-300 .svg-icon,
+.btn.btn-active-color-gray-300:focus:not(.btn-active) i,
+.btn.btn-active-color-gray-300:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-300:hover:not(.btn-active) i,
+.btn.btn-active-color-gray-300:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-300:active:not(.btn-active) i,
+.btn.btn-active-color-gray-300:active:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-300.active i,
+.btn.btn-active-color-gray-300.active .svg-icon,
+.btn.btn-active-color-gray-300.show i,
+.btn.btn-active-color-gray-300.show .svg-icon,
+.show > .btn.btn-active-color-gray-300 i,
+.show > .btn.btn-active-color-gray-300 .svg-icon {
+    color: #e4e6ef;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-300.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-color-gray-300.dropdown-toggle:after,
+.btn.btn-active-color-gray-300:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-300:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-300:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-300.active.dropdown-toggle:after,
+.btn.btn-active-color-gray-300.show.dropdown-toggle:after,
+.show > .btn.btn-active-color-gray-300.dropdown-toggle:after {
+    color: #e4e6ef;
+}
+
+.btn.btn-icon-gray-300 i,
+.btn.btn-icon-gray-300 .svg-icon {
+    color: #e4e6ef;
+}
+
+.btn.btn-icon-gray-300.dropdown-toggle:after {
+    color: #e4e6ef;
+}
+
+.btn-check:checked + .btn.btn-active-icon-gray-300 i,
+.btn-check:checked + .btn.btn-active-icon-gray-300 .svg-icon,
+.btn-check:active + .btn.btn-active-icon-gray-300 i,
+.btn-check:active + .btn.btn-active-icon-gray-300 .svg-icon,
+.btn.btn-active-icon-gray-300:focus:not(.btn-active) i,
+.btn.btn-active-icon-gray-300:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-300:hover:not(.btn-active) i,
+.btn.btn-active-icon-gray-300:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-300:active:not(.btn-active) i,
+.btn.btn-active-icon-gray-300:active:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-300.active i,
+.btn.btn-active-icon-gray-300.active .svg-icon,
+.btn.btn-active-icon-gray-300.show i,
+.btn.btn-active-icon-gray-300.show .svg-icon,
+.show > .btn.btn-active-icon-gray-300 i,
+.show > .btn.btn-active-icon-gray-300 .svg-icon {
+    color: #e4e6ef;
+}
+
+.btn-check:checked + .btn.btn-active-icon-gray-300.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-icon-gray-300.dropdown-toggle:after,
+.btn.btn-active-icon-gray-300:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-300:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-300:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-300.active.dropdown-toggle:after,
+.btn.btn-active-icon-gray-300.show.dropdown-toggle:after,
+.show > .btn.btn-active-icon-gray-300.dropdown-toggle:after {
+    color: #e4e6ef;
+}
+
+.btn.btn-text-gray-300 {
+    color: #e4e6ef;
+}
+
+.btn-check:checked + .btn.btn-active-text-gray-300,
+.btn-check:active + .btn.btn-active-text-gray-300,
+.btn.btn-active-text-gray-300:focus:not(.btn-active),
+.btn.btn-active-text-gray-300:hover:not(.btn-active),
+.btn.btn-active-text-gray-300:active:not(.btn-active),
+.btn.btn-active-text-gray-300.active,
+.btn.btn-active-text-gray-300.show,
+.show > .btn.btn-active-text-gray-300 {
+    color: #e4e6ef;
+}
+
+.btn.btn-color-gray-400 {
+    color: #b5b5c3;
+}
+
+.btn.btn-color-gray-400 i,
+.btn.btn-color-gray-400 .svg-icon {
+    color: #b5b5c3;
+}
+
+.btn.btn-color-gray-400.dropdown-toggle:after {
+    color: #b5b5c3;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-400,
+.btn-check:active + .btn.btn-active-color-gray-400,
+.btn.btn-active-color-gray-400:focus:not(.btn-active),
+.btn.btn-active-color-gray-400:hover:not(.btn-active),
+.btn.btn-active-color-gray-400:active:not(.btn-active),
+.btn.btn-active-color-gray-400.active,
+.btn.btn-active-color-gray-400.show,
+.show > .btn.btn-active-color-gray-400 {
+    color: #b5b5c3;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-400 i,
+.btn-check:checked + .btn.btn-active-color-gray-400 .svg-icon,
+.btn-check:active + .btn.btn-active-color-gray-400 i,
+.btn-check:active + .btn.btn-active-color-gray-400 .svg-icon,
+.btn.btn-active-color-gray-400:focus:not(.btn-active) i,
+.btn.btn-active-color-gray-400:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-400:hover:not(.btn-active) i,
+.btn.btn-active-color-gray-400:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-400:active:not(.btn-active) i,
+.btn.btn-active-color-gray-400:active:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-400.active i,
+.btn.btn-active-color-gray-400.active .svg-icon,
+.btn.btn-active-color-gray-400.show i,
+.btn.btn-active-color-gray-400.show .svg-icon,
+.show > .btn.btn-active-color-gray-400 i,
+.show > .btn.btn-active-color-gray-400 .svg-icon {
+    color: #b5b5c3;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-400.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-color-gray-400.dropdown-toggle:after,
+.btn.btn-active-color-gray-400:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-400:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-400:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-400.active.dropdown-toggle:after,
+.btn.btn-active-color-gray-400.show.dropdown-toggle:after,
+.show > .btn.btn-active-color-gray-400.dropdown-toggle:after {
+    color: #b5b5c3;
+}
+
+.btn.btn-icon-gray-400 i,
+.btn.btn-icon-gray-400 .svg-icon {
+    color: #b5b5c3;
+}
+
+.btn.btn-icon-gray-400.dropdown-toggle:after {
+    color: #b5b5c3;
+}
+
+.btn-check:checked + .btn.btn-active-icon-gray-400 i,
+.btn-check:checked + .btn.btn-active-icon-gray-400 .svg-icon,
+.btn-check:active + .btn.btn-active-icon-gray-400 i,
+.btn-check:active + .btn.btn-active-icon-gray-400 .svg-icon,
+.btn.btn-active-icon-gray-400:focus:not(.btn-active) i,
+.btn.btn-active-icon-gray-400:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-400:hover:not(.btn-active) i,
+.btn.btn-active-icon-gray-400:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-400:active:not(.btn-active) i,
+.btn.btn-active-icon-gray-400:active:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-400.active i,
+.btn.btn-active-icon-gray-400.active .svg-icon,
+.btn.btn-active-icon-gray-400.show i,
+.btn.btn-active-icon-gray-400.show .svg-icon,
+.show > .btn.btn-active-icon-gray-400 i,
+.show > .btn.btn-active-icon-gray-400 .svg-icon {
+    color: #b5b5c3;
+}
+
+.btn-check:checked + .btn.btn-active-icon-gray-400.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-icon-gray-400.dropdown-toggle:after,
+.btn.btn-active-icon-gray-400:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-400:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-400:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-400.active.dropdown-toggle:after,
+.btn.btn-active-icon-gray-400.show.dropdown-toggle:after,
+.show > .btn.btn-active-icon-gray-400.dropdown-toggle:after {
+    color: #b5b5c3;
+}
+
+.btn.btn-text-gray-400 {
+    color: #b5b5c3;
+}
+
+.btn-check:checked + .btn.btn-active-text-gray-400,
+.btn-check:active + .btn.btn-active-text-gray-400,
+.btn.btn-active-text-gray-400:focus:not(.btn-active),
+.btn.btn-active-text-gray-400:hover:not(.btn-active),
+.btn.btn-active-text-gray-400:active:not(.btn-active),
+.btn.btn-active-text-gray-400.active,
+.btn.btn-active-text-gray-400.show,
+.show > .btn.btn-active-text-gray-400 {
+    color: #b5b5c3;
+}
+
+.btn.btn-color-gray-500 {
+    color: #a1a5b7;
+}
+
+.btn.btn-color-gray-500 i,
+.btn.btn-color-gray-500 .svg-icon {
+    color: #a1a5b7;
+}
+
+.btn.btn-color-gray-500.dropdown-toggle:after {
+    color: #a1a5b7;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-500,
+.btn-check:active + .btn.btn-active-color-gray-500,
+.btn.btn-active-color-gray-500:focus:not(.btn-active),
+.btn.btn-active-color-gray-500:hover:not(.btn-active),
+.btn.btn-active-color-gray-500:active:not(.btn-active),
+.btn.btn-active-color-gray-500.active,
+.btn.btn-active-color-gray-500.show,
+.show > .btn.btn-active-color-gray-500 {
+    color: #a1a5b7;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-500 i,
+.btn-check:checked + .btn.btn-active-color-gray-500 .svg-icon,
+.btn-check:active + .btn.btn-active-color-gray-500 i,
+.btn-check:active + .btn.btn-active-color-gray-500 .svg-icon,
+.btn.btn-active-color-gray-500:focus:not(.btn-active) i,
+.btn.btn-active-color-gray-500:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-500:hover:not(.btn-active) i,
+.btn.btn-active-color-gray-500:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-500:active:not(.btn-active) i,
+.btn.btn-active-color-gray-500:active:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-500.active i,
+.btn.btn-active-color-gray-500.active .svg-icon,
+.btn.btn-active-color-gray-500.show i,
+.btn.btn-active-color-gray-500.show .svg-icon,
+.show > .btn.btn-active-color-gray-500 i,
+.show > .btn.btn-active-color-gray-500 .svg-icon {
+    color: #a1a5b7;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-500.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-color-gray-500.dropdown-toggle:after,
+.btn.btn-active-color-gray-500:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-500:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-500:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-500.active.dropdown-toggle:after,
+.btn.btn-active-color-gray-500.show.dropdown-toggle:after,
+.show > .btn.btn-active-color-gray-500.dropdown-toggle:after {
+    color: #a1a5b7;
+}
+
+.btn.btn-icon-gray-500 i,
+.btn.btn-icon-gray-500 .svg-icon {
+    color: #a1a5b7;
+}
+
+.btn.btn-icon-gray-500.dropdown-toggle:after {
+    color: #a1a5b7;
+}
+
+.btn-check:checked + .btn.btn-active-icon-gray-500 i,
+.btn-check:checked + .btn.btn-active-icon-gray-500 .svg-icon,
+.btn-check:active + .btn.btn-active-icon-gray-500 i,
+.btn-check:active + .btn.btn-active-icon-gray-500 .svg-icon,
+.btn.btn-active-icon-gray-500:focus:not(.btn-active) i,
+.btn.btn-active-icon-gray-500:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-500:hover:not(.btn-active) i,
+.btn.btn-active-icon-gray-500:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-500:active:not(.btn-active) i,
+.btn.btn-active-icon-gray-500:active:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-500.active i,
+.btn.btn-active-icon-gray-500.active .svg-icon,
+.btn.btn-active-icon-gray-500.show i,
+.btn.btn-active-icon-gray-500.show .svg-icon,
+.show > .btn.btn-active-icon-gray-500 i,
+.show > .btn.btn-active-icon-gray-500 .svg-icon {
+    color: #a1a5b7;
+}
+
+.btn-check:checked + .btn.btn-active-icon-gray-500.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-icon-gray-500.dropdown-toggle:after,
+.btn.btn-active-icon-gray-500:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-500:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-500:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-500.active.dropdown-toggle:after,
+.btn.btn-active-icon-gray-500.show.dropdown-toggle:after,
+.show > .btn.btn-active-icon-gray-500.dropdown-toggle:after {
+    color: #a1a5b7;
+}
+
+.btn.btn-text-gray-500 {
+    color: #a1a5b7;
+}
+
+.btn-check:checked + .btn.btn-active-text-gray-500,
+.btn-check:active + .btn.btn-active-text-gray-500,
+.btn.btn-active-text-gray-500:focus:not(.btn-active),
+.btn.btn-active-text-gray-500:hover:not(.btn-active),
+.btn.btn-active-text-gray-500:active:not(.btn-active),
+.btn.btn-active-text-gray-500.active,
+.btn.btn-active-text-gray-500.show,
+.show > .btn.btn-active-text-gray-500 {
+    color: #a1a5b7;
+}
+
+.btn.btn-color-gray-600 {
+    color: #7e8299;
+}
+
+.btn.btn-color-gray-600 i,
+.btn.btn-color-gray-600 .svg-icon {
+    color: #7e8299;
+}
+
+.btn.btn-color-gray-600.dropdown-toggle:after {
+    color: #7e8299;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-600,
+.btn-check:active + .btn.btn-active-color-gray-600,
+.btn.btn-active-color-gray-600:focus:not(.btn-active),
+.btn.btn-active-color-gray-600:hover:not(.btn-active),
+.btn.btn-active-color-gray-600:active:not(.btn-active),
+.btn.btn-active-color-gray-600.active,
+.btn.btn-active-color-gray-600.show,
+.show > .btn.btn-active-color-gray-600 {
+    color: #7e8299;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-600 i,
+.btn-check:checked + .btn.btn-active-color-gray-600 .svg-icon,
+.btn-check:active + .btn.btn-active-color-gray-600 i,
+.btn-check:active + .btn.btn-active-color-gray-600 .svg-icon,
+.btn.btn-active-color-gray-600:focus:not(.btn-active) i,
+.btn.btn-active-color-gray-600:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-600:hover:not(.btn-active) i,
+.btn.btn-active-color-gray-600:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-600:active:not(.btn-active) i,
+.btn.btn-active-color-gray-600:active:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-600.active i,
+.btn.btn-active-color-gray-600.active .svg-icon,
+.btn.btn-active-color-gray-600.show i,
+.btn.btn-active-color-gray-600.show .svg-icon,
+.show > .btn.btn-active-color-gray-600 i,
+.show > .btn.btn-active-color-gray-600 .svg-icon {
+    color: #7e8299;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-600.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-color-gray-600.dropdown-toggle:after,
+.btn.btn-active-color-gray-600:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-600:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-600:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-600.active.dropdown-toggle:after,
+.btn.btn-active-color-gray-600.show.dropdown-toggle:after,
+.show > .btn.btn-active-color-gray-600.dropdown-toggle:after {
+    color: #7e8299;
+}
+
+.btn.btn-icon-gray-600 i,
+.btn.btn-icon-gray-600 .svg-icon {
+    color: #7e8299;
+}
+
+.btn.btn-icon-gray-600.dropdown-toggle:after {
+    color: #7e8299;
+}
+
+.btn-check:checked + .btn.btn-active-icon-gray-600 i,
+.btn-check:checked + .btn.btn-active-icon-gray-600 .svg-icon,
+.btn-check:active + .btn.btn-active-icon-gray-600 i,
+.btn-check:active + .btn.btn-active-icon-gray-600 .svg-icon,
+.btn.btn-active-icon-gray-600:focus:not(.btn-active) i,
+.btn.btn-active-icon-gray-600:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-600:hover:not(.btn-active) i,
+.btn.btn-active-icon-gray-600:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-600:active:not(.btn-active) i,
+.btn.btn-active-icon-gray-600:active:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-600.active i,
+.btn.btn-active-icon-gray-600.active .svg-icon,
+.btn.btn-active-icon-gray-600.show i,
+.btn.btn-active-icon-gray-600.show .svg-icon,
+.show > .btn.btn-active-icon-gray-600 i,
+.show > .btn.btn-active-icon-gray-600 .svg-icon {
+    color: #7e8299;
+}
+
+.btn-check:checked + .btn.btn-active-icon-gray-600.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-icon-gray-600.dropdown-toggle:after,
+.btn.btn-active-icon-gray-600:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-600:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-600:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-600.active.dropdown-toggle:after,
+.btn.btn-active-icon-gray-600.show.dropdown-toggle:after,
+.show > .btn.btn-active-icon-gray-600.dropdown-toggle:after {
+    color: #7e8299;
+}
+
+.btn.btn-text-gray-600 {
+    color: #7e8299;
+}
+
+.btn-check:checked + .btn.btn-active-text-gray-600,
+.btn-check:active + .btn.btn-active-text-gray-600,
+.btn.btn-active-text-gray-600:focus:not(.btn-active),
+.btn.btn-active-text-gray-600:hover:not(.btn-active),
+.btn.btn-active-text-gray-600:active:not(.btn-active),
+.btn.btn-active-text-gray-600.active,
+.btn.btn-active-text-gray-600.show,
+.show > .btn.btn-active-text-gray-600 {
+    color: #7e8299;
+}
+
+.btn.btn-color-gray-700 {
+    color: #5e6278;
+}
+
+.btn.btn-color-gray-700 i,
+.btn.btn-color-gray-700 .svg-icon {
+    color: #5e6278;
+}
+
+.btn.btn-color-gray-700.dropdown-toggle:after {
+    color: #5e6278;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-700,
+.btn-check:active + .btn.btn-active-color-gray-700,
+.btn.btn-active-color-gray-700:focus:not(.btn-active),
+.btn.btn-active-color-gray-700:hover:not(.btn-active),
+.btn.btn-active-color-gray-700:active:not(.btn-active),
+.btn.btn-active-color-gray-700.active,
+.btn.btn-active-color-gray-700.show,
+.show > .btn.btn-active-color-gray-700 {
+    color: #5e6278;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-700 i,
+.btn-check:checked + .btn.btn-active-color-gray-700 .svg-icon,
+.btn-check:active + .btn.btn-active-color-gray-700 i,
+.btn-check:active + .btn.btn-active-color-gray-700 .svg-icon,
+.btn.btn-active-color-gray-700:focus:not(.btn-active) i,
+.btn.btn-active-color-gray-700:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-700:hover:not(.btn-active) i,
+.btn.btn-active-color-gray-700:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-700:active:not(.btn-active) i,
+.btn.btn-active-color-gray-700:active:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-700.active i,
+.btn.btn-active-color-gray-700.active .svg-icon,
+.btn.btn-active-color-gray-700.show i,
+.btn.btn-active-color-gray-700.show .svg-icon,
+.show > .btn.btn-active-color-gray-700 i,
+.show > .btn.btn-active-color-gray-700 .svg-icon {
+    color: #5e6278;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-700.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-color-gray-700.dropdown-toggle:after,
+.btn.btn-active-color-gray-700:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-700:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-700:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-700.active.dropdown-toggle:after,
+.btn.btn-active-color-gray-700.show.dropdown-toggle:after,
+.show > .btn.btn-active-color-gray-700.dropdown-toggle:after {
+    color: #5e6278;
+}
+
+.btn.btn-icon-gray-700 i,
+.btn.btn-icon-gray-700 .svg-icon {
+    color: #5e6278;
+}
+
+.btn.btn-icon-gray-700.dropdown-toggle:after {
+    color: #5e6278;
+}
+
+.btn-check:checked + .btn.btn-active-icon-gray-700 i,
+.btn-check:checked + .btn.btn-active-icon-gray-700 .svg-icon,
+.btn-check:active + .btn.btn-active-icon-gray-700 i,
+.btn-check:active + .btn.btn-active-icon-gray-700 .svg-icon,
+.btn.btn-active-icon-gray-700:focus:not(.btn-active) i,
+.btn.btn-active-icon-gray-700:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-700:hover:not(.btn-active) i,
+.btn.btn-active-icon-gray-700:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-700:active:not(.btn-active) i,
+.btn.btn-active-icon-gray-700:active:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-700.active i,
+.btn.btn-active-icon-gray-700.active .svg-icon,
+.btn.btn-active-icon-gray-700.show i,
+.btn.btn-active-icon-gray-700.show .svg-icon,
+.show > .btn.btn-active-icon-gray-700 i,
+.show > .btn.btn-active-icon-gray-700 .svg-icon {
+    color: #5e6278;
+}
+
+.btn-check:checked + .btn.btn-active-icon-gray-700.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-icon-gray-700.dropdown-toggle:after,
+.btn.btn-active-icon-gray-700:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-700:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-700:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-700.active.dropdown-toggle:after,
+.btn.btn-active-icon-gray-700.show.dropdown-toggle:after,
+.show > .btn.btn-active-icon-gray-700.dropdown-toggle:after {
+    color: #5e6278;
+}
+
+.btn.btn-text-gray-700 {
+    color: #5e6278;
+}
+
+.btn-check:checked + .btn.btn-active-text-gray-700,
+.btn-check:active + .btn.btn-active-text-gray-700,
+.btn.btn-active-text-gray-700:focus:not(.btn-active),
+.btn.btn-active-text-gray-700:hover:not(.btn-active),
+.btn.btn-active-text-gray-700:active:not(.btn-active),
+.btn.btn-active-text-gray-700.active,
+.btn.btn-active-text-gray-700.show,
+.show > .btn.btn-active-text-gray-700 {
+    color: #5e6278;
+}
+
+.btn.btn-color-gray-800 {
+    color: #3f4254;
+}
+
+.btn.btn-color-gray-800 i,
+.btn.btn-color-gray-800 .svg-icon {
+    color: #3f4254;
+}
+
+.btn.btn-color-gray-800.dropdown-toggle:after {
+    color: #3f4254;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-800,
+.btn-check:active + .btn.btn-active-color-gray-800,
+.btn.btn-active-color-gray-800:focus:not(.btn-active),
+.btn.btn-active-color-gray-800:hover:not(.btn-active),
+.btn.btn-active-color-gray-800:active:not(.btn-active),
+.btn.btn-active-color-gray-800.active,
+.btn.btn-active-color-gray-800.show,
+.show > .btn.btn-active-color-gray-800 {
+    color: #3f4254;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-800 i,
+.btn-check:checked + .btn.btn-active-color-gray-800 .svg-icon,
+.btn-check:active + .btn.btn-active-color-gray-800 i,
+.btn-check:active + .btn.btn-active-color-gray-800 .svg-icon,
+.btn.btn-active-color-gray-800:focus:not(.btn-active) i,
+.btn.btn-active-color-gray-800:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-800:hover:not(.btn-active) i,
+.btn.btn-active-color-gray-800:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-800:active:not(.btn-active) i,
+.btn.btn-active-color-gray-800:active:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-800.active i,
+.btn.btn-active-color-gray-800.active .svg-icon,
+.btn.btn-active-color-gray-800.show i,
+.btn.btn-active-color-gray-800.show .svg-icon,
+.show > .btn.btn-active-color-gray-800 i,
+.show > .btn.btn-active-color-gray-800 .svg-icon {
+    color: #3f4254;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-800.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-color-gray-800.dropdown-toggle:after,
+.btn.btn-active-color-gray-800:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-800:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-800:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-800.active.dropdown-toggle:after,
+.btn.btn-active-color-gray-800.show.dropdown-toggle:after,
+.show > .btn.btn-active-color-gray-800.dropdown-toggle:after {
+    color: #3f4254;
+}
+
+.btn.btn-icon-gray-800 i,
+.btn.btn-icon-gray-800 .svg-icon {
+    color: #3f4254;
+}
+
+.btn.btn-icon-gray-800.dropdown-toggle:after {
+    color: #3f4254;
+}
+
+.btn-check:checked + .btn.btn-active-icon-gray-800 i,
+.btn-check:checked + .btn.btn-active-icon-gray-800 .svg-icon,
+.btn-check:active + .btn.btn-active-icon-gray-800 i,
+.btn-check:active + .btn.btn-active-icon-gray-800 .svg-icon,
+.btn.btn-active-icon-gray-800:focus:not(.btn-active) i,
+.btn.btn-active-icon-gray-800:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-800:hover:not(.btn-active) i,
+.btn.btn-active-icon-gray-800:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-800:active:not(.btn-active) i,
+.btn.btn-active-icon-gray-800:active:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-800.active i,
+.btn.btn-active-icon-gray-800.active .svg-icon,
+.btn.btn-active-icon-gray-800.show i,
+.btn.btn-active-icon-gray-800.show .svg-icon,
+.show > .btn.btn-active-icon-gray-800 i,
+.show > .btn.btn-active-icon-gray-800 .svg-icon {
+    color: #3f4254;
+}
+
+.btn-check:checked + .btn.btn-active-icon-gray-800.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-icon-gray-800.dropdown-toggle:after,
+.btn.btn-active-icon-gray-800:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-800:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-800:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-800.active.dropdown-toggle:after,
+.btn.btn-active-icon-gray-800.show.dropdown-toggle:after,
+.show > .btn.btn-active-icon-gray-800.dropdown-toggle:after {
+    color: #3f4254;
+}
+
+.btn.btn-text-gray-800 {
+    color: #3f4254;
+}
+
+.btn-check:checked + .btn.btn-active-text-gray-800,
+.btn-check:active + .btn.btn-active-text-gray-800,
+.btn.btn-active-text-gray-800:focus:not(.btn-active),
+.btn.btn-active-text-gray-800:hover:not(.btn-active),
+.btn.btn-active-text-gray-800:active:not(.btn-active),
+.btn.btn-active-text-gray-800.active,
+.btn.btn-active-text-gray-800.show,
+.show > .btn.btn-active-text-gray-800 {
+    color: #3f4254;
+}
+
+.btn.btn-color-gray-900 {
+    color: #181c32;
+}
+
+.btn.btn-color-gray-900 i,
+.btn.btn-color-gray-900 .svg-icon {
+    color: #181c32;
+}
+
+.btn.btn-color-gray-900.dropdown-toggle:after {
+    color: #181c32;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-900,
+.btn-check:active + .btn.btn-active-color-gray-900,
+.btn.btn-active-color-gray-900:focus:not(.btn-active),
+.btn.btn-active-color-gray-900:hover:not(.btn-active),
+.btn.btn-active-color-gray-900:active:not(.btn-active),
+.btn.btn-active-color-gray-900.active,
+.btn.btn-active-color-gray-900.show,
+.show > .btn.btn-active-color-gray-900 {
+    color: #181c32;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-900 i,
+.btn-check:checked + .btn.btn-active-color-gray-900 .svg-icon,
+.btn-check:active + .btn.btn-active-color-gray-900 i,
+.btn-check:active + .btn.btn-active-color-gray-900 .svg-icon,
+.btn.btn-active-color-gray-900:focus:not(.btn-active) i,
+.btn.btn-active-color-gray-900:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-900:hover:not(.btn-active) i,
+.btn.btn-active-color-gray-900:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-900:active:not(.btn-active) i,
+.btn.btn-active-color-gray-900:active:not(.btn-active) .svg-icon,
+.btn.btn-active-color-gray-900.active i,
+.btn.btn-active-color-gray-900.active .svg-icon,
+.btn.btn-active-color-gray-900.show i,
+.btn.btn-active-color-gray-900.show .svg-icon,
+.show > .btn.btn-active-color-gray-900 i,
+.show > .btn.btn-active-color-gray-900 .svg-icon {
+    color: #181c32;
+}
+
+.btn-check:checked + .btn.btn-active-color-gray-900.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-color-gray-900.dropdown-toggle:after,
+.btn.btn-active-color-gray-900:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-900:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-900:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-color-gray-900.active.dropdown-toggle:after,
+.btn.btn-active-color-gray-900.show.dropdown-toggle:after,
+.show > .btn.btn-active-color-gray-900.dropdown-toggle:after {
+    color: #181c32;
+}
+
+.btn.btn-icon-gray-900 i,
+.btn.btn-icon-gray-900 .svg-icon {
+    color: #181c32;
+}
+
+.btn.btn-icon-gray-900.dropdown-toggle:after {
+    color: #181c32;
+}
+
+.btn-check:checked + .btn.btn-active-icon-gray-900 i,
+.btn-check:checked + .btn.btn-active-icon-gray-900 .svg-icon,
+.btn-check:active + .btn.btn-active-icon-gray-900 i,
+.btn-check:active + .btn.btn-active-icon-gray-900 .svg-icon,
+.btn.btn-active-icon-gray-900:focus:not(.btn-active) i,
+.btn.btn-active-icon-gray-900:focus:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-900:hover:not(.btn-active) i,
+.btn.btn-active-icon-gray-900:hover:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-900:active:not(.btn-active) i,
+.btn.btn-active-icon-gray-900:active:not(.btn-active) .svg-icon,
+.btn.btn-active-icon-gray-900.active i,
+.btn.btn-active-icon-gray-900.active .svg-icon,
+.btn.btn-active-icon-gray-900.show i,
+.btn.btn-active-icon-gray-900.show .svg-icon,
+.show > .btn.btn-active-icon-gray-900 i,
+.show > .btn.btn-active-icon-gray-900 .svg-icon {
+    color: #181c32;
+}
+
+.btn-check:checked + .btn.btn-active-icon-gray-900.dropdown-toggle:after,
+.btn-check:active + .btn.btn-active-icon-gray-900.dropdown-toggle:after,
+.btn.btn-active-icon-gray-900:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-900:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-900:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-active-icon-gray-900.active.dropdown-toggle:after,
+.btn.btn-active-icon-gray-900.show.dropdown-toggle:after,
+.show > .btn.btn-active-icon-gray-900.dropdown-toggle:after {
+    color: #181c32;
+}
+
+.btn.btn-text-gray-900 {
+    color: #181c32;
+}
+
+.btn-check:checked + .btn.btn-active-text-gray-900,
+.btn-check:active + .btn.btn-active-text-gray-900,
+.btn.btn-active-text-gray-900:focus:not(.btn-active),
+.btn.btn-active-text-gray-900:hover:not(.btn-active),
+.btn.btn-active-text-gray-900:active:not(.btn-active),
+.btn.btn-active-text-gray-900.active,
+.btn.btn-active-text-gray-900.show,
+.show > .btn.btn-active-text-gray-900 {
+    color: #181c32;
+}
+
+.btn.btn-facebook {
+    color: #ffffff;
+    border-color: #3b5998;
+    background-color: #3b5998;
+}
+
+.btn.btn-facebook i,
+.btn.btn-facebook .svg-icon {
+    color: #ffffff;
+}
+
+.btn.btn-facebook.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-facebook,
+.btn-check:active + .btn.btn-facebook,
+.btn.btn-facebook:focus:not(.btn-active),
+.btn.btn-facebook:hover:not(.btn-active),
+.btn.btn-facebook:active:not(.btn-active),
+.btn.btn-facebook.active,
+.btn.btn-facebook.show,
+.show > .btn.btn-facebook {
+    border-color: #30497c;
+    background-color: #30497c !important;
+}
+
+.btn.btn-light-facebook {
+    color: #3b5998;
+    border-color: rgba(59, 89, 152, 0.1);
+    background-color: rgba(59, 89, 152, 0.1);
+}
+
+.btn.btn-light-facebook i,
+.btn.btn-light-facebook .svg-icon {
+    color: #3b5998;
+}
+
+.btn.btn-light-facebook.dropdown-toggle:after {
+    color: #3b5998;
+}
+
+.btn-check:checked + .btn.btn-light-facebook,
+.btn-check:active + .btn.btn-light-facebook,
+.btn.btn-light-facebook:focus:not(.btn-active),
+.btn.btn-light-facebook:hover:not(.btn-active),
+.btn.btn-light-facebook:active:not(.btn-active),
+.btn.btn-light-facebook.active,
+.btn.btn-light-facebook.show,
+.show > .btn.btn-light-facebook {
+    color: #ffffff;
+    border-color: #3b5998;
+    background-color: #3b5998 !important;
+}
+
+.btn-check:checked + .btn.btn-light-facebook i,
+.btn-check:checked + .btn.btn-light-facebook .svg-icon,
+.btn-check:active + .btn.btn-light-facebook i,
+.btn-check:active + .btn.btn-light-facebook .svg-icon,
+.btn.btn-light-facebook:focus:not(.btn-active) i,
+.btn.btn-light-facebook:focus:not(.btn-active) .svg-icon,
+.btn.btn-light-facebook:hover:not(.btn-active) i,
+.btn.btn-light-facebook:hover:not(.btn-active) .svg-icon,
+.btn.btn-light-facebook:active:not(.btn-active) i,
+.btn.btn-light-facebook:active:not(.btn-active) .svg-icon,
+.btn.btn-light-facebook.active i,
+.btn.btn-light-facebook.active .svg-icon,
+.btn.btn-light-facebook.show i,
+.btn.btn-light-facebook.show .svg-icon,
+.show > .btn.btn-light-facebook i,
+.show > .btn.btn-light-facebook .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-light-facebook.dropdown-toggle:after,
+.btn-check:active + .btn.btn-light-facebook.dropdown-toggle:after,
+.btn.btn-light-facebook:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-facebook:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-facebook:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-facebook.active.dropdown-toggle:after,
+.btn.btn-light-facebook.show.dropdown-toggle:after,
+.show > .btn.btn-light-facebook.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn.btn-google {
+    color: #ffffff;
+    border-color: #dd4b39;
+    background-color: #dd4b39;
+}
+
+.btn.btn-google i,
+.btn.btn-google .svg-icon {
+    color: #ffffff;
+}
+
+.btn.btn-google.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-google,
+.btn-check:active + .btn.btn-google,
+.btn.btn-google:focus:not(.btn-active),
+.btn.btn-google:hover:not(.btn-active),
+.btn.btn-google:active:not(.btn-active),
+.btn.btn-google.active,
+.btn.btn-google.show,
+.show > .btn.btn-google {
+    border-color: #cd3623;
+    background-color: #cd3623 !important;
+}
+
+.btn.btn-light-google {
+    color: #dd4b39;
+    border-color: rgba(221, 75, 57, 0.1);
+    background-color: rgba(221, 75, 57, 0.1);
+}
+
+.btn.btn-light-google i,
+.btn.btn-light-google .svg-icon {
+    color: #dd4b39;
+}
+
+.btn.btn-light-google.dropdown-toggle:after {
+    color: #dd4b39;
+}
+
+.btn-check:checked + .btn.btn-light-google,
+.btn-check:active + .btn.btn-light-google,
+.btn.btn-light-google:focus:not(.btn-active),
+.btn.btn-light-google:hover:not(.btn-active),
+.btn.btn-light-google:active:not(.btn-active),
+.btn.btn-light-google.active,
+.btn.btn-light-google.show,
+.show > .btn.btn-light-google {
+    color: #ffffff;
+    border-color: #dd4b39;
+    background-color: #dd4b39 !important;
+}
+
+.btn-check:checked + .btn.btn-light-google i,
+.btn-check:checked + .btn.btn-light-google .svg-icon,
+.btn-check:active + .btn.btn-light-google i,
+.btn-check:active + .btn.btn-light-google .svg-icon,
+.btn.btn-light-google:focus:not(.btn-active) i,
+.btn.btn-light-google:focus:not(.btn-active) .svg-icon,
+.btn.btn-light-google:hover:not(.btn-active) i,
+.btn.btn-light-google:hover:not(.btn-active) .svg-icon,
+.btn.btn-light-google:active:not(.btn-active) i,
+.btn.btn-light-google:active:not(.btn-active) .svg-icon,
+.btn.btn-light-google.active i,
+.btn.btn-light-google.active .svg-icon,
+.btn.btn-light-google.show i,
+.btn.btn-light-google.show .svg-icon,
+.show > .btn.btn-light-google i,
+.show > .btn.btn-light-google .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-light-google.dropdown-toggle:after,
+.btn-check:active + .btn.btn-light-google.dropdown-toggle:after,
+.btn.btn-light-google:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-google:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-google:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-google.active.dropdown-toggle:after,
+.btn.btn-light-google.show.dropdown-toggle:after,
+.show > .btn.btn-light-google.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn.btn-twitter {
+    color: #ffffff;
+    border-color: #1da1f2;
+    background-color: #1da1f2;
+}
+
+.btn.btn-twitter i,
+.btn.btn-twitter .svg-icon {
+    color: #ffffff;
+}
+
+.btn.btn-twitter.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-twitter,
+.btn-check:active + .btn.btn-twitter,
+.btn.btn-twitter:focus:not(.btn-active),
+.btn.btn-twitter:hover:not(.btn-active),
+.btn.btn-twitter:active:not(.btn-active),
+.btn.btn-twitter.active,
+.btn.btn-twitter.show,
+.show > .btn.btn-twitter {
+    border-color: #0d8ddc;
+    background-color: #0d8ddc !important;
+}
+
+.btn.btn-light-twitter {
+    color: #1da1f2;
+    border-color: rgba(29, 161, 242, 0.1);
+    background-color: rgba(29, 161, 242, 0.1);
+}
+
+.btn.btn-light-twitter i,
+.btn.btn-light-twitter .svg-icon {
+    color: #1da1f2;
+}
+
+.btn.btn-light-twitter.dropdown-toggle:after {
+    color: #1da1f2;
+}
+
+.btn-check:checked + .btn.btn-light-twitter,
+.btn-check:active + .btn.btn-light-twitter,
+.btn.btn-light-twitter:focus:not(.btn-active),
+.btn.btn-light-twitter:hover:not(.btn-active),
+.btn.btn-light-twitter:active:not(.btn-active),
+.btn.btn-light-twitter.active,
+.btn.btn-light-twitter.show,
+.show > .btn.btn-light-twitter {
+    color: #ffffff;
+    border-color: #1da1f2;
+    background-color: #1da1f2 !important;
+}
+
+.btn-check:checked + .btn.btn-light-twitter i,
+.btn-check:checked + .btn.btn-light-twitter .svg-icon,
+.btn-check:active + .btn.btn-light-twitter i,
+.btn-check:active + .btn.btn-light-twitter .svg-icon,
+.btn.btn-light-twitter:focus:not(.btn-active) i,
+.btn.btn-light-twitter:focus:not(.btn-active) .svg-icon,
+.btn.btn-light-twitter:hover:not(.btn-active) i,
+.btn.btn-light-twitter:hover:not(.btn-active) .svg-icon,
+.btn.btn-light-twitter:active:not(.btn-active) i,
+.btn.btn-light-twitter:active:not(.btn-active) .svg-icon,
+.btn.btn-light-twitter.active i,
+.btn.btn-light-twitter.active .svg-icon,
+.btn.btn-light-twitter.show i,
+.btn.btn-light-twitter.show .svg-icon,
+.show > .btn.btn-light-twitter i,
+.show > .btn.btn-light-twitter .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-light-twitter.dropdown-toggle:after,
+.btn-check:active + .btn.btn-light-twitter.dropdown-toggle:after,
+.btn.btn-light-twitter:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-twitter:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-twitter:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-twitter.active.dropdown-toggle:after,
+.btn.btn-light-twitter.show.dropdown-toggle:after,
+.show > .btn.btn-light-twitter.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn.btn-instagram {
+    color: #ffffff;
+    border-color: #e1306c;
+    background-color: #e1306c;
+}
+
+.btn.btn-instagram i,
+.btn.btn-instagram .svg-icon {
+    color: #ffffff;
+}
+
+.btn.btn-instagram.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-instagram,
+.btn-check:active + .btn.btn-instagram,
+.btn.btn-instagram:focus:not(.btn-active),
+.btn.btn-instagram:hover:not(.btn-active),
+.btn.btn-instagram:active:not(.btn-active),
+.btn.btn-instagram.active,
+.btn.btn-instagram.show,
+.show > .btn.btn-instagram {
+    border-color: #cd1e59;
+    background-color: #cd1e59 !important;
+}
+
+.btn.btn-light-instagram {
+    color: #e1306c;
+    border-color: rgba(225, 48, 108, 0.1);
+    background-color: rgba(225, 48, 108, 0.1);
+}
+
+.btn.btn-light-instagram i,
+.btn.btn-light-instagram .svg-icon {
+    color: #e1306c;
+}
+
+.btn.btn-light-instagram.dropdown-toggle:after {
+    color: #e1306c;
+}
+
+.btn-check:checked + .btn.btn-light-instagram,
+.btn-check:active + .btn.btn-light-instagram,
+.btn.btn-light-instagram:focus:not(.btn-active),
+.btn.btn-light-instagram:hover:not(.btn-active),
+.btn.btn-light-instagram:active:not(.btn-active),
+.btn.btn-light-instagram.active,
+.btn.btn-light-instagram.show,
+.show > .btn.btn-light-instagram {
+    color: #ffffff;
+    border-color: #e1306c;
+    background-color: #e1306c !important;
+}
+
+.btn-check:checked + .btn.btn-light-instagram i,
+.btn-check:checked + .btn.btn-light-instagram .svg-icon,
+.btn-check:active + .btn.btn-light-instagram i,
+.btn-check:active + .btn.btn-light-instagram .svg-icon,
+.btn.btn-light-instagram:focus:not(.btn-active) i,
+.btn.btn-light-instagram:focus:not(.btn-active) .svg-icon,
+.btn.btn-light-instagram:hover:not(.btn-active) i,
+.btn.btn-light-instagram:hover:not(.btn-active) .svg-icon,
+.btn.btn-light-instagram:active:not(.btn-active) i,
+.btn.btn-light-instagram:active:not(.btn-active) .svg-icon,
+.btn.btn-light-instagram.active i,
+.btn.btn-light-instagram.active .svg-icon,
+.btn.btn-light-instagram.show i,
+.btn.btn-light-instagram.show .svg-icon,
+.show > .btn.btn-light-instagram i,
+.show > .btn.btn-light-instagram .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-light-instagram.dropdown-toggle:after,
+.btn-check:active + .btn.btn-light-instagram.dropdown-toggle:after,
+.btn.btn-light-instagram:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-instagram:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-instagram:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-instagram.active.dropdown-toggle:after,
+.btn.btn-light-instagram.show.dropdown-toggle:after,
+.show > .btn.btn-light-instagram.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn.btn-youtube {
+    color: #ffffff;
+    border-color: #ff0000;
+    background-color: #ff0000;
+}
+
+.btn.btn-youtube i,
+.btn.btn-youtube .svg-icon {
+    color: #ffffff;
+}
+
+.btn.btn-youtube.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-youtube,
+.btn-check:active + .btn.btn-youtube,
+.btn.btn-youtube:focus:not(.btn-active),
+.btn.btn-youtube:hover:not(.btn-active),
+.btn.btn-youtube:active:not(.btn-active),
+.btn.btn-youtube.active,
+.btn.btn-youtube.show,
+.show > .btn.btn-youtube {
+    border-color: #d90000;
+    background-color: #d90000 !important;
+}
+
+.btn.btn-light-youtube {
+    color: #ff0000;
+    border-color: rgba(255, 0, 0, 0.1);
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.btn.btn-light-youtube i,
+.btn.btn-light-youtube .svg-icon {
+    color: #ff0000;
+}
+
+.btn.btn-light-youtube.dropdown-toggle:after {
+    color: #ff0000;
+}
+
+.btn-check:checked + .btn.btn-light-youtube,
+.btn-check:active + .btn.btn-light-youtube,
+.btn.btn-light-youtube:focus:not(.btn-active),
+.btn.btn-light-youtube:hover:not(.btn-active),
+.btn.btn-light-youtube:active:not(.btn-active),
+.btn.btn-light-youtube.active,
+.btn.btn-light-youtube.show,
+.show > .btn.btn-light-youtube {
+    color: #ffffff;
+    border-color: #ff0000;
+    background-color: #ff0000 !important;
+}
+
+.btn-check:checked + .btn.btn-light-youtube i,
+.btn-check:checked + .btn.btn-light-youtube .svg-icon,
+.btn-check:active + .btn.btn-light-youtube i,
+.btn-check:active + .btn.btn-light-youtube .svg-icon,
+.btn.btn-light-youtube:focus:not(.btn-active) i,
+.btn.btn-light-youtube:focus:not(.btn-active) .svg-icon,
+.btn.btn-light-youtube:hover:not(.btn-active) i,
+.btn.btn-light-youtube:hover:not(.btn-active) .svg-icon,
+.btn.btn-light-youtube:active:not(.btn-active) i,
+.btn.btn-light-youtube:active:not(.btn-active) .svg-icon,
+.btn.btn-light-youtube.active i,
+.btn.btn-light-youtube.active .svg-icon,
+.btn.btn-light-youtube.show i,
+.btn.btn-light-youtube.show .svg-icon,
+.show > .btn.btn-light-youtube i,
+.show > .btn.btn-light-youtube .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-light-youtube.dropdown-toggle:after,
+.btn-check:active + .btn.btn-light-youtube.dropdown-toggle:after,
+.btn.btn-light-youtube:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-youtube:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-youtube:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-youtube.active.dropdown-toggle:after,
+.btn.btn-light-youtube.show.dropdown-toggle:after,
+.show > .btn.btn-light-youtube.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn.btn-linkedin {
+    color: #ffffff;
+    border-color: #0077b5;
+    background-color: #0077b5;
+}
+
+.btn.btn-linkedin i,
+.btn.btn-linkedin .svg-icon {
+    color: #ffffff;
+}
+
+.btn.btn-linkedin.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-linkedin,
+.btn-check:active + .btn.btn-linkedin,
+.btn.btn-linkedin:focus:not(.btn-active),
+.btn.btn-linkedin:hover:not(.btn-active),
+.btn.btn-linkedin:active:not(.btn-active),
+.btn.btn-linkedin.active,
+.btn.btn-linkedin.show,
+.show > .btn.btn-linkedin {
+    border-color: #005e8f;
+    background-color: #005e8f !important;
+}
+
+.btn.btn-light-linkedin {
+    color: #0077b5;
+    border-color: rgba(0, 119, 181, 0.1);
+    background-color: rgba(0, 119, 181, 0.1);
+}
+
+.btn.btn-light-linkedin i,
+.btn.btn-light-linkedin .svg-icon {
+    color: #0077b5;
+}
+
+.btn.btn-light-linkedin.dropdown-toggle:after {
+    color: #0077b5;
+}
+
+.btn-check:checked + .btn.btn-light-linkedin,
+.btn-check:active + .btn.btn-light-linkedin,
+.btn.btn-light-linkedin:focus:not(.btn-active),
+.btn.btn-light-linkedin:hover:not(.btn-active),
+.btn.btn-light-linkedin:active:not(.btn-active),
+.btn.btn-light-linkedin.active,
+.btn.btn-light-linkedin.show,
+.show > .btn.btn-light-linkedin {
+    color: #ffffff;
+    border-color: #0077b5;
+    background-color: #0077b5 !important;
+}
+
+.btn-check:checked + .btn.btn-light-linkedin i,
+.btn-check:checked + .btn.btn-light-linkedin .svg-icon,
+.btn-check:active + .btn.btn-light-linkedin i,
+.btn-check:active + .btn.btn-light-linkedin .svg-icon,
+.btn.btn-light-linkedin:focus:not(.btn-active) i,
+.btn.btn-light-linkedin:focus:not(.btn-active) .svg-icon,
+.btn.btn-light-linkedin:hover:not(.btn-active) i,
+.btn.btn-light-linkedin:hover:not(.btn-active) .svg-icon,
+.btn.btn-light-linkedin:active:not(.btn-active) i,
+.btn.btn-light-linkedin:active:not(.btn-active) .svg-icon,
+.btn.btn-light-linkedin.active i,
+.btn.btn-light-linkedin.active .svg-icon,
+.btn.btn-light-linkedin.show i,
+.btn.btn-light-linkedin.show .svg-icon,
+.show > .btn.btn-light-linkedin i,
+.show > .btn.btn-light-linkedin .svg-icon {
+    color: #ffffff;
+}
+
+.btn-check:checked + .btn.btn-light-linkedin.dropdown-toggle:after,
+.btn-check:active + .btn.btn-light-linkedin.dropdown-toggle:after,
+.btn.btn-light-linkedin:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-linkedin:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-linkedin:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-light-linkedin.active.dropdown-toggle:after,
+.btn.btn-light-linkedin.show.dropdown-toggle:after,
+.show > .btn.btn-light-linkedin.dropdown-toggle:after {
+    color: #ffffff;
+}
+
+.btn.btn-outline.btn-outline-dashed {
+    border-width: 1px;
+    border-style: dashed;
+}
+
+.btn-check:checked + .btn.btn-outline.btn-outline-dashed,
+.btn-check:active + .btn.btn-outline.btn-outline-dashed,
+.btn.btn-outline.btn-outline-dashed:focus:not(.btn-active),
+.btn.btn-outline.btn-outline-dashed:hover:not(.btn-active),
+.btn.btn-outline.btn-outline-dashed:active:not(.btn-active),
+.btn.btn-outline.btn-outline-dashed.active,
+.btn.btn-outline.btn-outline-dashed.show,
+.show > .btn.btn-outline.btn-outline-dashed {
+    border-color: #009ef7;
+}
+
+.btn.btn-outline.btn-outline-dashed.btn-outline-default {
+    border-width: 1px;
+    border-style: dashed;
+    color: #7e8299;
+    border-color: #e4e6ef;
+}
+
+.btn.btn-outline.btn-outline-dashed.btn-outline-default i,
+.btn.btn-outline.btn-outline-dashed.btn-outline-default .svg-icon {
+    color: #7e8299;
+}
+
+.btn.btn-outline.btn-outline-dashed.btn-outline-default.dropdown-toggle:after {
+    color: #7e8299;
+}
+
+.btn-check:checked + .btn.btn-outline.btn-outline-dashed.btn-outline-default,
+.btn-check:active + .btn.btn-outline.btn-outline-dashed.btn-outline-default,
+.btn.btn-outline.btn-outline-dashed.btn-outline-default:focus:not(.btn-active),
+.btn.btn-outline.btn-outline-dashed.btn-outline-default:hover:not(.btn-active),
+.btn.btn-outline.btn-outline-dashed.btn-outline-default:active:not(.btn-active),
+.btn.btn-outline.btn-outline-dashed.btn-outline-default.active,
+.btn.btn-outline.btn-outline-dashed.btn-outline-default.show,
+.show > .btn.btn-outline.btn-outline-dashed.btn-outline-default {
+    color: #009ef7;
+    border-color: #009ef7;
+    background-color: #f1faff !important;
+}
+
+.btn-check:checked + .btn.btn-outline.btn-outline-dashed.btn-outline-default i,
+.btn-check:checked + .btn.btn-outline.btn-outline-dashed.btn-outline-default .svg-icon,
+.btn-check:active + .btn.btn-outline.btn-outline-dashed.btn-outline-default i,
+.btn-check:active + .btn.btn-outline.btn-outline-dashed.btn-outline-default .svg-icon,
+.btn.btn-outline.btn-outline-dashed.btn-outline-default:focus:not(.btn-active) i,
+.btn.btn-outline.btn-outline-dashed.btn-outline-default:focus:not(.btn-active) .svg-icon,
+.btn.btn-outline.btn-outline-dashed.btn-outline-default:hover:not(.btn-active) i,
+.btn.btn-outline.btn-outline-dashed.btn-outline-default:hover:not(.btn-active) .svg-icon,
+.btn.btn-outline.btn-outline-dashed.btn-outline-default:active:not(.btn-active) i,
+.btn.btn-outline.btn-outline-dashed.btn-outline-default:active:not(.btn-active) .svg-icon,
+.btn.btn-outline.btn-outline-dashed.btn-outline-default.active i,
+.btn.btn-outline.btn-outline-dashed.btn-outline-default.active .svg-icon,
+.btn.btn-outline.btn-outline-dashed.btn-outline-default.show i,
+.btn.btn-outline.btn-outline-dashed.btn-outline-default.show .svg-icon,
+.show > .btn.btn-outline.btn-outline-dashed.btn-outline-default i,
+.show > .btn.btn-outline.btn-outline-dashed.btn-outline-default .svg-icon {
+    color: #009ef7;
+}
+
+.btn-check:checked + .btn.btn-outline.btn-outline-dashed.btn-outline-default.dropdown-toggle:after,
+.btn-check:active + .btn.btn-outline.btn-outline-dashed.btn-outline-default.dropdown-toggle:after,
+.btn.btn-outline.btn-outline-dashed.btn-outline-default:focus:not(.btn-active).dropdown-toggle:after,
+.btn.btn-outline.btn-outline-dashed.btn-outline-default:hover:not(.btn-active).dropdown-toggle:after,
+.btn.btn-outline.btn-outline-dashed.btn-outline-default:active:not(.btn-active).dropdown-toggle:after,
+.btn.btn-outline.btn-outline-dashed.btn-outline-default.active.dropdown-toggle:after,
+.btn.btn-outline.btn-outline-dashed.btn-outline-default.show.dropdown-toggle:after,
+.show > .btn.btn-outline.btn-outline-dashed.btn-outline-default.dropdown-toggle:after {
+    color: #009ef7;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.325rem 0.5rem;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.325rem;
+    border: 0;
+}
+
+.badge-white {
+    color: #7e8299;
+    background-color: #ffffff;
+}
+
+.badge-light-white {
+    color: #ffffff;
+}
+
+.badge-light {
+    color: #7e8299;
+    background-color: #f5f8fa;
+}
+
+.badge-light-light {
+    color: #f5f8fa;
+}
+
+.badge-primary {
+    color: #ffffff;
+    background-color: #009ef7;
+}
+
+.badge-light-primary {
+    color: #009ef7;
+    background-color: #f1faff;
+}
+
+.badge-secondary {
+    color: #3f4254;
+    background-color: #e4e6ef;
+}
+
+.badge-light-secondary {
+    color: #e4e6ef;
+}
+
+.badge-success {
+    color: #ffffff;
+    background-color: #50cd89;
+}
+
+.badge-light-success {
+    color: #50cd89;
+    background-color: #e8fff3;
+}
+
+.badge-info {
+    color: #ffffff;
+    background-color: #7239ea;
+}
+
+.badge-light-info {
+    color: #7239ea;
+    background-color: #f8f5ff;
+}
+
+.badge-warning {
+    color: #ffffff;
+    background-color: #ffc700;
+}
+
+.badge-light-warning {
+    color: #ffc700;
+    background-color: #fff8dd;
+}
+
+.badge-danger {
+    color: #ffffff;
+    background-color: #f1416c;
+}
+
+.badge-light-danger {
+    color: #f1416c;
+    background-color: #fff5f8;
+}
+
+.badge-dark {
+    color: #ffffff;
+    background-color: #181c32;
+}
+
+.badge-light-dark {
+    color: #181c32;
+    background-color: #eff2f5;
+}
+
+.badge-easy {
+    color: #fff;
+    background-color: blue;
+}
+
+.badge-light-easy {
+    color: blue;
+    background-color: lightblue;
+}
+
+.badge-medium {
+    color: #fff;
+    background-color: red;
+}
+
+.badge-light-medium {
+    color: red;
+    background-color: lightpink;
+}
+
+.badge-hard {
+    color: #ffffff;
+    background-color: black;
+}
+
+.badge-light-hard {
+    color: black;
+    background-color: #999999;
+}
+
+.btn-outline-secondary:active,
+.btn-outline-secondary.active,
+.btn-outline-secondary.dropdown-toggle.show,
+.btn-outline-secondary:hover,
+.btn-outline-secondary.hover {
+    color: #6c757d;
+    font-weight: bold !important;
+}
+
+.btn-outline-danger:active,
+.btn-outline-danger.active,
+.btn-outline-danger.dropdown-toggle.show,
+.btn-outline-danger:hover,
+.btn-outline-danger.hover {
+    color: #dc3545;
+    font-weight: bold !important;
+}
+
+.btn-outline-secondary:active i,
+.btn-outline-secondary.active i,
+.btn-outline-secondary.dropdown-toggle.show i,
+.btn-outline-secondary:hover i,
+.btn-outline-secondary.hover i,
+.btn-outline-danger:active i,
+.btn-outline-danger.active i,
+.btn-outline-danger.dropdown-toggle.show i,
+.btn-outline-danger:hover i,
+.btn-outline-danger.hover i {
+    font-weight: bold !important;
+}
+
+.form-group > .frm-flex-container > .frm-flex-child .btn.btn-simple {
+    min-height: 45px;
+    border-radius: var(--form-border-radius) !important;
+}
+
+.modal-title {
+    font-weight: 600;
+}
+
+/* .dt-table.dt-table-mode table > tbody .dt-col-indexlabel {
+    background: var(--tmr-corp-color) !important;
+} */
+
+@media screen and (max-width: 991px) {
+    .sidebar-offcanvas.show {
+        right: 0;
+        z-index: 1099;
+    }
+
+    .dt-mobile-value .badge {
+        padding: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .content-wrapper {
+        padding: 2rem 2rem;
+    }
+
+    #sidebar {
+        max-height: calc(100vh - 64px);
+        overflow: auto;
+        transition:
+            width 0.25s ease,
+            background 0.25s ease,
+            color 0.25s ease;
+        color: #181824;
+        position: sticky;
+        top: 64px;
+    }
+
+    #sidebar:hover {
+        color: rgb(87, 84, 84);
+    }
+
+    /* scrollbar */
+
+    #sidebar::-webkit-scrollbar {
+        width: 16px;
+        height: 30px;
+        border-radius: 13px;
+        background-clip: padding-box;
+        border: 4px solid transparent;
+    }
+
+    #sidebar::-webkit-scrollbar-track {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background-color: #181824;
+    }
+
+    #sidebar::-webkit-scrollbar-thumb {
+        width: 8px;
+        height: 30px;
+        border-radius: 13px;
+        background-clip: padding-box;
+        border: 4px solid transparent;
+        box-shadow: inset 0 0 0 10px;
+        cursor: pointer;
+    }
+}

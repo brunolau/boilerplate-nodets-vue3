@@ -1,0 +1,30 @@
+#!/bin/sh
+
+npm run type-check
+
+if [ $? -eq 0 ]
+then
+    echo "Type check passed."
+    echo 
+else
+    echo "Type check failed."
+    echo
+    exit 1
+fi
+
+# Running ESLint check only for created, modified, renamed and added to index (git add <file>) files 
+MODIFIED_FILES=$(git status --porcelain | grep '^[AMR]  [[:graph:]]\+$' | grep -o "[[:graph:]]\+$")
+
+npx eslint $MODIFIED_FILES
+
+if [ $? -eq 0 ]
+then
+    echo "ESLint check passed."
+    echo 
+else
+    echo "ESLint check failed."
+    echo
+    exit 1
+fi
+
+exit 0

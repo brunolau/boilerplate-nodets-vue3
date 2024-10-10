@@ -1,0 +1,49 @@
+﻿.trumbowyg-dropdown {
+    min-width: 200px;
+    width: auto !important;
+}
+
+.trumbowyg-box,
+.trumbowyg-editor {
+    min-height: 150px;
+}
+
+.trumbowyg-editor {
+    max-height: 300px;
+}
+
+.trumbowyg-editor,
+.trumbowyg-textarea {
+    min-height: 180px;
+}
+
+.form-group > div > div.trumbowyg-box {
+    margin-top: 0;
+}
+
+.trumbowyg-modal-box label select {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 27px;
+    line-height: 27px;
+    border: 1px solid #dedede;
+    background: #fff;
+    font-size: 14px;
+    max-width: 330px;
+    width: 70%;
+    padding: 0 7px;
+    transition: all 150ms;
+}
+
+@media (max-width: 767px) {
+    .trumbowyg-box,
+    .trumbowyg-editor {
+        min-height: 150px;
+    }
+
+    .trumbowyg-editor,
+    .trumbowyg-textarea {
+        min-height: 140px;
+    }
+}

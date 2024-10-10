@@ -1,0 +1,13 @@
+﻿.bmc-container-wrap.form-control {
+    height: auto;
+    border-style: dotted;
+    border-width: 2px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background: #fbfbfb;
+}
+
+.bmc-container-wrap.form-control button.btn-simple {
+    background: white !important;
+}

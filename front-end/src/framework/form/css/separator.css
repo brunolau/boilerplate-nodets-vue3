@@ -1,0 +1,22 @@
+﻿.ifw-separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+.ifw-separator::before,
+.ifw-separator::after {
+    content: "";
+    flex: 1;
+    border-bottom: 2px dashed #ababab;
+}
+
+.ifw-separator::before {
+    margin-right: 0.45em;
+}
+
+.ifw-separator::after {
+    margin-left: 0.45em;
+}

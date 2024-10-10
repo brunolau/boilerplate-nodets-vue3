@@ -1,0 +1,16 @@
+# Ignore artifacts:
+build
+
+# Ignore imagese
+*.png
+*.svg
+
+# Ignore node_modules
+node_modules
+
+# Other
+.husky
+.prettierignore
+.gitignore
+LICENSE
+.env

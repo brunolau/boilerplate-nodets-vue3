@@ -1,0 +1,30 @@
+{
+	"name": "boilerplate-nodets-vue3",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"build": "turbo run build-and-deploy",
+		"migrate": "turbo run db-push-migrations",
+		"dev": "turbo run dev --parallel",
+		"lint": "turbo run lint",
+		"prepare": "husky .",
+		"format": "lint-staged"
+	},
+	"devDependencies": {
+		"husky": "^9.1.6",
+		"lint-staged": "^15.2.10",
+		"prettier": "^3.3.3",
+		"turbo": "1.11.3"
+	},
+	"packageManager": "pnpm@8.9.2",
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm run format"
+		}
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx,json,css,scss,md}": [
+			"prettier --write"
+		]
+	}
+}

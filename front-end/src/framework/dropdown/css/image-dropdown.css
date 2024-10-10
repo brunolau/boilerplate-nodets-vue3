@@ -1,0 +1,85 @@
+﻿.imgddl-dropdown-wrap {
+    min-height: 50px;
+}
+
+.imgddl-dropdown-wrap .imgddl-image {
+    height: 50px;
+    width: 50px;
+    float: left;
+    background-size: cover;
+    background-position: center center;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid #ababab;
+    margin-right: 10px;
+}
+
+.imgddl-dropdown-wrap .imgddl-text {
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.imgddl-dropdown-wrap .imgddl-subtitle {
+}
+
+.imgddl-selected-item {
+    background-color: #eaeaea;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    cursor: default;
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 0px;
+}
+
+.imgddl-selected-item .imgddl-dropdown-resultroot {
+    display: inline-block;
+    float: left;
+}
+
+.imgddl-selected-item .imgddl-dropdown-resultroot .imgddl-dropdown-resultwrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgddl-selected-item .imgddl-dropdown-resultroot .imgddl-dropdown-resultwrap .imgddl-result-image {
+    height: 30px;
+    width: 30px;
+    float: left;
+    background-size: cover;
+    background-position: center center;
+    background-color: white;
+    border-right: 1px solid #ababab;
+    margin-right: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.imgddl-selected-item .imgddl-dropdown-resultroot .imgddl-dropdown-resultwrap .imgddl-result-text {
+    font-size: 13px;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.imgddl-result-remove.imgddl-result-button.select2-selection__choice__remove,
+.imgddl-selected-item .imgddl-dropdown-resultroot .imgddl-dropdown-resultwrap > .imgddl-result-button {
+    color: #eaeaea;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 2px;
+    height: 18px;
+    width: 18px;
+    text-align: center;
+    background-color: #a7a7a7;
+    border-radius: 50%;
+    font-size: 11px;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 1px;
+}
+
+.imgddl-result-remove.imgddl-result-button.select2-selection__choice__remove {
+    margin-top: 6px;
+}

@@ -1,0 +1,22 @@
+.webLinkItemSortableContainer > div {
+    padding: 10px 0;
+    border-bottom: 1px solid #bbb;
+}
+
+.webLinkItemSortableContainer > div:last-child {
+    border-bottom: none;
+}
+
+.webLinkSectionItem {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.webLinkSectionItemButtons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 100%;
+}

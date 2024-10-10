@@ -1,0 +1,97 @@
+﻿.localized-input-wrap {
+    cursor: pointer;
+    background: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.localized-input-wrap.lii-placeholder {
+    color: #c7c7c7;
+}
+
+.localized-input-wrap.lii-more {
+    height: auto;
+    line-height: 1.2;
+    white-space: normal;
+}
+
+.localized-input-wrap .localized-input-item {
+    font-size: 70%;
+    display: inline-block;
+    width: 48%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.localized-input-wrap .localized-input-item img {
+    height: 8px;
+}
+
+.localized-input-wrap .localized-input-item.lii-auto {
+    color: #b5b2b2;
+}
+
+.localized-url-wrap {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.lsi-form-group .input-group {
+    width: 100%;
+}
+
+.lsi-form-group .input-group .input-group-addon {
+    display: none;
+}
+
+.localized-input-wrap.lii-placeholder {
+    color: #969696;
+}
+
+.lsi-label {
+    text-align: right;
+}
+
+@media (max-width: 720px) {
+    .localized-input-wrap .localized-input-item {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    #localized-msg-target .form-group {
+        text-align: left;
+    }
+
+    .lsi-form-group {
+        position: relative;
+    }
+
+    .lsi-text {
+        display: none;
+    }
+
+    .lsi-label {
+        position: absolute;
+        z-index: 1;
+        left: 10px;
+        top: -1px;
+        border-right: 1px solid #e3e3e3;
+        height: 36px;
+        width: 43px;
+        padding: 0;
+        padding-top: 7px;
+        padding-right: 10px;
+    }
+
+    .form-group.maxwidth-input .form-control.lsi-main-input {
+        padding-left: 45px;
+    }
+
+    .lsi-form-group .input-group .input-group-addon {
+        display: table-cell;
+    }
+}

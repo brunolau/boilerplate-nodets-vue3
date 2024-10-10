@@ -1,0 +1,38 @@
+﻿.gallery-dropzone {
+    padding: 0;
+}
+
+.gallery-dropzone .dz-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.gallery-dropzone .dz-size,
+.gallery-dropzone .dz-filename {
+    visibility: hidden;
+}
+
+.gallery-dropzone .gallery-insert-image {
+    font-size: 2em;
+}
+
+.gallery-dropzone .dropzone {
+    border: 2px dashed rgba(0, 0, 0, 0.3) !important;
+    border-radius: 3px !important;
+}
+
+.gallery-dropzone .dz-remove-image,
+.gallery-dropzone .dz-details > a {
+    cursor: pointer !important;
+    font-size: 25px !important;
+    font-weight: bold !important;
+    color: #700 !important;
+}
+
+.gallery-dropzone .dz-remove-image:hover,
+.gallery-dropzone .dz-details > a:hover {
+    font-size: 40px !important;
+    font-weight: bold !important;
+    color: #ff4136 !important;
+    text-decoration: none !important;
+}

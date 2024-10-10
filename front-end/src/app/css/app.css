@@ -1,0 +1,94 @@
+﻿.animation-transition-general,
+.card-collapse .card .card-header a[data-toggle="collapse"] i,
+.nav-pills .nav-link,
+.nav-tabs .nav-link,
+.navbar,
+.navbar-collapse .navbar-nav .nav-link,
+.off-canvas-sidebar .logo a.logo-mini,
+.off-canvas-sidebar .logo a.logo-normal,
+.off-canvas-sidebar .navbar-minimize,
+.off-canvas-sidebar .nav p,
+.off-canvas-sidebar .sidebar-wrapper .user .info [data-toggle="collapse"] ~ div > ul > li > a span,
+.off-canvas-sidebar .sidebar-wrapper > .nav [data-toggle="collapse"] ~ div > ul > li > a span,
+.off-canvas-sidebar .user .info > a > span,
+.off-canvas-sidebar .user .photo,
+.off-canvas-sidebar .user a,
+.sidebar .logo a.logo-mini,
+.sidebar .logo a.logo-normal,
+.sidebar .nav a,
+.sidebar .nav a i,
+.sidebar .navbar-minimize,
+.sidebar .nav p,
+.sidebar .sidebar-wrapper .user .info [data-toggle="collapse"] ~ div > ul > li > a span,
+.sidebar .sidebar-wrapper > .nav [data-toggle="collapse"] ~ div > ul > li > a span,
+.sidebar .user .info > a > span,
+.sidebar .user .photo,
+.sidebar .user a,
+.tag,
+.tag [data-role="remove"] {
+    transition: all 0.3s ease 0s;
+}
+
+.has-danger .form-control,
+.has-danger .input-group-append .input-group-text,
+.has-danger.input-group-focus .input-group-append .input-group-text,
+.has-danger.input-group-focus .input-group-prepend .input-group-text,
+.has-danger .input-group-prepend .input-group-text,
+.has-danger .select2-container--default .select2-selection,
+.fieldset-control.has-danger {
+    border-color: #ffcfcf !important;
+    color: #ff3636;
+    background-color: #fdf4f4;
+}
+
+.modal-header.modal-has-headericon {
+    position: relative;
+    min-height: 80px;
+    padding-left: 100px;
+}
+
+.modal-header.modal-has-headericon.swal-extended-icon {
+    padding-left: 120px;
+    padding-bottom: 20px;
+}
+
+.modal-header.modal-has-headericon > h5 {
+    display: flex;
+    width: 100%;
+    min-height: 60px;
+    align-items: center;
+}
+
+.modal-header.modal-has-headericon > .modal-header-icon {
+    position: absolute;
+    top: 0;
+    left: 22px;
+}
+
+.modal-header.modal-has-headericon > .modal-header-icon .swal2-transform-resize {
+    transform: scale(0.75);
+}
+
+.modal-header.modal-has-headericon > .modal-header-icon .swal2-transform-resize.swal2-icon,
+.modal-header.modal-has-headericon > .modal-header-icon .swal2-transform-resize .swal2-icon {
+    margin-top: 10px;
+    margin-left: -10px;
+}
+
+.modal-header.modal-has-headericon > .modal-header-icon .swal2-transform-resize .success-icon-stub {
+    border-color: #b9f0b7;
+}
+
+.modal-header.modal-has-headericon > .modal-header-icon .swal2-standard-resize {
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+}
+
+.modal-header.modal-has-headericon > .modal-header-icon > .swal2-icon {
+    overflow: hidden;
+    border-width: 4px;
+    margin: 20px auto 30px;
+}

@@ -1,0 +1,10 @@
+.webLinkSortableContainer > div {
+    padding: 5px 0;
+}
+
+.webLinkSectionButtons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 100%;
+}

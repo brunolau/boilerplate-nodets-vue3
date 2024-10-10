@@ -1,0 +1,460 @@
+﻿/*Filterable dropdown*/
+@-webkit-keyframes fadeInFddOverlay {
+    0% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes fadeInFddOverlay {
+    0% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
+
+.fadeInFddOverlay {
+    -webkit-animation-name: fadeInFddOverlay;
+    animation-name: fadeInFddOverlay;
+}
+
+.fdd-animated {
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fdd-ovl-animated {
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fdd-anim-init {
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    -webkit-transition: 0.37s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 0.37s;
+    -moz-transform-style: preserve-3d;
+    transition: 0.37s;
+    transform-style: preserve-3d;
+}
+
+.fdd-anim-shown {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    -webkit-transition: 0.3s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 0.3s;
+    -moz-transform-style: preserve-3d;
+    transition: 0.3s;
+    transform-style: preserve-3d;
+}
+
+.fdd-main {
+    z-index: 999991;
+}
+
+.fdd-winner {
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    z-index: 999992;
+    width: 94%;
+    margin-left: 3% !important;
+    left: 0;
+    top: 25px;
+    bottom: 25px;
+    position: absolute;
+    overflow: hidden !important;
+    padding-top: 0px;
+    padding-bottom: 60px;
+}
+
+.fdd-bottom {
+    position: absolute;
+    height: 50px;
+    width: 94%;
+    bottom: 10px;
+    background-color: rgb(178, 178, 178);
+    text-align: center;
+    z-index: 999994;
+    margin-left: 3%;
+}
+
+.fdd-swrap {
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.fdd-sscroll {
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 101%;
+    min-height: calc(100% + 1px);
+}
+
+.fdd-cancel-btn,
+.fdd-confirm-btn {
+    width: 150px;
+    height: 34px;
+    margin-top: 7px;
+}
+
+.fdd-item {
+    left: 5px;
+    padding-right: 0px !important;
+    letter-spacing: -1px;
+    font-size: 16px;
+}
+
+.fdd-inner {
+    min-height: 35px;
+    padding-right: 35px;
+    background-size: 10px 20px;
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    background-position: -webkit-calc(100% - 15px) center;
+    background-position: calc(100% - 15px) center;
+}
+
+.fdd-selected .fdd-item {
+    color: #ff6000 !important;
+}
+
+.fdd-noselected:before {
+    height: 100%;
+    width: 5px;
+    background-color: #e0e0e0;
+    position: absolute;
+    left: -3px;
+    top: -1px;
+    content: close-quote;
+    color: #e0e0e0;
+}
+
+.fdd-selected:after {
+    height: 100%;
+    width: 5px;
+    background-color: orange;
+    position: absolute;
+    left: -3px;
+    top: -1px;
+    content: close-quote;
+    color: orange;
+}
+
+#filterableSelectDropDown {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 999991;
+    top: 0px;
+}
+
+#filterableSelectDropDown .locitems-itemclk {
+    height: 45px;
+}
+
+#filterableSelectDropDownInner {
+    -webkit-overflow-scrolling: touch;
+}
+
+#filterableSelectDropDownInner .items-container {
+    margin-top: 0px !important;
+    padding-left: 4px;
+    padding-right: 1%;
+    background: white;
+}
+
+#filterableSelectDropDown ul {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    background-origin: padding-box;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto;
+    border-collapse: separate;
+    color: rgb(0, 0, 0);
+    display: block;
+    font-family: -apple-system, "SF UI Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 23.8px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-size-adjust: 100%;
+    user-select: none;
+    -webkit-margin-after: 0px;
+    -webkit-margin-before: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#filterableSelectDropDown .filterabledd-item {
+    border-collapse: separate;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    display: list-item;
+    font-family: -apple-system, "SF UI Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 23.8px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    position: relative;
+    text-align: left;
+    text-size-adjust: 100%;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#filterableSelectDropDown .fdd-item-link.fdd-item-content {
+    box-sizing: border-box;
+    display: flex;
+    font-family: -apple-system, "SF UI Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    min-height: 44px;
+    line-height: 24px;
+    min-height: 44px;
+    padding-left: 3px;
+    position: relative;
+    text-align: left;
+    transition-duration: 0.3s;
+    user-select: none;
+    text-decoration: none;
+    width: 100%;
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#filterableSelectDropDown .fdd-item-inner.fdd-inner {
+    align-items: center;
+    align-self: stretch;
+    background-size: 10px 20px;
+    border-collapse: separate;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    cursor: auto;
+    display: flex;
+    font-family: -apple-system, "SF UI Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    justify-content: space-between;
+    line-height: 23.8px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    min-height: 44px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 7px;
+    padding-right: 35px;
+    padding-top: 8px;
+    position: relative;
+    text-align: left;
+    text-size-adjust: 100%;
+    transition-duration: 0.3s;
+    transition-property: background-color;
+    user-select: none;
+    -webkit-box-align: center;
+    -webkit-box-flex: 1;
+    -webkit-box-pack: justify;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    width: 100%;
+}
+
+.fdd-inner::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    display: block;
+    background-color: #e4e3e6;
+    margin-top: -3px;
+    position: absolute;
+    bottom: 0;
+}
+
+#filterableSelectDropDown li:first-child .fdd-inner::before {
+    content: "";
+    height: 3px;
+    width: 100%;
+    display: block;
+    background-color: #e4e3e6;
+    margin-top: -3px;
+    position: absolute;
+    top: 1px;
+    width: 200%;
+    margin-left: -30px;
+}
+
+.fdd-item-title.fdd-item {
+    border-collapse: separate;
+    box-sizing: border-box;
+    /*color: rgb(255, 96, 0);*/
+    cursor: auto;
+    display: block;
+    flex-shrink: 1;
+    font-family: -apple-system, "SF UI Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    left: 5px;
+    letter-spacing: -1px;
+    line-height: 22.4px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    width: 100%;
+    overflow-wrap: break-word;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    padding-right: 0px;
+    position: relative;
+    text-align: left;
+    text-overflow: ellipsis;
+    text-size-adjust: 100%;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.fdd-list-block {
+    margin: 35px 0;
+    font-size: 17px;
+}
+
+.fdd-singleselect-root .fdd-bottom button {
+    width: 100%;
+}
+
+.lvb-filter-container {
+    position: absolute;
+    width: 100%;
+    margin-top: -49px;
+    z-index: 9999999;
+    padding-top: 7px;
+    padding-bottom: 6px;
+    padding-left: 3px;
+    padding-right: 3px;
+    box-sizing: border-box;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.lvb-filter-erase {
+    position: absolute;
+    right: 4px;
+    padding: 5px 10px;
+    background-color: #d6d5d5;
+    margin-top: 1px;
+    padding-top: 6px;
+    color: #545454;
+    height: 34px;
+    box-sizing: border-box;
+    width: 34px;
+}
+
+.lvb-filter-input {
+    height: 36px !important;
+    padding: 9px !important;
+    border: solid 1px #e5e5e5 !important;
+    outline: 0 !important;
+    font:
+        normal 13px/100% Verdana,
+        Tahoma,
+        sans-serif !important;
+    background: -webkit-gradient(linear, left top, left 25, from(#ffffff), color-stop(4%, #eeeeee), to(#ffffff)) !important;
+    background: -moz-linear-gradient(top, #ffffff, #eeeeee 1px, #ffffff 25px) !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px !important;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px !important;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px !important;
+    border-color: #c3c3c3 !important;
+    width: 100%;
+}
+
+.fdd-bottom-hasmultiple button,
+.fdd-bottom-hasmultiple div {
+    display: inline-block;
+    max-width: 48%;
+}
+
+.fdd-has-exclusive-switch #filterableSelectDropDownInner {
+    padding-top: 30px;
+}
+
+.fdd-has-exclusive-switch .filterableSelectFilter {
+    height: 78px;
+}
+
+.fdd-incl-excl-chb {
+    padding-top: 10px;
+    background: white;
+    margin-top: -5px;
+    min-height: 39px;
+}
+
+.filterabledd-optgroup-item {
+    padding-left: 15px;
+}
+
+.filterabledd-optgroup {
+    padding-top: 10px;
+}
+
+.filterabledd-optgroup:first-child {
+    padding-top: 0px;
+}
+
+.filterabledd-optgroup.fdd-noselected:before {
+    height: 100%;
+    width: 5px;
+    background-color: white;
+    position: absolute;
+    left: -3px;
+    top: -1px;
+    content: close-quote;
+    color: white;
+}
+
+.filterabledd-optgroup .fdd-item-title {
+    font-weight: bold;
+}
+
+#filterableSelectDropDown li.filterabledd-optgroup:first-child .fdd-inner::before {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .fdd-bottom-hasmultiple {
+        text-align: right;
+        padding-right: 10px;
+    }
+}

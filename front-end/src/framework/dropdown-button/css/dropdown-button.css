@@ -1,0 +1,39 @@
+﻿.dd-btn-icon {
+    position: relative;
+}
+
+.dd-btn-icon .dd-btn-icon-wrap {
+    min-width: 28px;
+    text-align: center;
+    display: inline-block !important;
+    position: static;
+    width: 28px;
+}
+
+.dd-btn-icon .dd-btn-icon-wrap i {
+    display: inline-block !important;
+    width: 28px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+}
+
+.dd-btn-icon .dd-btn-icon-wrap i.icon {
+    font-size: 20px;
+}
+
+.dropdown.dropdown-inline-disp {
+    display: inline;
+}
+
+.dropdown.dropdown-menuontop > .dropdown-menu {
+    top: auto !important;
+    bottom: 35px;
+}
+
+.dropdown.dropdown-menuontop > .dropdown-menu:before {
+    transform: rotate(180deg);
+    top: auto;
+    bottom: -5px;
+}

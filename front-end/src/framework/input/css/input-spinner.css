@@ -1,0 +1,24 @@
+﻿.input-spinner-wrap {
+    max-width: 200px !important;
+    min-width: 40px;
+}
+
+.input-spinner-wrap button {
+    padding: 8px;
+    margin-top: 0px;
+    min-width: 1.2rem !important;
+    margin-bottom: 0;
+    border-radius: 7px;
+}
+
+.input-spinner-wrap.has-danger:after {
+    right: 32px;
+}
+
+.input-spinner-wrap.has-danger.form-group .form-control {
+    padding-right: 20px;
+}
+
+.input-spinner-wrap.input-spinner-fullwidth {
+    max-width: 100% !important;
+}
