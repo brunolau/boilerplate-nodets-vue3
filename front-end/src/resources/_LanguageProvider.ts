@@ -35,10 +35,10 @@
 
     function getImportedObj(importedObj: any): any {
         if (importedObj != null && importedObj.__esModule == true) {
-            return importedObj.default;
+            return { ...importedObj.default };
         }
 
-        return importedObj;
+        return { ...importedObj };
     }
 
     function needsReload(): boolean {
