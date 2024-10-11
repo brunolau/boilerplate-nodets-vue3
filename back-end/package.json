@@ -29,7 +29,7 @@
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.1",
     "drizzle-orm": "0.34.1",
-    "eftify-drizzle-pg": "^0.0.2",
+    "eftify-drizzle-pg": "^0.0.3",
     "ejs": "^3.1.9",
     "express": "^5.0.0-beta.1",
     "express-rate-limit": "^7.2.0",
